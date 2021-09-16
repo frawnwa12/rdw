@@ -1070,7 +1070,7 @@ local textchuser = database:get(bot_id.. 'text:ch:user' )
 if textchuser then
 send(msg.chat_id_, msg.id_,' [' ..textchuser.. ']' )
 else
-send(msg.chat_id_, msg.id_,  '❍ لا تستطيع استخدام البوت يرجى الاشتراك في القناة حتى تتمكن من استخدام الاوامر \n  ❍ اشترك هنا [ ..database:get(bot_id.. add:ch:username ).. ] )
+send(msg.chat_id_, msg.id_,  ❍ لا تستطيع استخدام البوت يرجى الاشتراك في القناة حتى تتمكن من استخدام الاوامر \n  ❍ اشترك هنا [ ..database:get(bot_id.. add:ch:username ).. ] )
 end
 return false
 end
