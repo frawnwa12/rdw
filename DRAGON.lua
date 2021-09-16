@@ -2683,10 +2683,10 @@ keyboard = {}
 keyboard.inline_keyboard = { 
 {{text = '𝗙𝗥𝗔𝗪𝗡 ',url="t.me/DEV_FRAWN"},{text = ' 𝐘𝐎𝐔𝐒𝐔𝐅  ',url="t.me/php_d"}}, 
 {{text = '[𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡]', url="t.me/source_frawn"}}, 
-{{text = ' اضـف الــبــوت لـمــجـمـوعـتـك' ,url="http://t.me/frawnwafr_bot?startgroup=start"}},
+
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/source_frawn/167&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/source_frawn&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
@@ -2710,7 +2710,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡  ',url="t.me/DEV_FRAWN"}},
+{{text = '  𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡 ',url="t.me/DEV_FRAWN"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/DEV_FRAWN&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -2741,7 +2741,7 @@ keyboard.inline_keyboard = {
 {{text = '  𝐘𝐎𝐔𝐒𝐔𝐅 ',url="t.me/php_d"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/asera126&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/php_d&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == "تويت" or text == "كت تويت" then 
@@ -3020,7 +3020,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'مبرمج السورس' then
+if text == 'فرعون' then
 local Text = [[
 المبرمج فرعون لو حابب تتواصل معاه
 اتبع الزر إلى تحت ↓
