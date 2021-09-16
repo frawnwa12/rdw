@@ -1064,7 +1064,7 @@ end
 
 
 if Chat_Type ==  UserBot  then
-if text ==  /start  then  
+if text ==  '/start' then  
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id.. text:ch:user )
 if textchuser then
