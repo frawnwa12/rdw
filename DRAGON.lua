@@ -1063,21 +1063,21 @@ end
 ------by-alex---- by--- alex ------byalex-------power-----soucer----alex
 
 
-if Chat_Type == 'UserBot' then
-if text == '/start' or text == 'العوده 🌚💞' then  
+if Chat_Type ==  UserBot  then
+if text ==  /start  then  
 if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
+local textchuser = database:get(bot_id.. text:ch:user )
 if textchuser then
-send(msg.chat_id_, msg.id_,'['..textchuser..']')
+send(msg.chat_id_, msg.id_, [ ..textchuser.. ] )
 else
-send(msg.chat_id_, msg.id_,' 👨‍🎤لا تستطيع استخدام البوت يرجى الاشتراك في القناة حتى تتمكن من استخدام الاوامر \n 👨‍🎤اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,  ❍ لا تستطيع استخدام البوت يرجى الاشتراك في القناة حتى تتمكن من استخدام الاوامر \n  ❍ اشترك هنا [ ..database:get(bot_id.. add:ch:username ).. ] )
 end
 return false
 end
 if DevSoFi(msg) then
-local bl = ' 👨‍🎤انت الان المطور الاساسي في البوت \n👨‍🎤 سورس فرعون\n 👨‍🎤يمكنك تحكم في البوتات من الكيبورد أسفل \n [تابع جديدنا](t.me/source_frawn) 
+local bl =   𖤍 اهلا عزيزي آلمـطـور\n 𖤍 آنت آلمـطـور آلآسـآسـي للبوت\n┉  ┉  ┉  ┉  ┉  ┉  ┉  ┉ء\n 𖤍 تسـتطـيع‌‏ آلتحگم باوامر البوت\n 𖤍 من خلاال الكيبورت خاص بك\n 𖤍 قناة سورس البوت [𖤍𝙨𝙤𝙪𝙧𝙘𝙚 𝙛𝙧𝙖𝙬𝙣𖤍](t.me/source_frawn) 
 local keyboard = {
-	
+
 {'فرعون'},
 	
 {'ضع اسم للبوت','معلومات الكيبورد'},
