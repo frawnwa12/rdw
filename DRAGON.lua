@@ -138,14 +138,8 @@ end
 _redis = load_redis()  
 --------------------------------------------------------------------------------------------------------------
 print([[
-╔══╗╔═╗╔══╗╔╦═╦╗╔═╦╗
-║═╦╝║╬║║╔╗║║║║║║║║║║
-║╔╝─║╗╣║╠╣║║║║║║║║║║
-╚╝──╚╩╝╚╝╚╝╚═╩═╝╚╩═╝
-────────────────────
-CH❥ @source_frawn
-
-DEV❥ @DEV_FRAWN 
+> CH › @source_frawn
+~> DEVELOPER › @DEV_FRAWN 
 ]])
 sudos = dofile("./frawn.lua") 
 SUDO = tonumber(sudos.SUDO)
@@ -171,7 +165,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,1779150039,1944028567}   
+sudo_users = {SUDO,1970574026,1944028567}   
 function SudoBot(msg)  
 local DRAGON = false  
 for k,v in pairs(sudo_users) do  
@@ -263,7 +257,7 @@ end
 function Can_or_NotCan(user_id,chat_id)
 if tonumber(user_id) == tonumber(1944028567) then  
 var = true  
-elseif tonumber(user_id) == tonumber(1635597460) then
+elseif tonumber(user_id) == tonumber(1970574026) then
 var = true  
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
@@ -297,8 +291,8 @@ end
 return var
 end 
 function Rutba(user_id,chat_id)
-if tonumber(user_id) == tonumber(1779150039) then  
-var = 'المطور يوسف الجمد'
+if tonumber(user_id) == tonumber(1970574026) then  
+var = 'المبرمج احمد'
 elseif tonumber(user_id) == tonumber(1944028567) then
 var = 'المبرمج فرعون الكبير'
 elseif tonumber(user_id) == tonumber(SUDO) then
@@ -876,7 +870,7 @@ if DevSoFi(msg) then
 local bl = ' 𖤍 اهلا عزيزي آلمـطـور\n 𖤍 آنت آلمـطـور آلآسـآسـي للبوت\n┉  ┉  ┉  ┉  ┉  ┉  ┉  ┉ء\n 𖤍 تسـتطـيع‌‏ آلتحگم باوامر البوت\n 𖤍 من خلاال الكيبورت خاص بك\n 𖤍 قناة سورس البوت [𖤍𝙨𝙤𝙪𝙧𝙘𝙚 𝙛𝙧𝙖𝙬𝙣𖤍](t.me/source_frawn)'
 local keyboard = {
 
-{'𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡'},
+{'𝙁𝙍𝘼𝙒𝙉 𝙒𝘼'},
 {'الاحصائيات','ضع اسم للبوت'},
 {'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'اضف رد عام','مسح رد عام'},
@@ -934,7 +928,7 @@ if start then
 keyboard = start
 else
 keyboard = {
-{'𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡'},
+{'𝙁𝙍𝘼𝙒𝙉 𝙒𝘼'},
 {'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'كتبات','غنيلي'},
 {'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
@@ -1114,7 +1108,7 @@ dofile('DRAGON.lua')
 end
 if text == 'الاصدار' and DevSoFi(msg) then 
 database:del(bot_id..'Srt:Bot') 
-send(msg.chat_id_, msg.id_,' ❍ اصدار سورس فرعون \n ❍ الاصدار »{ v 1.8}')
+send(msg.chat_id_, msg.id_,' ❍ اصدار سورس فرعون \n ❍ الاصدار »{ v 1.5}')
 end
 if text == 'قناه السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
@@ -2702,7 +2696,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
-if text == '𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡' then
+if text == '𝙁𝙍𝘼𝙒𝙉 𝙒𝘼' then
 local Text = [[
 المبرمج فرعون لو حابب تتواصل معاه
 اتبع الزر إلى تحت ↓
@@ -2710,7 +2704,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡 ',url="t.me/DEV_FRAWN"}},
+{{text = '  𝙁𝙍𝘼𝙒𝙉 𝙒𝘼  ',url="t.me/DEV_FRAWN"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/DEV_FRAWN&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -2724,7 +2718,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡  ',url="t.me/DEV_FRAWN"}},
+{{text = '  𝙁𝙍𝘼𝙒𝙉 𝙒𝘼  ',url="t.me/DEV_FRAWN"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/DEV_FRAWN&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -2741,7 +2735,7 @@ keyboard.inline_keyboard = {
 {{text = '  𝐘𝐎𝐔𝐒𝐔𝐅 ',url="t.me/php_d"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/php_d&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/asera126&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == "تويت" or text == "كت تويت" then 
@@ -3020,7 +3014,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'فرعون' then
+if text == 'مبرمج السورس' then
 local Text = [[
 المبرمج فرعون لو حابب تتواصل معاه
 اتبع الزر إلى تحت ↓
@@ -3028,7 +3022,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨ 𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡 ❩ ',url="t.me/DEV_FRAWN"}},
+{{text = '  ❨ 𝙁𝙍𝘼𝙒𝙉 𝙒𝘼 ❩ ',url="t.me/DEV_FRAWN"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/DEV_FRAWN&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -3964,8 +3958,8 @@ if result.sender_user_id_ == tonumber(1944028567) then
 send(msg.chat_id_, msg.id_, " ❍ لا يمكنك حظر المرمج الكبير فرعون\n")
 return false 
 end
-if result.sender_user_id_ == tonumber(1779150039) then
-send(msg.chat_id_, msg.id_, " ❍ لا يمكنك حظر يوسف\n")
+if result.sender_user_id_ == tonumber(1970574026) then
+send(msg.chat_id_, msg.id_, " ❍ لا يمكنك حظر المبرمج احمد\n")
 return false 
 end
 if result.sender_user_id_ == tonumber(936285607) then
