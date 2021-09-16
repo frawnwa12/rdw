@@ -23,29 +23,29 @@ file:write(serialized)
 file:close()  
 end  
 if not database:get(id_server..":token") then
-io.write('\27[0;31m\n ارسل لي توكن البوت الان ↓ :\na⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n\27')
+io.write('\27[0;31m\n ارسل لي توكن البوت الان ↓ :\na⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n\27')
 local token = io.read()
 if token ~= '' then
 local url , res = https.request('https://api.telegram.org/bot'..token..'/getMe')
 if res ~= 200 then
-print('\27[0;31m⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n التوكن غير صحيح تاكد منه ثم ارسله')
+print('\27[0;31m⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n التوكن غير صحيح تاكد منه ثم ارسله')
 else
-io.write('\27[0;31m تم حفظ التوكن بنجاح \na⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n27[0;39;49m')
+io.write('\27[0;31m تم حفظ التوكن بنجاح \na⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n27[0;39;49m')
 database:set(id_server..":token",token)
 end 
 else
-print('\27[0;35m⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚ ┉\n لم يتم حفظ التوكن ارسل لي التوكن الان')
+print('\27[0;35m⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚ ┉\n لم يتم حفظ التوكن ارسل لي التوكن الان')
 end 
 os.execute('lua DRAGON.lua')
 end
 if not database:get(id_server..":SUDO:ID") then
-io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\na⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n\27[0;33;49m')
+io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\na⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n\27[0;33;49m')
 local SUDOID = io.read()
 if SUDOID ~= '' then
-io.write('\27[1;35m تم حفظ ايدي المطور الاساسي \na⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n27[0;39;49m')
+io.write('\27[1;35m تم حفظ ايدي المطور الاساسي \na⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n27[0;39;49m')
 database:set(id_server..":SUDO:ID",SUDOID)
 else
-print('\27[0;31m⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚ ┉ ┉\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
+print('\27[0;31m⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚ ┉ ┉\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
 end 
 os.execute('lua DRAGON.lua')
 end
@@ -81,15 +81,15 @@ token="]]..database:get(id_server..":token")..[["
 while(true) do
 rm -fr ../.telegram-cli
 if [ ! -f ./tg ]; then
-echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝐃𝐑𝐠 ┉  ┉ ┉ ┉ ┉≫ٴ ┉ ┉ ┉ ┉ ┉ ┉┉ ┉ ┉ ┉ ┉ ┉ ┉"
+echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝗙𝙍𝗔𝙒𝗡 ┉  ┉ ┉ ┉ ┉≫ٴ ┉ ┉ ┉ ┉ ┉ ┉┉ ┉ ┉ ┉ ┉ ┉ ┉"
 echo "TG IS NOT FIND IN FILES BOT"
-echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝐃𝐑𝐠 ┉  ┉ ┉ ┉ ┉≫ٴ ٴ≪┉ ┉ ┉ ┉ ┉ 𝐃𝐑𝐠 ┉  ┉ ┉ ┉ ┉≫ٴ ┉"
+echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝗙𝙍𝗔𝙒𝗡 ┉  ┉ ┉ ┉ ┉≫ٴ ٴ≪┉ ┉ ┉ ┉ ┉ 𝗙𝙍𝗔 ┉  ┉ ┉ ┉ ┉≫ٴ ┉"
 exit 1
 fi
 if [ ! $token ]; then
-echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝐃𝐑𝐠 ┉  ┉ ┉ ┉ ┉≫ٴ ٴ≪┉ ┉ ┉ ┉ ┉ 𝐃𝐑𝐠 ┉  ┉ ┉ ┉ ┉≫ٴ ┉ ┉"
+echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝗙𝙍𝗔𝙒𝗡 ┉  ┉ ┉ ┉ ┉≫ٴ ٴ≪┉ ┉ ┉ ┉ ┉ 𝗙𝙍𝗔 ┉  ┉ ┉ ┉ ┉≫ٴ ┉ ┉"
 echo -e "\e[1;36mTOKEN IS NOT FIND IN FILE kkkklInfo.lua \e[0m"
-echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝐃𝐑𝐠 ┉  ┉ ┉ ┉ ┉≫ٴ ┉ ┉ ┉ ┉┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉┉ ┉"
+echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝗙𝙍𝗔𝙒𝗡 ┉  ┉ ┉ ┉ ┉≫ٴ ┉ ┉ ┉ ┉┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉┉ ┉"
 exit 1
 fi
 echo -e "\033[38;5;208m"
@@ -141,30 +141,13 @@ _redis = load_redis()
 ------by-alex---- by--- alex ------byalex-------power-----soucer----alex
 
 print([[
-          _____                    _____            _____                                  
-         /\    \                  /\    \          /\    \                 ______          
-        /::\    \                /::\____\        /::\    \               |::|   |         
-       /::::\    \              /:::/    /       /::::\    \              |::|   |         
-      /::::::\    \            /:::/    /       /::::::\    \             |::|   |         
-     /:::/\:::\    \          /:::/    /       /:::/\:::\    \            |::|   |         
-    /:::/__\:::\    \        /:::/    /       /:::/__\:::\    \           |::|   |         
-   /::::\   \:::\    \      /:::/    /       /::::\   \:::\    \          |::|   |         
-  /::::::\   \:::\    \    /:::/    /       /::::::\   \:::\    \         |::|   |         
- /:::/\:::\   \:::\    \  /:::/    /       /:::/\:::\   \:::\    \  ______|::|___|___ ____ 
-/:::/  \:::\   \:::\____\/:::/____/       /:::/__\:::\   \:::\____\|:::::::::::::::::|    |
-\::/    \:::\  /:::/    /\:::\    \       \:::\   \:::\   \::/    /|:::::::::::::::::|____|
- \/____/ \:::\/:::/    /  \:::\    \       \:::\   \:::\   \/____/  ~~~~~~|::|~~~|~~~      
-          \::::::/    /    \:::\    \       \:::\   \:::\    \            |::|   |         
-           \::::/    /      \:::\    \       \:::\   \:::\____\           |::|   |         
-           /:::/    /        \:::\    \       \:::\   \::/    /           |::|   |         
-          /:::/    /          \:::\    \       \:::\   \/____/            |::|   |         
-         /:::/    /            \:::\    \       \:::\    \                |::|   |         
-        /:::/    /              \:::\____\       \:::\____\               |::|   |         
-        \::/    /                \::/    /        \::/    /               |::|___|         
-         \/____/                  \/____/          \/____/                 ~~              
-                                                                                           
-
-~> DEVELOPER › @M_S_U
+╔══╗╔═╗╔══╗╔╦═╦╗╔═╦╗  ╔╦═╦╗╔══╗
+║═╦╝║╬║║╔╗║║║║║║║║║║  ║║║║║║╔╗║
+║╔╝─║╗╣║╠╣║║║║║║║║║║  ║║║║║║╠╣║
+╚╝──╚╩╝╚╝╚╝╚═╩═╝╚╩═╝  ╚═╩═╝╚╝╚╝
+────────────────────  ─────────
+> CH › @source_frawn
+~> DEVELOPER › @DEV_FRAWN
 ]])
 sudos = dofile("./kkkklInfo.lua") 
 SUDO = tonumber(sudos.SUDO)
@@ -192,7 +175,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end
-sudo_users = {SUDO,1909613841,5677887665443345666,400099998887777,10589490701058949070}   
+sudo_users = {SUDO,1947931401,1944028567,1741676289,10589490701058949070}   
 function SudoBot(msg)  
 local DRAGON = false  
 for k,v in pairs(sudo_users) do  
@@ -282,11 +265,11 @@ return false
 end 
 end
 function Can_or_NotCan(user_id,chat_id)
-if tonumber(user_id) == tonumber(1909613841) then  
+if tonumber(user_id) == tonumber(1944028567) then  
 var = true  
-elseif tonumber(user_id) == tonumber(5677887665443345666) then
+elseif tonumber(user_id) == tonumber(1947931401) then
 var = true  
-elseif tonumber(user_id) == tonumber(400099998887777) then
+elseif tonumber(user_id) == tonumber(1741676289) then
 var = true  
 elseif tonumber(user_id) == tonumber(10589490701058949070) then
 var = true  
@@ -322,16 +305,18 @@ end
 return var
 end 
 function Rutba(user_id,chat_id)
-if tonumber(user_id) == tonumber(1909613841) then  
-var = 'المبرمج باور'
-elseif tonumber(user_id) == tonumber(5677887665443345666) then
-var = 'المبرمج بابلو'
+if tonumber(user_id) == tonumber(1944028567) then  
+var = 'المرمج فرعون الكبير '
+elseif tonumber(user_id) == tonumber(1947931401) then
+var = 'مالك السورس'
+elseif tonumber(user_id) == tonumber(1741676289)then
+var ='مطور السورس'
 elseif tonumber(user_id) == tonumber(SUDO) then
-var ='الباور المتوسط'  
+var ='المطور الاساسي'  
 elseif database:sismember(bot_id.."Dev:SoFi:2", user_id) then 
-var = "الباور الصغير"  
+var = "المطور الاساسي²"  
 elseif tonumber(user_id) == tonumber(bot_id) then  
-var = 'بوت باور'
+var = 'بوت'
 elseif database:sismember(bot_id..'Sudo:User', user_id) then
 var = database:get(bot_id.."Sudo:Rd"..msg.chat_id_) or 'المطور'  
 elseif database:sismember(bot_id..'CoSu'..chat_id, user_id) then
@@ -524,7 +509,7 @@ end
 function Reply_Status(msg,user_id,status,text)
 tdcli_function ({ID = "GetUser",user_id_ = user_id},function(arg,data) 
 if data.first_name_ ~= false then
-local UserName = (data.username_ or "MKALEXES")
+local UserName = (data.username_ or "source_frawn")
 local NameUser = "👨‍🎤︙ بواسطه » ["..data.first_name_.."](T.me/"..UserName..")"
 local NameUserr = "👨‍🎤︙ اسم المستخدم » ["..data.first_name_.."](T.me/"..UserName..")"
 if status == "reply" then
@@ -760,7 +745,7 @@ end
 function Addmp3(msg,chat,kkl,ffrr)
 local eer = json:decode(https.request('https://api.telegram.org/bot'.. token..'/getfile?file_id='..kkl)) 
 download_to_file('https://api.telegram.org/file/bot'..token..'/'..eer.result.file_path,ffrr) 
-sendAudio(msg.chat_id_,msg.id_,'./'..ffrr,"🎼┇𓆩 𝗣𝗢𝗪𝗘𝗥𓏴   𓆪.")  
+sendAudio(msg.chat_id_,msg.id_,'./'..ffrr,"🎼┇𓆩 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡𓏴   𓆪.")  
 os.execute('rm -rf ./'..ffrr) 
 end
 function Addsticker(msg,chat,Sd,rre)
@@ -958,16 +943,16 @@ end
 if Chat_Type == 'UserBot' then
 if not DevSoFi(msg) then
 if text == '/start' or text == 'رجعني💘..!'  then  
-local bl = '👨‍🎤انت الان العضو في البوت \n👨‍🎤 سورس باور\n 👨‍🎤يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/MKALEXES)'
+local bl = '👨‍🎤انت الان العضو في البوت \n👨‍🎤 سورس فرعون\n 👨‍🎤يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/source_frawn)'
 local keyboard = {
 	
-{'باورات السورس 🌚💞'},
+{'فرعون السورس 🌚💞'},
 
-{'• ━━━━━━━━━━━ •'},
+{'✧══════•❁❀❁•══════✧'},
 
 {'تع نتسله 🌚💞'},
 
-{'• ━━━━━━━━━━━ •'},
+{'✧══════•❁❀❁•══════✧'},
 
 {'اوامر رائعه 🌚💞'},
 }
@@ -976,7 +961,7 @@ end
 
 if text == "/start" then
 if not DevSoFi(msg) then
-local Namebot = (database:get(bot_id..'Name:Bot') or 'باور') 
+local Namebot = (database:get(bot_id..'Name:Bot') or 'فرعون') 
 local DRAGON_Msg = { 
 ' مرحبا بك في بوت '..Namebot.. ' 🌚💞 | اقوم بحمايه الجروبات.. 🌚💞 \n من الاعداء والاطباء يوصون بي 🌚💞 \n  لتفعيلي في جروبك 🌚💞 \n ↤ ضفني في جروبك 🌚💞 \n ↤ وارفعني ادمن وسبلي الجروب ونام 🌚💞 \n ↤ صح تعاله هنا اكتب تفعيل الاول 🌚💞 \n ونا هرفعلك المشرفين وهمسك الجروب🌚💞',
 } 
@@ -985,7 +970,7 @@ local msg_id = msg.id_/2097152/0.5
 keyboard = {} 
 keyboard.inline_keyboard = {
 	
-{{text = '00:00', url="t.me/MKALEXES"}}, 
+{{text = '00:00', url="t.me/source_frawn"}}, 
 
 }
 local function getpro(extra, result, success) 
@@ -1004,13 +989,13 @@ local Key = {
 
 {'مطور','انا مين'},
 
-{'باور'},
+{'فرعون'},
 
 {'انصحنى','كتبات'},
 
 {'التخمين','العكس'},
 
-{'• ━━━━━━━━━━━ •'},
+{'✧══════•❁❀❁•══════✧'},
 
 {'المختلف','الاسرع'},
 
@@ -1018,7 +1003,7 @@ local Key = {
 
 {'خلفيات','صور'},
 
-{'• ━━━━━━━━━━━ •'},
+{'✧══════•❁❀❁•══════✧'},
 
 {'المعاني','الحزوره'},
 
@@ -1026,7 +1011,7 @@ local Key = {
 
 {'حروف','لو خيروك','نكته'},
 
-{'• ━━━━━━━━━━━ •'},
+{'✧══════•❁❀❁•══════✧'},
 
 
 {'رجعني💘..!'},
@@ -1039,33 +1024,33 @@ local Key = {
 
 {'اغاني','مميزات'},
 
-{'• ━━━━━━━━━━━ •'},
+{'✧══════•❁❀❁•══════✧'},
 
 {'افلام','العاب'},
 
 {'قران'},
 
-{'• ━━━━━━━━━━━ •'},
+{'✧══════•❁❀❁•══════✧'},
 
 {'ثيم','رتبتي'},
 
-{'• ━━━━━━━━━━━ •'},
+{'✧══════•❁❀❁•══════✧'},
 
 {'رجعني💘..!'},
 }
 send_inline_key(msg.chat_id_,Text,Key)
 end 
-if text == 'باورات السورس 🌚💞' then
-local Text = 'اليك باورات السورس'
+if text == 'فرعون السورس 🌚💞' then
+local Text = 'اليك فرعون السورس'
 local Key = {
 	
-{'اليكس'},
+{'يوسف'},
 
-{'• ━━━━━━━━━━━ •'},
+{'✧══════•❁❀❁•══════✧'},
 
-{'باور'},
+{'فرعون'},
 
-{'• ━━━━━━━━━━━ •'},
+{'✧══════•❁❀❁•══════✧'},
 
 {'رجعني💘..!'},
 
@@ -1092,10 +1077,10 @@ end
 return false
 end
 if DevSoFi(msg) then
-local bl = '👨‍🎤انت الان المطور الاساسي في البوت \n👨‍🎤 سورس باور\n 👨‍🎤يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/MKALEXES)'
+local bl = '👨‍🎤انت الان المطور الاساسي في البوت' \n👨‍🎤 💜'! فرعون'\n '👨‍🎤يمكنك تحكم في البوتات من الكيبورد أسفل' \n'[تابع جديدنا](t.me/source_frawn)'
 local keyboard = {
 	
-{'باور'},
+{'فرعون'},
 	
 {'ضع اسم للبوت','معلومات الكيبورد'},
 
@@ -1103,24 +1088,24 @@ local keyboard = {
 {'المطور','الاحصائيات'},
 
 
-{'• ━━━━━━━━━━━ •'},
+{'✧══════•❁❀❁•══════✧'},
 
 {'اوامر الاذاعه'},
 
 {'اوامر المسح','اوامر التفعيل ','اوامر الحمايه'},
 
-{'• ━━━━━━━━━━━ •'},
+{'✧══════•❁❀❁•══════✧'},
 
 
 
 {'جلب المشتركين','جلب النسخه'},
 
 
-{'جلب المطورين','جلب التوكن'}
+{'جلب المطورين'}
 ,
 {'تحديث السورس ','الاصدار'},
 
-{'• ━━━━━━━━━━━ •'},
+{'✧══════•❁❀❁•══════✧'},
 {'معلومات السيرفر'},
 {'الغاء'},
 }
@@ -1281,11 +1266,11 @@ HardDisk=`df -lh | awk '{if ($6 == "/") { print $3"/"$2" ~ {"$5"}" }}'`
 CPUPer=`top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`
 uptime=`uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes."}'`
 echo '⇗ نظام التشغيل ⇖•\n* '"$linux_version"'*' 
-echo '⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n 👨‍🎤「 الذاكره العشوائيه 」  ↚\n* '"$memUsedPrc"'*'
-echo '⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n 👨‍🎤「 وحـده الـتـخـزيـن 」  ↚\n* '"$HardDisk"'*'
-echo '⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n 👨‍🎤「 الـمــعــالــج 」  ↚\n* '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
-echo '⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n 👨‍🎤「 الــدخــول 」  ↚\n* '`whoami`'*'
-echo '⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n 👨‍🎤「 مـده تـشغيـل الـسـيـرفـر 」 ↚\n* '"$uptime"'*'
+echo '⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n 👨‍🎤「 الذاكره العشوائيه 」  ↚\n* '"$memUsedPrc"'*'
+echo '⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n 👨‍🎤「 وحـده الـتـخـزيـن 」  ↚\n* '"$HardDisk"'*'
+echo '⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n 👨‍🎤「 الـمــعــالــج 」  ↚\n* '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
+echo '⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n 👨‍🎤「 الــدخــول 」  ↚\n* '`whoami`'*'
+echo '⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n 👨‍🎤「 مـده تـشغيـل الـسـيـرفـر 」 ↚\n* '"$uptime"'*'
 ]]):read('*all'))  
 end
 if text == 'تحديث السورس ' and DevSoFi(msg) then 
@@ -1386,14 +1371,14 @@ else
 tdcli_function ({ID = "GetUser",user_id_ = SUDO,},function(arg,result) 
 local function taha(extra, taha, success)
 if taha.photos_[0] then
-local Name = 'مطور البوت الباور اهو 🌚💞 -\n['..result.first_name_..'](tg://user?id='..result.id_..')\n'
+local Name = 'مطور البوت الفرعون اهو 🌚💞 -\n['..result.first_name_..'](tg://user?id='..result.id_..')\n'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = ''..result.first_name_..'', url = "https://t.me/"..result.username_..""},
+{text = ''..result.first_name_..'', url = "https://t.me/source_frawn"..result.username_..""},
 },
 {
-{text = '00:00', url="t.me/MKALEXES"},
+{text = '00:00', url="t.me/source_frawn"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -1441,22 +1426,22 @@ tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonu
 end
 if text == 'الاصدار' and DevSoFi(msg) then 
 database:del(bot_id..'Srt:Bot') 
-send(msg.chat_id_, msg.id_,' 👨‍🎤 اصدار سورس باور{ S:12✓}')
+send(msg.chat_id_, msg.id_,' 👨‍🎤 اصدار سورس فرعون{ S:12✓}')
 end
 
 
 if text == '• ━━━━━━━━━━━ •' and DevSoFi(msg) then
 local Text = [[ 
-[قناه سورس باور ادخل وتابع الجديد](t.me/MKALEXES)
+[قناه سورس فرعون ادخل وتابع الجديد](t.me/source_frawn)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 	
-{{text = '00:00', url="t.me/MKALEXES"}}, 
+{{text = '00:00', url="t.me/source_frawn"}}, 
 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MKALEXES/11&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/source_frawn/11&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 
@@ -1464,7 +1449,7 @@ end
 if text == 'معلومات الكيبورد' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
-[CH](t.me/MKALEXES)مرحبا بك مطوري سأشرح لك كل شئ في لوحه الاوامر بالتفصيل
+[CH](t.me/source_frawn)مرحبا بك مطوري سأشرح لك كل شئ في لوحه الاوامر بالتفصيل
 1• الاحصائيات { لعرض عدد المجموعات، والمشتركين في البوت
  2• تفعيل التواصل{ لتفعيل التواصل عبر البوت خاص بك} 
  3• تعطيل التواصل{ لتعطيل التواصل عبر البوت خاص بك } 
@@ -1486,7 +1471,7 @@ local Text = [[
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'قناه السورس', url="t.me/MKALEXES"}}, 
+{{text = 'قناه السورس', url="t.me/source_frawn"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -1494,7 +1479,7 @@ end
 
 
 
-if text == "توكن البوت" and SudoBot(msg) or text == 'جلب التوكن' and SudoBot(msg) then 
+if text == "توكين البوت" and SudoBot(msg) or text == 'عرض الوكين' and SudoBot(msg) then 
 if not DevSoFi(msg) then
 send(msg.chat_id_, msg.id_,'هذا الامر خاص بمطور البوت')
 return false
@@ -1508,17 +1493,17 @@ end
 if text == 'قناه السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
- 👨‍🎤 من أحسن السورسات على التليجرام سورس باور 👨‍🎤
+ 👨‍🎤 من أحسن السورسات على التليجرام سورس فرعون 👨‍🎤
 بجد سورس أمان جدا وفي مميزات جامده
 تع نصب بوتك عندنا لو محظور
 خش على تواصل هيدخلك لروم التواصل 
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '00:00', url="t.me/MKALEXES"}}, 
+{{text = '00:00', url="t.me/source_frawn"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MKALEXES/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/source_frawn/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == "ضع اسم للبوت" and DevSoFi(msg) then  
@@ -1528,7 +1513,7 @@ return false
 end
 if text == ("الثانوين") and SudoBot(msg) then
 local list = database:smembers(bot_id.."Dev:SoFi:2")
-t = "\n 👨‍🎤 قائمة مطورين الثانويين للبوت \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n 👨‍🎤 قائمة مطورين الثانويين للبوت \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -1567,7 +1552,7 @@ return false
 end
 if text == ("المطورين") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'Sudo:User')
-t = "\n 👨‍🎤 قائمة المطورين \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n 👨‍🎤 قائمة المطورين \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -1583,7 +1568,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("قائمه العام") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'GBan:User')
-t = "\n 👨‍🎤 قائمه المحظورين عام \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n 👨‍🎤 قائمه المحظورين عام \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -1600,7 +1585,7 @@ return false
 end
 if text == ("قائمه الكتم العام") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'Gmute:User')
-t = "\n 👨‍🎤 قائمة المكتومين عام \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n 👨‍🎤 قائمة المكتومين عام \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -1855,7 +1840,7 @@ if text and not Special(msg) then
 local DRAGON1_Msg = database:get(bot_id.."DRAGON1:Add:Filter:Rp2"..text..msg.chat_id_)   
 if DRAGON1_Msg then 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 العضو » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 '..DRAGON1_Msg)
+send(msg.chat_id_, msg.id_,'👨‍🎤 العضو » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 '..DRAGON1_Msg)
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})     
 return false
 end,nil)
@@ -2131,7 +2116,7 @@ tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,dat
 if data.username_ ~= false then
 send(msg.chat_id_,0,"👨‍🎤 العضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n👨‍🎤 ["..DRAGON_Msg.."] \n")
 else
-send(msg.chat_id_,0,"👨‍🎤 العضو : {["..data.first_name_.."](T.ME/MKALEXES)}\n👨‍🎤 ["..DRAGON_Msg.."] \n")
+send(msg.chat_id_,0,"👨‍🎤 العضو : {["..data.first_name_.."](T.ME/source_frawn)}\n👨‍🎤 ["..DRAGON_Msg.."] \n")
 end
 end,nil)   
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})     
@@ -2587,7 +2572,7 @@ tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data
 if data.username_ ~= false then
 send(msg.chat_id_,0, "👨‍🎤 عذرا » {[@"..data.username_.."]}\n👨‍🎤 عذرا تم منع الملصق \n" ) 
 else
-send(msg.chat_id_,0, "👨‍🎤 عذرا » {["..data.first_name_.."](T.ME/MKALEXES)}\n👨‍🎤 عذرا تم منع الملصق \n" ) 
+send(msg.chat_id_,0, "👨‍🎤 عذرا » {["..data.first_name_.."](T.ME/source_frawn)}\n👨‍🎤 عذرا تم منع الملصق \n" ) 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})       
@@ -2607,7 +2592,7 @@ tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data
 if data.username_ ~= false then
 send(msg.chat_id_,0,"👨‍🎤 عذرا » {[@"..data.username_.."]}\n👨‍🎤 عذرا تم منع الصوره \n" ) 
 else
-send(msg.chat_id_,0,"👨‍🎤 عذرا » {["..data.first_name_.."](T.ME/MKALEXES)}\n👨‍🎤 عذرا تم منع الصوره \n") 
+send(msg.chat_id_,0,"👨‍🎤 عذرا » {["..data.first_name_.."](T.ME/source_frawn)}\n👨‍🎤 عذرا تم منع الصوره \n") 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})       
@@ -2624,7 +2609,7 @@ tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data
 if data.username_ ~= false then
 send(msg.chat_id_,0,"👨‍🎤 عذرا » {[@"..data.username_.."]}\n👨‍🎤 عذرا تم منع المتحركه \n") 
 else
-send(msg.chat_id_,0,"👨‍🎤 عذرا » {["..data.first_name_.."](T.ME/MKALEXES)}\n👨‍🎤 عذرا تم منع المتحركه \n" ) 
+send(msg.chat_id_,0,"👨‍🎤 عذرا » {["..data.first_name_.."](T.ME/source_frawn)}\n👨‍🎤 عذرا تم منع المتحركه \n" ) 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})       
@@ -2812,7 +2797,7 @@ return false
 end
 os.execute('rm -rf DRAGON.lua')
 os.execute('wget https://raw.githubusercontent.com/exalex200/EX/main/DRAGON.lua')
-send(msg.chat_id_, msg.id_,'👨‍🎤 تم تحديث السورس \n👨‍🎤 لديك اخر اصدار لسورس باور\n👨‍🎤 الاصدار » { v 1.6 }')
+send(msg.chat_id_, msg.id_,'👨‍🎤 تم تحديث السورس \n👨‍🎤 لديك اخر اصدار لسورس فرعون\n👨‍🎤 الاصدار » { v 1.6 }')
 dofile('DRAGON.lua')  
 end
 
@@ -2900,7 +2885,7 @@ send(msg.chat_id_, msg.id_, texts)
 end
 if text == "الاسماء المكتومه" and Constructor(msg) and database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
 local All_name = database:smembers(bot_id.."DRAGON:blocname"..msg.chat_id_)
-t = "\n👨‍🎤︙ قائمة الاسماء المكتومه \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚ \n"
+t = "\n👨‍🎤︙ قائمة الاسماء المكتومه \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚ \n"
 for k,v in pairs(All_name) do
 t = t..""..k.."- (["..v.."])\n"
 end
@@ -2975,7 +2960,7 @@ if (tonumber(mrsofi_nnn2) == tonumber(mrsofi_nnn) or tonumber(mrsofi_nnn2) > ton
 database:sadd(bot_id..'Muted:User'..msg.chat_id_, msg.sender_user_id_)
 else 
 database:incrby(bot_id.."DRAGON:nump22"..msg.chat_id_..msg.sender_user_id_,1)
-send(msg.chat_id_, msg.id_, "👨‍🎤︙ عزيزي >>["..mrsofi2.username_.."](https://t.me/"..(mrsofi2.username_ or "MKALEXES")..")\n👨‍🎤︙ عليك وضع التوحيد ⪼ {"..database:get(bot_id.."DRAGON:teh"..msg.chat_id_).."} بجانب اسمك\n👨‍🎤︙ عدد المحاولات المتبقيه {"..(tonumber(mrsofi_nnn) - tonumber(mrsofi_nnn2)).."}")
+send(msg.chat_id_, msg.id_, "👨‍🎤︙ عزيزي >>["..mrsofi2.username_.."](https://t.me/"..(mrsofi2.username_ or "source_frawn")..")\n👨‍🎤︙ عليك وضع التوحيد ⪼ {"..database:get(bot_id.."DRAGON:teh"..msg.chat_id_).."} بجانب اسمك\n👨‍🎤︙ عدد المحاولات المتبقيه {"..(tonumber(mrsofi_nnn) - tonumber(mrsofi_nnn2)).."}")
 end
 end
 end
@@ -3095,26 +3080,26 @@ end
 
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == '"' then
 local Text =[[
-☑ [𝚃𝙾 𝙰𝚂𝙺   ](t.me/ASKpowerooBOT)
+☑ [𝗗𝙀𝗩 𝗕𝙀𝗗𝗔𝙔𝙍](t.me/BEDAYR)
 
-☑ [⟦𝚂𝙾𝚄𝚁𝙲𝙴 𝙿𝙾𝚆𝙴𝚁 ⟧](t.me/MKALEXES)
+☑ [⟦𝗦𝙊𝙐𝙍𝗖𝙀 𝗙𝙍𝗔𝙒𝗡 ⟧](t.me/source_frawn)
   
-☑ [𝙰𝙻𝙴𝚇 ](t.me/M_S_U)
+☑ [𝗗𝙀𝗩 7𝗞𝗠𝗗𝗔𝙍](t.me/Elsawy_KFS_1)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 	
-{{text = ' ◍ 𝙳𝙴𝚅 𝚂𝙾𝚄𝚁𝙲𝙴  𖣌 ', url = "https://t.me/M_S_U"}},
+{{text = ' ◍ 𝗗𝙀𝗩 𝗕𝙀𝗗𝗔𝙔𝙍 𖣌 ', url = "https://t.me/BEDAYR"}},
 
-{{text = ' ◍ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙿𝙾𝚆𝙴𝚁 𖣌 ', url = "https://t.me/MKALEXES"}},
+{{text = ' ◍ 𝗦𝙊𝙐𝙍𝗖𝙀 𝗙𝙍𝗔𝙒𝗡 𖣌 ', url = "https://t.me/source_frawn"}},
 
-{{text = ' ◍ 𝚃𝙾 𝙰𝚂𝙺 𝙰𝙳𝙼𝙸𝙽 𖣌 ', url = "https://t.me/ASKpowerooBOT"}},
+{{text = ' ◍𝗗𝙀𝗩 7𝗞𝗠𝗗𝗔𝙍 𖣌 ', url = "https://t.me/Elsawy_KFS_1"}},
 
 
 { {text = 'اضف البوت لمجموعتك 🌚💞', url="http://t.me/"..sudos.UserName.."?startgroup=new"}, },
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MKALEXES/19&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/source_frawn/167&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 ------by-alex---- by--- alex ------byalex-------power-----soucer----alex
@@ -3156,7 +3141,7 @@ GetFile_Bot(msg)
 end
 if text == 'الاوامر المضافه' and Constructor(msg) then
 local list = database:smembers(bot_id..'List:Cmd:Group:New'..msg.chat_id_..'')
-t = "👨‍🎤 قائمه الاوامر المضافه  \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "👨‍🎤 قائمه الاوامر المضافه  \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 Cmds = database:get(bot_id.."Set:Cmd:Group:New1"..msg.chat_id_..':'..v)
 print(Cmds)
@@ -3230,69 +3215,69 @@ end
 if text == 'قفل الدردشه' and msg.reply_to_message_id_ == 0 and Manager(msg) then 
 database:set(bot_id.."lock:text"..msg.chat_id_,true) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data)  
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الدردشه ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الدردشه ')
 end,nil)   
 elseif text == 'قفل الاضافه' and msg.reply_to_message_id_ == 0 and Mod(msg) then 
 database:set(bot_id.."lock:AddMempar"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤| تـم قفـل اضافة ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤| تـم قفـل اضافة ')
 end,nil)   
 elseif text == 'قفل الدخول' and msg.reply_to_message_id_ == 0 and Mod(msg) then 
 database:set(bot_id.."lock:Join"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل دخول ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل دخول ')
 end,nil)   
 elseif text == 'قفل البوتات' and msg.reply_to_message_id_ == 0 and Mod(msg) then 
 database:set(bot_id.."lock:Bot:kick"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل البوتات ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل البوتات ')
 end,nil)   
 elseif text == 'قفل البوتات بالطرد' and msg.reply_to_message_id_ == 0 and Mod(msg) then 
 database:set(bot_id.."lock:Bot:kick"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل البوتات بالطرد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل البوتات بالطرد ')
 end,nil)   
 elseif text == 'قفل الاشعارات' and msg.reply_to_message_id_ == 0 and Mod(msg) then  
 database:set(bot_id..'lock:tagservr'..msg.chat_id_,true)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الاشعارات ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الاشعارات ')
 end,nil)   
 elseif text == 'قفل التثبيت' and msg.reply_to_message_id_ == 0 and Constructor(msg) then 
 database:set(bot_id.."lockpin"..msg.chat_id_, true) 
 database:sadd(bot_id..'lock:pin',msg.chat_id_) 
 tdcli_function ({ ID = "GetChannelFull",  channel_id_ = getChatId(msg.chat_id_).ID }, function(arg,data)  database:set(bot_id..'Pin:Id:Msg'..msg.chat_id_,data.pinned_message_id_)  end,nil)
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل التثبيت ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل التثبيت ')
 end,nil)   
 elseif text == 'قفل التعديل' and msg.reply_to_message_id_ == 0 and Constructor(msg) then 
 database:set(bot_id..'lock:edit'..msg.chat_id_,true) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل تعديل ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل تعديل ')
 end,nil)   
 elseif text == 'قفل السب' and msg.reply_to_message_id_ == 0 and Manager(msg) then 
 database:set(bot_id..'lock:Fshar'..msg.chat_id_,true) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل السب ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل السب ')
 end,nil)  
 elseif text == 'قفل الفارسيه' and msg.reply_to_message_id_ == 0 and Manager(msg) then 
 database:set(bot_id..'lock:Fars'..msg.chat_id_,true) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الفارسيه ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الفارسيه ')
 end,nil)   
 elseif text == 'قفل الانكليزيه' and msg.reply_to_message_id_ == 0 and Manager(msg) then 
 database:set(bot_id..'lock:Engilsh'..msg.chat_id_,true) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الانكليزيه ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الانكليزيه ')
 end,nil)
 elseif text == 'قفل الانلاين' and msg.reply_to_message_id_ == 0 and Manager(msg) then 
 database:set(bot_id.."lock:inline"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الانلاين ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الانلاين ')
 end,nil)
 elseif text == 'قفل تعديل الميديا' and msg.reply_to_message_id_ == 0 and Constructor(msg) then 
 database:set(bot_id..'lock_edit_med'..msg.chat_id_,true) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل تعديل ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل تعديل ')
 end,nil)    
 elseif text == 'قفل الكل' and msg.reply_to_message_id_ == 0 and Mod(msg) then 
 database:set(bot_id..'lock:tagservrbot'..msg.chat_id_,true)   
@@ -3301,85 +3286,85 @@ for i,lock in pairs(list) do
 database:set(bot_id..lock..msg.chat_id_,'del')    
 end
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل جميع الاوامر ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل جميع الاوامر ')
 end,nil)   
 end
 if text == 'قفل الاباحي' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Lock:Sexy"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الاباحي ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الاباحي ')
 end,nil)   
 elseif text == 'فتح الاباحي' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:del(bot_id.."lock:Lock:Sexy"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح الاباحي ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح الاباحي ')
 end,nil)   
 end
 if text == 'فتح الانلاين' and msg.reply_to_message_id_ == 0 and Mod(msg) then 
 database:del(bot_id.."lock:inline"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح الانلاين ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح الانلاين ')
 end,nil)
 elseif text == 'فتح الاضافه' and msg.reply_to_message_id_ == 0 and Mod(msg) then 
 database:del(bot_id.."lock:AddMempar"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح اضافة ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح اضافة ')
 end,nil)   
 elseif text == 'فتح الدردشه' and msg.reply_to_message_id_ == 0 and Manager(msg) then 
 database:del(bot_id.."lock:text"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح الدردشه ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح الدردشه ')
 end,nil)   
 elseif text == 'فتح الدخول' and msg.reply_to_message_id_ == 0 and Mod(msg) then 
 database:del(bot_id.."lock:Join"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح دخول ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح دخول ')
 end,nil)   
 elseif text == 'فتح البوتات' and msg.reply_to_message_id_ == 0 and Mod(msg) then 
 database:del(bot_id.."lock:Bot:kick"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فـتح البوتات ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فـتح البوتات ')
 end,nil)   
 elseif text == 'فتح البوتات بالطرد' and msg.reply_to_message_id_ == 0 and Mod(msg) then 
 database:del(bot_id.."lock:Bot:kick"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فـتح البوتات بالطرد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فـتح البوتات بالطرد ')
 end,nil)   
 elseif text == 'فتح الاشعارات' and msg.reply_to_message_id_ == 0 and Mod(msg) then  
 database:del(bot_id..'lock:tagservr'..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فـتح الاشعارات ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فـتح الاشعارات ')
 end,nil)   
 elseif text == 'فتح التثبيت' and msg.reply_to_message_id_ == 0 and Constructor(msg) then 
 database:del(bot_id.."lockpin"..msg.chat_id_)  
 database:srem(bot_id..'lock:pin',msg.chat_id_)
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فـتح التثبيت ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فـتح التثبيت ')
 end,nil)   
 elseif text == 'فتح التعديل' and msg.reply_to_message_id_ == 0 and Constructor(msg) then 
 database:del(bot_id..'lock:edit'..msg.chat_id_) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فـتح تعديل ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فـتح تعديل ')
 end,nil)   
 elseif text == 'فتح السب' and msg.reply_to_message_id_ == 0 and Manager(msg) then 
 database:del(bot_id..'lock:Fshar'..msg.chat_id_) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فـتح السب ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فـتح السب ')
 end,nil)   
 elseif text == 'فتح الفارسيه' and msg.reply_to_message_id_ == 0 and Manager(msg) then 
 database:del(bot_id..'lock:Fars'..msg.chat_id_) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فـتح الفارسيه ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فـتح الفارسيه ')
 end,nil)   
 elseif text == 'فتح الانكليزيه' and msg.reply_to_message_id_ == 0 and Manager(msg) then 
 database:del(bot_id..'lock:Engilsh'..msg.chat_id_) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فـتح الانكليزيه ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فـتح الانكليزيه ')
 end,nil)
 elseif text == 'فتح تعديل الميديا' and msg.reply_to_message_id_ == 0 and Constructor(msg) then 
 database:del(bot_id..'lock_edit_med'..msg.chat_id_) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فـتح تعديل ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فـتح تعديل ')
 end,nil)    
 elseif text == 'فتح الكل' and msg.reply_to_message_id_ == 0 and Mod(msg) then 
 database:del(bot_id..'lock:tagservrbot'..msg.chat_id_)   
@@ -3388,59 +3373,59 @@ for i,lock in pairs(list) do
 database:del(bot_id..lock..msg.chat_id_)    
 end
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فـتح جميع الاوامر ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فـتح جميع الاوامر ')
 end,nil)   
 end
 if text == 'قفل الروابط' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Link"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الروابط ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الروابط ')
 end,nil)   
 elseif text == 'قفل الروابط بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Link"..msg.chat_id_,'ked')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الروابط بالتقييد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الروابط بالتقييد ')
 end,nil)   
 elseif text == 'قفل الروابط بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Link"..msg.chat_id_,'ktm')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الروابط بالكتم ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الروابط بالكتم ')
 end,nil)   
 elseif text == 'قفل الروابط بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Link"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الروابط بالطرد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الروابط بالطرد ')
 end,nil)   
 elseif text == 'فتح الروابط' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:del(bot_id.."lock:Link"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح الروابط ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح الروابط ')
 end,nil)   
 end
 if text == 'قفل المعرفات' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:user:name"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل المعرفات ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل المعرفات ')
 end,nil)   
 elseif text == 'قفل المعرفات بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:user:name"..msg.chat_id_,'ked')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل المعرفات بالتقييد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل المعرفات بالتقييد ')
 end,nil)   
 elseif text == 'قفل المعرفات بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:user:name"..msg.chat_id_,'ktm')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل المعرفات بالكتم ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل المعرفات بالكتم ')
 end,nil)   
 elseif text == 'قفل المعرفات بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:user:name"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل المعرفات بالطرد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل المعرفات بالطرد ')
 end,nil)   
 elseif text == 'فتح المعرفات' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:del(bot_id.."lock:user:name"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح المعرفات ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح المعرفات ')
 end,nil)   
 end
 
@@ -3574,417 +3559,417 @@ end
 if text == 'قفل التاك' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:hashtak"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل التاك ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل التاك ')
 end,nil)   
 elseif text == 'قفل التاك بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:hashtak"..msg.chat_id_,'ked')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل التاك بالتقييد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل التاك بالتقييد ')
 end,nil)   
 elseif text == 'قفل التاك بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:hashtak"..msg.chat_id_,'ktm')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..string.sub(data.first_name_,0,60)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل التاك بالكتم ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..string.sub(data.first_name_,0,60)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل التاك بالكتم ')
 end,nil)   
 elseif text == 'قفل التاك بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:hashtak"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل التاك بالطرد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل التاك بالطرد ')
 end,nil)   
 elseif text == 'فتح التاك' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:del(bot_id.."lock:hashtak"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح التاك ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح التاك ')
 end,nil)   
 end
 if text == 'قفل الشارحه' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Cmd"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الشارحه ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الشارحه ')
 end,nil)   
 elseif text == 'قفل الشارحه بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Cmd"..msg.chat_id_,'ked')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الشارحه بالتقييد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الشارحه بالتقييد ')
 end,nil)   
 elseif text == 'قفل الشارحه بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Cmd"..msg.chat_id_,'ktm')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الشارحه بالكتم ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الشارحه بالكتم ')
 end,nil)   
 elseif text == 'قفل الشارحه بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Cmd"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الشارحه بالطرد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الشارحه بالطرد ')
 end,nil)   
 elseif text == 'فتح الشارحه' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:del(bot_id.."lock:Cmd"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح الشارحه ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح الشارحه ')
 end,nil)   
 end
 if text == 'قفل الصور'and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Photo"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الصور ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الصور ')
 end,nil)   
 elseif text == 'قفل الصور بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Photo"..msg.chat_id_,'ked')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الصور بالتقييد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الصور بالتقييد ')
 end,nil)   
 elseif text == 'قفل الصور بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Photo"..msg.chat_id_,'ktm')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الصور بالكتم ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الصور بالكتم ')
 end,nil)   
 elseif text == 'قفل الصور بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Photo"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الصور بالطرد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الصور بالطرد ')
 end,nil)   
 elseif text == 'فتح الصور' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:del(bot_id.."lock:Photo"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح الصور ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح الصور ')
 end,nil)   
 end
 if text == 'قفل الفيديو' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Video"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الفيديو ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الفيديو ')
 end,nil)   
 elseif text == 'قفل الفيديو بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Video"..msg.chat_id_,'ked')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الفيديو بالتقييد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الفيديو بالتقييد ')
 end,nil)   
 elseif text == 'قفل الفيديو بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Video"..msg.chat_id_,'ktm')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الفيديو بالكتم ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الفيديو بالكتم ')
 end,nil)   
 elseif text == 'قفل الفيديو بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Video"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الفيديو بالطرد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الفيديو بالطرد ')
 end,nil)   
 elseif text == 'فتح الفيديو' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:del(bot_id.."lock:Video"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح الفيديو ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح الفيديو ')
 end,nil)   
 end
 if text == 'قفل المتحركه' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Animation"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل المتحركه ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل المتحركه ')
 end,nil)   
 elseif text == 'قفل المتحركه بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Animation"..msg.chat_id_,'ked')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل المتحركه بالتقييد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل المتحركه بالتقييد ')
 end,nil)   
 elseif text == 'قفل المتحركه بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Animation"..msg.chat_id_,'ktm')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل المتحركه بالكتم ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل المتحركه بالكتم ')
 end,nil)   
 elseif text == 'قفل المتحركه بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Animation"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل المتحركه بالطرد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل المتحركه بالطرد ')
 end,nil)   
 elseif text == 'فتح المتحركه' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:del(bot_id.."lock:Animation"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح المتحركه ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح المتحركه ')
 end,nil)   
 end
 if text == 'قفل الالعاب' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:geam"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الالعاب ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الالعاب ')
 end,nil)   
 elseif text == 'قفل الالعاب بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:geam"..msg.chat_id_,'ked')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الالعاب بالتقييد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الالعاب بالتقييد ')
 end,nil)   
 elseif text == 'قفل الالعاب بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:geam"..msg.chat_id_,'ktm')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الالعاب بالكتم ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الالعاب بالكتم ')
 end,nil)   
 elseif text == 'قفل الالعاب بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:geam"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الالعاب بالطرد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الالعاب بالطرد ')
 end,nil)   
 elseif text == 'فتح الالعاب' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:del(bot_id.."lock:geam"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح الالعاب ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح الالعاب ')
 end,nil)   
 end
 if text == 'قفل الاغاني' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Audio"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الاغاني ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الاغاني ')
 end,nil)   
 elseif text == 'قفل الاغاني بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Audio"..msg.chat_id_,'ked')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الاغاني بالتقييد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الاغاني بالتقييد ')
 end,nil)   
 elseif text == 'قفل الاغاني بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Audio"..msg.chat_id_,'ktm')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الاغاني بالكتم ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الاغاني بالكتم ')
 end,nil)   
 elseif text == 'قفل الاغاني بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Audio"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الاغاني بالطرد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الاغاني بالطرد ')
 end,nil)   
 elseif text == 'فتح الاغاني' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:del(bot_id.."lock:Audio"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح الاغاني ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح الاغاني ')
 end,nil)   
 end
 if text == 'قفل الصوت' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:vico"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الصوت ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الصوت ')
 end,nil)   
 elseif text == 'قفل الصوت بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:vico"..msg.chat_id_,'ked')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الصوت بالتقييد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الصوت بالتقييد ')
 end,nil)   
 elseif text == 'قفل الصوت بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:vico"..msg.chat_id_,'ktm')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الصوت بالكتم ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الصوت بالكتم ')
 end,nil)   
 elseif text == 'قفل الصوت بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:vico"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الصوت بالطرد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الصوت بالطرد ')
 end,nil)   
 elseif text == 'فتح الصوت' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:del(bot_id.."lock:vico"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح الصوت ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح الصوت ')
 end,nil)   
 end
 if text == 'قفل الكيبورد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Keyboard"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الكيبورد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الكيبورد ')
 end,nil)   
 elseif text == 'قفل الكيبورد بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Keyboard"..msg.chat_id_,'ked')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الكيبورد بالتقييد ')
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الكيبورد بالتقييد ')
 end,nil)   
 elseif text == 'قفل الكيبورد بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Keyboard"..msg.chat_id_,'ktm')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الكيبورد بالكتم ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الكيبورد بالكتم ')  
 end,nil)   
 elseif text == 'قفل الكيبورد بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Keyboard"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الكيبورد بالطرد ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الكيبورد بالطرد ')  
 end,nil)   
 elseif text == 'فتح الكيبورد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:del(bot_id.."lock:Keyboard"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح الكيبورد ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح الكيبورد ')  
 end,nil)   
 end
 if text == 'قفل الملصقات' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Sticker"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الملصقات ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الملصقات ')  
 end,nil)   
 elseif text == 'قفل الملصقات بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Sticker"..msg.chat_id_,'ked')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الملصقات بالتقييد ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الملصقات بالتقييد ')  
 end,nil)
 elseif text == 'قفل الملصقات بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Sticker"..msg.chat_id_,'ktm')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الملصقات بالكتم ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الملصقات بالكتم ')  
 end,nil)   
 elseif text == 'قفل الملصقات بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Sticker"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الملصقات بالطرد ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الملصقات بالطرد ')  
 end,nil)   
 elseif text == 'فتح الملصقات' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:del(bot_id.."lock:Sticker"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح الملصقات ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح الملصقات ')  
 end,nil)   
 end
 if text == 'قفل التوجيه' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:forward"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل التوجيه ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل التوجيه ')  
 end,nil)   
 elseif text == 'قفل التوجيه بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:forward"..msg.chat_id_,'ked')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل التوجيه بالتقييد ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل التوجيه بالتقييد ')  
 end,nil)
 elseif text == 'قفل التوجيه بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:forward"..msg.chat_id_,'ktm')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل التوجيه بالكتم ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل التوجيه بالكتم ')  
 end,nil)   
 elseif text == 'قفل التوجيه بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:forward"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل التوجيه بالطرد ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل التوجيه بالطرد ')  
 end,nil)   
 elseif text == 'فتح التوجيه' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:del(bot_id.."lock:forward"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح التوجيه ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح التوجيه ')  
 end,nil)   
 end
 if text == 'قفل الملفات' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Document"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الملفات ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الملفات ')  
 end,nil)   
 elseif text == 'قفل الملفات بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Document"..msg.chat_id_,'ked')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الملفات بالتقييد ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الملفات بالتقييد ')  
 end,nil)
 elseif text == 'قفل الملفات بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Document"..msg.chat_id_,'ktm')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الملفات بالكتم ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الملفات بالكتم ')  
 end,nil)   
 elseif text == 'قفل الملفات بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Document"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'??︙ بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الملفات بالطرد ')  
+send(msg.chat_id_, msg.id_,'??︙ بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الملفات بالطرد ')  
 end,nil)   
 elseif text == 'فتح الملفات' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:del(bot_id.."lock:Document"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح الملفات ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح الملفات ')  
 end,nil)   
 end
 if text == 'قفل السيلفي' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Unsupported"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل السيلفي ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل السيلفي ')  
 end,nil)   
 elseif text == 'قفل السيلفي بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Unsupported"..msg.chat_id_,'ked')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل السيلفي بالتقييد ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل السيلفي بالتقييد ')  
 end,nil)
 elseif text == 'قفل السيلفي بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Unsupported"..msg.chat_id_,'ktm')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل السيلفي بالكتم ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل السيلفي بالكتم ')  
 end,nil)   
 elseif text == 'قفل السيلفي بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Unsupported"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل السيلفي بالطرد ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل السيلفي بالطرد ')  
 end,nil)   
 elseif text == 'فتح السيلفي' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:del(bot_id.."lock:Unsupported"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح السيلفي ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح السيلفي ')  
 end,nil)   
 end
 if text == 'قفل الماركداون' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Markdaun"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الماركداون ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الماركداون ')  
 end,nil)   
 elseif text == 'قفل الماركداون بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Markdaun"..msg.chat_id_,'ked')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الماركداون بالتقييد ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الماركداون بالتقييد ')  
 end,nil)
 elseif text == 'قفل الماركداون بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Markdaun"..msg.chat_id_,'ktm')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الماركداون بالكتم ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الماركداون بالكتم ')  
 end,nil)   
 elseif text == 'قفل الماركداون بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Markdaun"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الماركداون بالطرد ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الماركداون بالطرد ')  
 end,nil)   
 elseif text == 'فتح الماركداون' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:del(bot_id.."lock:Markdaun"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح الماركداون ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح الماركداون ')  
 end,nil)   
 end
 if text == 'قفل الجهات' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Contact"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الجهات ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الجهات ')  
 end,nil)   
 elseif text == 'قفل الجهات بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Contact"..msg.chat_id_,'ked')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الجهات بالتقييد ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الجهات بالتقييد ')  
 end,nil)
 elseif text == 'قفل الجهات بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Contact"..msg.chat_id_,'ktm')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الجهات بالكتم ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الجهات بالكتم ')  
 end,nil)   
 elseif text == 'قفل الجهات بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Contact"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الجهات بالطرد ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الجهات بالطرد ')  
 end,nil)   
 elseif text == 'فتح الجهات' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:del(bot_id.."lock:Contact"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح الجهات ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح الجهات ')  
 end,nil)   
 end
 if text == 'قفل الكلايش' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Spam"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الكلايش ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الكلايش ')  
 end,nil)   
 elseif text == 'قفل الكلايش بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Spam"..msg.chat_id_,'ked')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الكلايش بالتقييد ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الكلايش بالتقييد ')  
 end,nil)
 elseif text == 'قفل الكلايش بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Spam"..msg.chat_id_,'ktm')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الكلايش بالكتم ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الكلايش بالكتم ')  
 end,nil)   
 elseif text == 'قفل الكلايش بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Spam"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل الكلايش بالطرد ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل الكلايش بالطرد ')  
 end,nil)   
 elseif text == 'فتح الكلايش' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:del(bot_id.."lock:Spam"..msg.chat_id_)  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فتح الكلايش ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فتح الكلايش ')  
 end,nil)   
 end
 if text == 'قفل التكرار بالطرد' and Mod(msg) then 
@@ -4104,7 +4089,7 @@ return false
 end
 if text == ("قائمه العام") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'GBan:User')
-t = "\n👨‍🎤 قائمة المحظورين عام \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n👨‍🎤 قائمة المحظورين عام \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4138,16 +4123,16 @@ if tonumber(result.sender_user_id_) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع حظر البوت عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1909613841) then  
-send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع حظر مبرمج السورس عام")
+if tonumber(result.sender_user_id_) == tonumber(1947931401) then  
+send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع حظر مالك السورس")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(5677887665443345666) then  
-send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع حظر مبرمج السورس عام")
+if tonumber(result.sender_user_id_) == tonumber(1944028567) then  
+send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع حظر المبرمج فرعون الكبير")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(10589490701058949070) then  
-send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع حظر مبرمج السورس عام")
+if tonumber(result.sender_user_id_) == tonumber(1741676289) then  
+send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع حظر مطور السورس")
 return false 
 end
 if tonumber(result.sender_user_id_) == tonumber(400099998887777) then  
@@ -4192,16 +4177,16 @@ if result.id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " 👨‍🎤 لا يمكنك حظر المطور الاساسي \n")
 return false 
 end
-if result.id_ == tonumber(1909613841) then
-send(msg.chat_id_, msg.id_, " 👨‍🎤 لا يمكنك حظر مبرمج السورس \n")
+if result.id_ == tonumber(1947931401) then
+send(msg.chat_id_, msg.id_, " 👨‍🎤 لا يمكنك حظر مالك السورس \n")
 return false 
 end
-if result.id_ == tonumber(5677887665443345666) then
-send(msg.chat_id_, msg.id_, " 👨‍🎤 لا يمكنك حظر مبرمج السورس \n")
+if result.id_ == tonumber(1944028567) then
+send(msg.chat_id_, msg.id_, " 👨‍🎤 لا يمكنك حظر المبرمج فرعون الكبير \n")
 return false 
 end
-if result.id_ == tonumber(400099998887777) then
-send(msg.chat_id_, msg.id_, " 👨‍🎤 لا يمكنك حظر مبرمج السورس \n")
+if result.id_ == tonumber(1741676289) then
+send(msg.chat_id_, msg.id_, " 👨‍🎤 لا يمكنك حظر مطور السورس \n")
 return false 
 end
 if result.id_ == tonumber(10589490701058949070) then
@@ -4240,16 +4225,16 @@ if tonumber(userid) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع حظر البوت عام")
 return false 
 end
-if tonumber(userid) == tonumber(1909613841) then  
-send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع حظر مبرمج السورس عام")
+if tonumber(userid) == tonumber(1947931401) then  
+send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع حظر مالك السورس")
 return false 
 end
-if tonumber(userid) == tonumber(5677887665443345666) then  
-send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع حظر مبرمج السورس عام")
+if tonumber(userid) == tonumber(1944028567) then  
+send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع حظر المبرمج فرعون الكبير ")
 return false 
 end
-if tonumber(userid) == tonumber(400099998887777) then  
-send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع حظر مبرمج السورس عام")
+if tonumber(userid) == tonumber(1741676289) then  
+send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع حظر مطور السورس")
 return false 
 end
 if tonumber(userid) == tonumber(10589490701058949070) then  
@@ -4289,16 +4274,16 @@ if tonumber(result.sender_user_id_) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع كتم البوت عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1909613841) then  
-send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع كتم مبرمج السورس عام")
+if tonumber(result.sender_user_id_) == tonumber(1947931401) then  
+send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع كتم مالك السورس")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(5677887665443345666) then  
-send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع كتم مبرمج السورس عام")
+if tonumber(result.sender_user_id_) == tonumber(1944028567) then  
+send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع كتم المبرمج فرعون الكبير")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(400099998887777) then  
-send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع كتم مبرمج السورس عام")
+if tonumber(result.sender_user_id_) == tonumber(1741676289) then  
+send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع كتم مطور السورس")
 return false 
 end
 if tonumber(result.sender_user_id_) == tonumber(10589490701058949070) then  
@@ -4342,16 +4327,16 @@ if result.id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " 👨‍🎤 لا يمكنك كتم المطور الاساسي \n")
 return false 
 end
-if result.id_ == tonumber(1909613841) then
-send(msg.chat_id_, msg.id_, " 👨‍🎤 لا يمكنك كتم مبرمج السورس \n")
+if result.id_ == tonumber(1947931401) then
+send(msg.chat_id_, msg.id_, " 👨‍🎤 لا يمكنك كتم مالك السورس \n")
 return false 
 end
-if result.id_ == tonumber(5677887665443345666) then
-send(msg.chat_id_, msg.id_, " 👨‍🎤 لا يمكنك كتم مبرمج السورس \n")
+if result.id_ == tonumber(1944028567) then
+send(msg.chat_id_, msg.id_, " 👨‍🎤 لا يمكنك كتم المبرمج فرعون الكبير  \n")
 return false 
 end
-if result.id_ == tonumber(400099998887777) then
-send(msg.chat_id_, msg.id_, " 👨‍🎤 لا يمكنك كتم مبرمج السورس \n")
+if result.id_ == tonumber(1741676289) then
+send(msg.chat_id_, msg.id_, " 👨‍🎤 لا يمكنك كتم مطور السورس  \n")
 return false 
 end
 if result.id_ == tonumber(10589490701058949070) then
@@ -4390,16 +4375,16 @@ if tonumber(userid) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع كتم البوت عام")
 return false 
 end
-if tonumber(userid) == tonumber(1909613841) then  
-send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع كتم مبرمج السورس عام")
+if tonumber(userid) == tonumber(1947931401) then  
+send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع كتم مالك السورس")
 return false 
 end
-if tonumber(userid) == tonumber(5677887665443345666) then  
-send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع كتم مبرمج السورس عام")
+if tonumber(userid) == tonumber(1944028567) then  
+send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع كتم المبرمج فرعون الكبير ")
 return false 
 end
-if tonumber(userid) == tonumber(400099998887777) then  
-send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع كتم مبرمج السورس عام")
+if tonumber(userid) == tonumber(1741676289) then  
+send(msg.chat_id_, msg.id_, " 👨‍🎤 لا تسطيع كتم مطور السورس")
 return false 
 end
 if tonumber(userid) == tonumber(10589490701058949070) then  
@@ -4499,7 +4484,7 @@ send(msg.chat_id_, msg.id_, "\n👨‍🎤 تم مسح قائمة المطوري
 end
 if text == ("المطورين") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'Sudo:User')
-t = "\n👨‍🎤 قائمة مطورين البوت \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n👨‍🎤 قائمة مطورين البوت \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4550,7 +4535,7 @@ end
 end
 
 if text == 'الملفات' and DevSoFi(msg) then
-t = '👨‍🎤 ملفات السورس باور ↓\n ⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚ \n'
+t = '👨‍🎤 ملفات السورس فرعون ↓\n ⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚ \n'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
 if v:match(".lua$") then
@@ -4567,8 +4552,8 @@ if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
-local TextS = "\n👨‍🎤 اهلا بك في متجر ملفات سVIP\n👨‍🎤 ملفات السورس ↓\n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n\n"
-local TextE = "\n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n👨‍🎤 علامة تعني { ✔️ } ملف مفعل\n👨‍🎤 علامة تعني { ✖ } ملف معطل\n👨‍🎤 قناة سورس سVIP ↓\n".."👨‍🎤 [اضغط هنا لدخول](t.me/MKALEXES) \n"
+local TextS = "\n👨‍🎤 اهلا بك في متجر ملفات سVIP\n👨‍🎤 ملفات السورس ↓\n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n\n"
+local TextE = "\n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n👨‍🎤 علامة تعني { ✔️ } ملف مفعل\n👨‍🎤 علامة تعني { ✖ } ملف معطل\n👨‍🎤 قناة سورس سVIP ↓\n".."👨‍🎤 [اضغط هنا لدخول](t.me/source_frawn) \n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
 local Check_File_is_Found = io.open("File_Bot/"..name,"r")
@@ -4651,7 +4636,7 @@ return false
 end
 database:sadd(bot_id..'Sudo:User', result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم ترقيته مطور'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -4677,7 +4662,7 @@ send(msg.chat_id_,msg.id_,"⚠| عذرا عزيزي المستخدم هاذا م
 return false 
 end      
 database:sadd(bot_id..'Sudo:User', result.id_)
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم ترقيته مطور'
 texts = usertext..status
 else
@@ -4702,7 +4687,7 @@ end
 database:sadd(bot_id..'Sudo:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم ترقيته مطور'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -4725,7 +4710,7 @@ end
 function start_function(extra, result, success)
 database:srem(bot_id..'Sudo:User', result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من المطورين'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -4747,7 +4732,7 @@ end
 function start_function(extra, result, success)
 if result.id_ then
 database:srem(bot_id..'Sudo:User', result.id_)
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من المطورين'
 texts = usertext..status
 else
@@ -4772,7 +4757,7 @@ end
 database:srem(bot_id..'Sudo:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من المطورين'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -4790,7 +4775,7 @@ end
 
 if text == 'قائمه المالك' and Sudo(msg) then
 local list = database:smembers(bot_id..'CoSu'..msg.chat_id_)
-t = "\n👨‍🎤 قائمه المالك \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n👨‍🎤 قائمه المالك \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4807,7 +4792,7 @@ return false
 end
 if text == ("صيح للمالك") or text == ("تاك للمالك") then
 local list = database:smembers(bot_id..'CoSu'..msg.chat_id_)
-t = "\n👨‍🎤 وينكم تعالو يريدوكم بالمجموعه \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n👨‍🎤 وينكم تعالو يريدوكم بالمجموعه \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4835,7 +4820,7 @@ end
 function start_function(extra, result, success)
 database:sadd(bot_id..'CoSu'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم ترقيته مالك'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -4861,7 +4846,7 @@ send(msg.chat_id_,msg.id_,"👨‍🎤 عذرا عزيزي المستخدم ها
 return false 
 end      
 database:sadd(bot_id..'CoSu'..msg.chat_id_, result.id_)
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم ترقيته مالك'
 texts = usertext..status
 else
@@ -4886,7 +4871,7 @@ end
 database:sadd(bot_id..'CoSu'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم ترقيته مالك'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -4909,7 +4894,7 @@ end
 function start_function(extra, result, success)
 database:srem(bot_id..'CoSu'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من المالكين'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -4931,7 +4916,7 @@ end
 function start_function(extra, result, success)
 if result.id_ then
 database:srem(bot_id..'CoSu'..msg.chat_id_, result.id_)
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من المالكين'
 texts = usertext..status
 else
@@ -4956,7 +4941,7 @@ end
 database:srem(bot_id..'CoSu'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من المالكين'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -4974,7 +4959,7 @@ st = https.request('https://black-source.tk/BlackTeAM/ImageInfo.php?token='..tok
 eker = JSON.decode(st)
 if eker.ok.Info == "Indecent" then
 local list = database:smembers(bot_id.."Basic:Constructor"..msg.chat_id_)
-t = "👨‍🎤︙ المنشئين الاساسين تعالو مخرب \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "👨‍🎤︙ المنشئين الاساسين تعالو مخرب \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4996,7 +4981,7 @@ Srrt = https.request('https://black-source.tk/BlackTeAM/ImageInfo.php?token='..t
 Sto = JSON.decode(Srrt)
 if Sto.ok.Info == "Indecent" then
 local list = database:smembers(bot_id.."Basic:Constructor"..msg.chat_id_)
-t = "👨‍🎤︙ المنشئين الاساسين تعالو مخرب \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "👨‍🎤︙ المنشئين الاساسين تعالو مخرب \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5083,7 +5068,7 @@ return false
 end
 if text == 'المنشئين الاساسين' and CoSu(msg) then
 local list = database:smembers(bot_id..'Basic:Constructor'..msg.chat_id_)
-t = "\n👨‍🎤 قائمة المنشئين الاساسين \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n👨‍🎤 قائمة المنشئين الاساسين \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5100,7 +5085,7 @@ return false
 end
 if text == ("تاك للمنشئين الاساسين") or text == ("صيح المنشئين الاساسين") then
 local list = database:smembers(bot_id..'Basic:Constructor'..msg.chat_id_)
-t = "\n👨‍🎤 وينكم تعالو يريدوكم بالمجموعه \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n👨‍🎤 وينكم تعالو يريدوكم بالمجموعه \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5128,7 +5113,7 @@ end
 function start_function(extra, result, success)
 database:sadd(bot_id..'Basic:Constructor'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم ترقيته منشئ اساسي'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -5154,7 +5139,7 @@ send(msg.chat_id_,msg.id_,"👨‍🎤 عذرا عزيزي المستخدم ها
 return false 
 end      
 database:sadd(bot_id..'Basic:Constructor'..msg.chat_id_, result.id_)
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم ترقيته منشئ اساسي'
 texts = usertext..status
 else
@@ -5179,7 +5164,7 @@ end
 database:sadd(bot_id..'Basic:Constructor'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم ترقيته منشئ اساسي'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -5202,7 +5187,7 @@ end
 function start_function(extra, result, success)
 database:srem(bot_id..'Basic:Constructor'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من الاساسيين'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -5224,7 +5209,7 @@ end
 function start_function(extra, result, success)
 if result.id_ then
 database:srem(bot_id..'Basic:Constructor'..msg.chat_id_, result.id_)
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من الاساسيين'
 texts = usertext..status
 else
@@ -5249,7 +5234,7 @@ end
 database:srem(bot_id..'Basic:Constructor'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من الاساسيين'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -5268,7 +5253,7 @@ end
 
 if text == ("المنشئين") and BasicConstructor(msg) then
 local list = database:smembers(bot_id..'Constructor'..msg.chat_id_)
-t = "\n👨‍🎤 قائمة المنشئين \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n👨‍🎤 قائمة المنشئين \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5284,7 +5269,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمنشئين") or text == ("صيح المنشئين") then
 local list = database:smembers(bot_id..'Constructor'..msg.chat_id_)
-t = "\n👨‍🎤 وينكم تعالو يريدوكم بالمجموعه \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n👨‍🎤 وينكم تعالو يريدوكم بالمجموعه \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5329,7 +5314,7 @@ end
 function start_function(extra, result, success)
 database:sadd(bot_id..'Constructor'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤  العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤  العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم ترقيته منشئ'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -5354,7 +5339,7 @@ send(msg.chat_id_,msg.id_,"👨‍🎤 عذرا عزيزي المستخدم ها
 return false 
 end      
 database:sadd(bot_id..'Constructor'..msg.chat_id_, result.id_)
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم ترقيته منشئ'
 texts = usertext..status
 else
@@ -5379,7 +5364,7 @@ end
 database:sadd(bot_id..'Constructor'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم ترقيته منشئ'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -5401,7 +5386,7 @@ end
 function start_function(extra, result, success)
 database:srem(bot_id..'Constructor'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من المنشئين'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -5423,7 +5408,7 @@ end
 function start_function(extra, result, success)
 if result.id_ then
 database:srem(bot_id..'Constructor'..msg.chat_id_, result.id_)
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من المنشئين'
 texts = usertext..status
 else
@@ -5448,7 +5433,7 @@ end
 database:srem(bot_id..'Constructor'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من المنشئين'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -5465,7 +5450,7 @@ send(msg.chat_id_, msg.id_, texts)
 end
 if text == ("المدراء") and Constructor(msg) then
 local list = database:smembers(bot_id..'Manager'..msg.chat_id_)
-t = "\n👨‍🎤 قائمة المدراء \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n👨‍🎤 قائمة المدراء \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5481,7 +5466,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمدراء") or text == ("صيح المدراء") then
 local list = database:smembers(bot_id..'Manager'..msg.chat_id_)
-t = "\n👨‍🎤 وينكم تعالو يريدوكم بالمجموعه \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n👨‍🎤 وينكم تعالو يريدوكم بالمجموعه \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5508,7 +5493,7 @@ end
 function start_function(extra, result, success)
 database:sadd(bot_id..'Manager'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم ترقيته مدير'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -5534,7 +5519,7 @@ send(msg.chat_id_,msg.id_,"👨‍🎤 عذرا عزيزي المستخدم ها
 return false 
 end      
 database:sadd(bot_id..'Manager'..msg.chat_id_, result.id_)
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم ترقيته مدير'
 texts = usertext..status
 else
@@ -5560,7 +5545,7 @@ end
 database:sadd(bot_id..'Manager'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم ترقيته مدير'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -5583,7 +5568,7 @@ end
 function start_function(extra, result, success)
 database:srem(bot_id..'Manager'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من المدراء'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -5605,7 +5590,7 @@ end
 function start_function(extra, result, success)
 if result.id_ then
 database:srem(bot_id..'Manager'..msg.chat_id_, result.id_)
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من المدراء'
 texts = usertext..status
 else
@@ -5630,7 +5615,7 @@ end
 database:srem(bot_id..'Manager'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من المدراء'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -5641,7 +5626,7 @@ end;end,nil)
 return false
 end
 ------------------------------------------------------------------------ adddev2 sudog
-if text == ("رفع باور") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
+if text == ("رفع فرعون") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
 function Function_DRAGON(extra, result, success)
 database:sadd(bot_id.."Dev:SoFi:2", result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","👨‍🎤︙ تم ترقيته مطور ثانوي في البوت")  
@@ -5649,8 +5634,8 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_DRAGON, nil)
 return false 
 end
-if text and text:match("^رفع باور @(.*)$") and SudoBot(msg) then
-local username = text:match("^رفع باور @(.*)$")
+if text and text:match("^رفع فرعون @(.*)$") and SudoBot(msg) then
+local username = text:match("^رفع فرعون @(.*)$")
 function Function_DRAGON(extra, result, success)
 if result.id_ then
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
@@ -5666,8 +5651,8 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_DRAGON, nil)
 return false 
 end
-if text and text:match("^رفع باور (%d+)$") and SudoBot(msg) then
-local userid = text:match("^رفع باور (%d+)$")
+if text and text:match("^رفع فرعون (%d+)$") and SudoBot(msg) then
+local userid = text:match("^رفع فرعون (%d+)$")
 database:sadd(bot_id.."Dev:SoFi:2", userid)
 Reply_Status(msg,userid,"reply","👨‍🎤︙ تم ترقيته مطور ثانوي في البوت")  
 return false 
@@ -5701,7 +5686,7 @@ return false
 end
 if text == ("الثانويين") and SudoBot(msg) then
 local list = database:smembers(bot_id.."Dev:SoFi:2")
-t = "\n👨‍🎤︙ قائمة مطورين الثانويين للبوت \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n👨‍🎤︙ قائمة مطورين الثانويين للبوت \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5752,7 +5737,7 @@ send(msg.chat_id_, msg.id_, '👨‍🎤 تم مسح الادمنيه')
 end
 if text == ("الادمنيه") and Manager(msg) then
 local list = database:smembers(bot_id..'Mod:User'..msg.chat_id_)
-t = "\n👨‍🎤 قائمة الادمنيه \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n👨‍🎤 قائمة الادمنيه \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5768,7 +5753,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للادمنيه") or text == ("صيح الادمنيه") then
 local list = database:smembers(bot_id..'Mod:User'..msg.chat_id_)
-t = "\n👨‍🎤 وينكم تعالو يريدوكم بالمجموعه \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n👨‍🎤 وينكم تعالو يريدوكم بالمجموعه \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5799,7 +5784,7 @@ return false
 end
 database:sadd(bot_id..'Mod:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم ترقيته ادمن'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -5829,7 +5814,7 @@ send(msg.chat_id_,msg.id_,"👨‍🎤 عذرا عزيزي المستخدم ها
 return false 
 end      
 database:sadd(bot_id..'Mod:User'..msg.chat_id_, result.id_)
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم ترقيته ادمن'
 texts = usertext..status
 else
@@ -5858,7 +5843,7 @@ end
 database:sadd(bot_id..'Mod:User'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم ترقيته ادمن'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -5881,7 +5866,7 @@ end
 function start_function(extra, result, success)
 database:srem(bot_id..'Mod:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من الادمنيه'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -5903,7 +5888,7 @@ end
 function start_function(extra, result, success)
 if result.id_ then
 database:srem(bot_id..'Mod:User'..msg.chat_id_, result.id_)
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من الادمنيه'
 texts = usertext..status
 else
@@ -5928,7 +5913,7 @@ end
 database:srem(bot_id..'Mod:User'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من الادمنيه'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -5960,7 +5945,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمنظفين") or text == ("صيح المنظفين") then
 local list = database:smembers(bot_id..'S00F4:MN:TF'..msg.chat_id_)
-t = "\n👨‍🎤 وينكم تعالو يريدوكم بالمجموعه \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n👨‍🎤 وينكم تعالو يريدوكم بالمجموعه \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5991,7 +5976,7 @@ return false
 end
 database:sadd(bot_id..'S00F4:MN:TF'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم ترقيته منظف'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -6021,7 +6006,7 @@ send(msg.chat_id_,msg.id_,"👨‍🎤 عذرا عزيزي المستخدم ها
 return false 
 end      
 database:sadd(bot_id..'S00F4:MN:TF'..msg.chat_id_, result.id_)
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم ترقيته منظف'
 texts = usertext..status
 else
@@ -6050,7 +6035,7 @@ end
 database:sadd(bot_id..'S00F4:MN:TF'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم ترقيته منظف'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -6073,7 +6058,7 @@ end
 function start_function(extra, result, success)
 database:srem(bot_id..'S00F4:MN:TF'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من المنظفين'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -6095,7 +6080,7 @@ end
 function start_function(extra, result, success)
 if result.id_ then
 database:srem(bot_id..'S00F4:MN:TF'..msg.chat_id_, result.id_)
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من المنظفين'
 texts = usertext..status
 else
@@ -6120,7 +6105,7 @@ end
 database:srem(bot_id..'S00F4:MN:TF'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من المنظفين'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -6163,7 +6148,7 @@ send(msg.chat_id_, msg.id_,'👨‍🎤 البوت ليس ادمن يرجى تر
 return false  
 end
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 statusk  = '\n👨‍🎤 تم طرد العضو'
 send(msg.chat_id_, msg.id_, usertext..statusk)
 end,nil)
@@ -6211,7 +6196,7 @@ if msg.can_be_deleted_ == false then
 send(msg.chat_id_, msg.id_,'👨‍🎤 البوت ليس ادمن يرجى ترقيتي !') 
 return false  
 end
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 statusk  = '\n👨‍🎤 تم طرد العضو'
 texts = usertext..statusk
 chat_kick(msg.chat_id_, result.id_)
@@ -6260,7 +6245,7 @@ end
 chat_kick(msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
- usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+ usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
  statusk  = '\n👨‍🎤 تم طرد العضو'
 send(msg.chat_id_, msg.id_, usertext..statusk)
 else
@@ -6280,7 +6265,7 @@ send(msg.chat_id_, msg.id_, '👨‍🎤 تم مسح المميزين')
 end
 if text == ("المميزين") and Mod(msg) then
 local list = database:smembers(bot_id..'Special:User'..msg.chat_id_)
-t = "\n👨‍🎤 قائمة مميزين المجموعه \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n👨‍🎤 قائمة مميزين المجموعه \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6296,7 +6281,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمميزين") or text == ("صيح المميزين") then
 local list = database:smembers(bot_id..'Special:User'..msg.chat_id_)
-t = "\n👨‍🎤 وينكم تعالو يريدوكم بالمجموعه \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n👨‍🎤 وينكم تعالو يريدوكم بالمجموعه \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6327,7 +6312,7 @@ end
 function start_function(extra, result, success)
 database:sadd(bot_id..'Special:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 local  statuss  = '\n👨‍🎤 تم ترقيته مميز'
 send(msg.chat_id_, msg.id_, usertext..statuss)
 end,nil)
@@ -6357,7 +6342,7 @@ send(msg.chat_id_,msg.id_,"👨‍🎤 عذرا عزيزي المستخدم ها
 return false 
 end      
 database:sadd(bot_id..'Special:User'..msg.chat_id_, result.id_)
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 local  statuss  = '\n👨‍🎤 تم ترقيته مميز'
 texts = usertext..statuss
 else
@@ -6387,7 +6372,7 @@ end
 database:sadd(bot_id..'Special:User'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 local  statuss  = '\n👨‍🎤 تم ترقيته مميز'
 send(msg.chat_id_, msg.id_, usertext..statuss)
 else
@@ -6411,7 +6396,7 @@ end
 function start_function(extra, result, success)
 database:srem(bot_id..'Special:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من المميزين'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -6433,7 +6418,7 @@ end
 function start_function(extra, result, success)
 if result.id_ then
 database:srem(bot_id..'Special:User'..msg.chat_id_, result.id_)
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من المميزين'
 texts = usertext..status
 else
@@ -6458,7 +6443,7 @@ end
 database:srem(bot_id..'Special:User'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 لعضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 لعضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تنزيله من المميزين'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -6475,7 +6460,7 @@ send(msg.chat_id_, msg.id_, ' 👨‍🎤 تم مسح جميع المتوحدي�
 end
 if text == ("تاك للمتوحدين") and Mod(msg) then
 local list = database:smembers(bot_id..'Mote:User'..msg.chat_id_)
-t = "\n 👨‍🎤 قائمة متوحدين الجروب \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n 👨‍🎤 قائمة متوحدين الجروب \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6544,7 +6529,7 @@ send(msg.chat_id_, msg.id_, ' 👨‍🎤 تم مسح جميع الزوجات')
 end
 if text == ("تاك للزوجات") and Mod(msg) then
 local list = database:smembers(bot_id..'Mode:User'..msg.chat_id_)
-t = "\n 👨‍🎤 قائمه زوجات الجروب \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n 👨‍🎤 قائمه زوجات الجروب \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6609,9 +6594,9 @@ end
 -----------------------------------------------------
 if text == ("رفع ابني") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
-local MKALEXES = database:get(bot_id..'text:ch:user')
-if MKALEXES then
-send(msg.chat_id_, msg.id_,'['..MKALEXES..']')
+local source_frawn = database:get(bot_id..'text:ch:user')
+if source_frawn then
+send(msg.chat_id_, msg.id_,'['..source_frawn..']')
 else
 send(msg.chat_id_, msg.id_,' 👨‍🎤 لا تستطيع استخدام البوت \n  👨‍🎤 يرجى الاشتراك بالقناه اولا \n  👨‍🎤 اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
@@ -6624,7 +6609,7 @@ end
 function start_function(extra, result, success)
 database:sadd(bot_id..'Zahf:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n 👨‍🎤 العضو ← ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n 👨‍🎤 العضو ← ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 local  statuss  = '\n 👨‍🎤 تم رفع ابني في الجروب\n'
 send(msg.chat_id_, msg.id_, usertext..statuss)
 end,nil)
@@ -6635,9 +6620,9 @@ end
 
 if (text == ("تنزيل ابني")) and msg.reply_to_message_id_ and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
-local MKALEXES = database:get(bot_id..'text:ch:user')
-if MKALEXES then
-send(msg.chat_id_, msg.id_,'['..MKALEXES..']')
+local source_frawn = database:get(bot_id..'text:ch:user')
+if source_frawn then
+send(msg.chat_id_, msg.id_,'['..source_frawn..']')
 else
 send(msg.chat_id_, msg.id_,' 👨‍🎤 لا تستطيع استخدام البوت \n  👨‍🎤 يرجى الاشتراك بالقناه اولا \n  👨‍🎤 اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
@@ -6646,7 +6631,7 @@ end
 function start_function(extra, result, success)
 database:srem(bot_id..'Zahf:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n 👨‍🎤 العضو ← ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n 👨‍🎤 العضو ← ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n 👨‍🎤 تم تنزيل ابني من الجروب\n'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -6661,7 +6646,7 @@ send(msg.chat_id_, msg.id_, ' 👨‍🎤تم تنزيل جميع بناتك')
 end
 if text == ("تاك لبناتي") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n 👨‍🎤 قائمة بناتي الجروب \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n 👨‍🎤 قائمة بناتي الجروب \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6678,9 +6663,9 @@ end
 ---------
 if text == ("رفع بنتي") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
-local MKALEXES = database:get(bot_id..'text:ch:user')
-if MKALEXES then
-send(msg.chat_id_, msg.id_,'['..MKALEXES..']')
+local source_frawn = database:get(bot_id..'text:ch:user')
+if source_frawn then
+send(msg.chat_id_, msg.id_,'['..source_frawn..']')
 else
 send(msg.chat_id_, msg.id_,' 👨‍🎤 لا تستطيع استخدام البوت \n  👨‍🎤 يرجى الاشتراك بالقناه اولا \n  👨‍🎤 اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
@@ -6693,7 +6678,7 @@ end
 function start_function(extra, result, success)
 database:sadd(bot_id..'Zahf:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n 👨‍🎤 العضو ← ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n 👨‍🎤 العضو ← ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 local  statuss  = '\n 👨‍🎤 تم رفع بنتي في الجروب\n'
 send(msg.chat_id_, msg.id_, usertext..statuss)
 end,nil)
@@ -6704,9 +6689,9 @@ end
 
 if (text == ("تنزيل بنتي")) and msg.reply_to_message_id_ and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
-local MKALEXES = database:get(bot_id..'text:ch:user')
-if MKALEXES then
-send(msg.chat_id_, msg.id_,'['..MKALEXES..']')
+local source_frawn = database:get(bot_id..'text:ch:user')
+if source_frawn then
+send(msg.chat_id_, msg.id_,'['..source_frawn..']')
 else
 send(msg.chat_id_, msg.id_,' 👨‍🎤 لا تستطيع استخدام البوت \n  👨‍🎤 يرجى الاشتراك بالقناه اولا \n  👨‍🎤 اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
@@ -6715,7 +6700,7 @@ end
 function start_function(extra, result, success)
 database:srem(bot_id..'Zahf:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n 👨‍🎤 العضو ← ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n 👨‍🎤 العضو ← ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n 👨‍🎤 تم تنزيل بنتي من الجروب\n'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -6726,9 +6711,9 @@ end
 -----------------------------------------------------
 if text == ("رفع حكاك") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
-local MKALEXES = database:get(bot_id..'text:ch:user')
-if MKALEXES then
-send(msg.chat_id_, msg.id_,'['..MKALEXES..']')
+local source_frawn = database:get(bot_id..'text:ch:user')
+if source_frawn then
+send(msg.chat_id_, msg.id_,'['..source_frawn..']')
 else
 send(msg.chat_id_, msg.id_,' 👨‍🎤 لا تستطيع استخدام البوت \n  👨‍🎤 يرجى الاشتراك بالقناه اولا \n  👨‍🎤 اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
@@ -6752,9 +6737,9 @@ end
 
 if (text == ("تنزيل حكاك")) and msg.reply_to_message_id_ and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
-local MKALEXES = database:get(bot_id..'text:ch:user')
-if MKALEXES then
-send(msg.chat_id_, msg.id_,'['..MKALEXES..']')
+local source_frawn = database:get(bot_id..'text:ch:user')
+if source_frawn then
+send(msg.chat_id_, msg.id_,'['..source_frawn..']')
 else
 send(msg.chat_id_, msg.id_,' 👨‍🎤 لا تستطيع استخدام البوت \n  👨‍🎤 يرجى الاشتراك بالقناه اولا \n  👨‍🎤 اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
@@ -6777,7 +6762,7 @@ send(msg.chat_id_, msg.id_, ' 👨‍🎤 تم مسح كل النسوان بال
 end
 if text == ("تاك للنسوان") and Mod(msg) then
 local list = database:smembers(bot_id..'Girl:User'..msg.chat_id_)
-t = "\n 👨‍🎤 قائمة نسوان الجروب \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n 👨‍🎤 قائمة نسوان الجروب \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6794,9 +6779,9 @@ end
 ---------
 if text == ("رفع مره") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
-local MKALEXES = database:get(bot_id..'text:ch:user')
-if MKALEXES then
-send(msg.chat_id_, msg.id_,'['..MKALEXES..']')
+local source_frawn = database:get(bot_id..'text:ch:user')
+if source_frawn then
+send(msg.chat_id_, msg.id_,'['..source_frawn..']')
 else
 send(msg.chat_id_, msg.id_,' 👨‍🎤 لا تستطيع استخدام البوت \n  👨‍🎤 يرجى الاشتراك بالقناه اولا \n  👨‍🎤 اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
@@ -6820,9 +6805,9 @@ end
 
 if (text == ("تنزيل مره")) and msg.reply_to_message_id_ and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
-local MKALEXES = database:get(bot_id..'text:ch:user')
-if MKALEXES then
-send(msg.chat_id_, msg.id_,'['..MKALEXES..']')
+local source_frawn = database:get(bot_id..'text:ch:user')
+if source_frawn then
+send(msg.chat_id_, msg.id_,'['..source_frawn..']')
 else
 send(msg.chat_id_, msg.id_,' 👨‍🎤 لا تستطيع استخدام البوت \n  👨‍🎤 يرجى الاشتراك بالقناه اولا \n  👨‍🎤 اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
@@ -6845,7 +6830,7 @@ send(msg.chat_id_, msg.id_, ' 👨‍🎤 تم مسح جميع المتزوجي�
 end
 if text == ("تاك للمتزوجين") and Mod(msg) then
 local list = database:smembers(bot_id..'Mode:User'..msg.chat_id_)
-t = "\n 👨‍🎤 قائمه ازواج الجروب \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n 👨‍🎤 قائمه ازواج الجروب \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6866,7 +6851,7 @@ send(msg.chat_id_, msg.id_, ' 👨‍🎤 تم تنزيل جميع االاكس�
 end
 if text == ("تاك للخاينين") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n 👨‍🎤 قائمة الخاينين الجروب \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n 👨‍🎤 قائمة الخاينين الجروب \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6883,9 +6868,9 @@ end
 ---------
 if text == ("رفع خاين") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
-local MKALEXES = database:get(bot_id..'text:ch:user')
-if MKALEXES then
-send(msg.chat_id_, msg.id_,'['..MKALEXES..']')
+local source_frawn = database:get(bot_id..'text:ch:user')
+if source_frawn then
+send(msg.chat_id_, msg.id_,'['..source_frawn..']')
 else
 send(msg.chat_id_, msg.id_,' 👨‍🎤 لا تستطيع استخدام البوت \n  👨‍🎤 يرجى الاشتراك بالقناه اولا \n  👨‍🎤 اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
@@ -6898,7 +6883,7 @@ end
 function start_function(extra, result, success)
 database:sadd(bot_id..'Zahf:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n 👨‍🎤 العضو ← ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n 👨‍🎤 العضو ← ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 local  statuss  = '\n 👨‍🎤 تم رفع خاين في الجروب\n'
 send(msg.chat_id_, msg.id_, usertext..statuss)
 end,nil)
@@ -6909,9 +6894,9 @@ end
 
 if (text == ("تنزيل خاين")) and msg.reply_to_message_id_ and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
-local MKALEXES = database:get(bot_id..'text:ch:user')
-if MKALEXES then
-send(msg.chat_id_, msg.id_,'['..MKALEXES..']')
+local source_frawn = database:get(bot_id..'text:ch:user')
+if source_frawn then
+send(msg.chat_id_, msg.id_,'['..source_frawn..']')
 else
 send(msg.chat_id_, msg.id_,' 👨‍🎤 لا تستطيع استخدام البوت \n  👨‍🎤 يرجى الاشتراك بالقناه اولا \n  👨‍🎤 اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
@@ -6920,7 +6905,7 @@ end
 function start_function(extra, result, success)
 database:srem(bot_id..'Zahf:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n 👨‍🎤 العضو ← ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n 👨‍🎤 العضو ← ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n 👨‍🎤 تم تنزيل خاين من الجروب\n'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -6935,7 +6920,7 @@ send(msg.chat_id_, msg.id_, ' 👨‍🎤 تم مسح جميع الكلاب')
 end
 if text == ("تاك للكلاب") and Mod(msg) then
 local list = database:smembers(bot_id..'Modde:User'..msg.chat_id_)
-t = "\n 👨‍🎤 قائمه كلاب الجروب \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n 👨‍🎤 قائمه كلاب الجروب \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7004,7 +6989,7 @@ send(msg.chat_id_, msg.id_, ' 👨‍🎤 تم تنزيل جميع حمير من
 end
 if text == ("تاك للحمير") and Mod(msg) then
 local list = database:smembers(bot_id..'Sakl:User'..msg.chat_id_)
-t = "\n 👨‍🎤 قائمة حمير الجروب \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n 👨‍🎤 قائمة حمير الجروب \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7074,7 +7059,7 @@ send(msg.chat_id_, msg.id_, ' 👨‍🎤 تم تنزيل جميع وتكات ا
 end
 if text == ("تاك للوتكات") and Mod(msg) then
 local list = database:smembers(bot_id..'Motte:User'..msg.chat_id_)
-t = "\n 👨‍🎤 قائمة وتكات الجروب \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n 👨‍🎤 قائمة وتكات الجروب \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7212,7 +7197,7 @@ send(msg.chat_id_, msg.id_, ' 👨‍🎤 تم تنزيل جميع الارام�
 end
 if text == ("تاك للارامل") and Mod(msg) then
 local list = database:smembers(bot_id..'Bro:User'..msg.chat_id_)
-t = "\n 👨‍🎤 قائمة ارامل الجروب \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n 👨‍🎤 قائمة ارامل الجروب \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7281,7 +7266,7 @@ send(msg.chat_id_, msg.id_, ' 👨‍🎤 تم تنزيل جميع الخولا�
 end
 if text == ("تاك للخولات") and Mod(msg) then
 local list = database:smembers(bot_id..'Girl:User'..msg.chat_id_)
-t = "\n 👨‍🎤 قائمة خولات الجروب \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n 👨‍🎤 قائمة خولات الجروب \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7350,7 +7335,7 @@ send(msg.chat_id_, msg.id_, ' 👨‍🎤 تم تنزيل الازببه من ا
 end
 if text == ("تاك الازببه") and Mod(msg) then
 local list = database:smembers(bot_id..'Bakra:User'..msg.chat_id_)
-t = "\n 👨‍🎤 قائمة البقرات الجروب \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n 👨‍🎤 قائمة البقرات الجروب \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7419,7 +7404,7 @@ send(msg.chat_id_, msg.id_, ' 👨‍🎤 تم تنزيل جميع المزز ب
 end
 if text == ("تاك للمزز") and Mod(msg) then
 local list = database:smembers(bot_id..'Tele:User'..msg.chat_id_)
-t = "\n 👨‍🎤 قائمة مزز الجروب \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n 👨‍🎤 قائمة مزز الجروب \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7488,7 +7473,7 @@ send(msg.chat_id_, msg.id_, ' 👨‍🎤 تم تنزيل جميع االاكس�
 end
 if text == ("تاك للاكساس") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n 👨‍?? قائمة كساس الجروب \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n 👨‍?? قائمة كساس الجروب \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7557,7 +7542,7 @@ send(msg.chat_id_, msg.id_, ' ⦁ تم تنزيل جميع االاكساس')
 end
 if text == ("تاك للميتين") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ⦁ قائمة الميتنين \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n ⦁ قائمة الميتنين \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7625,7 +7610,7 @@ send(msg.chat_id_, msg.id_, '\n ⦁ تم مسح المحظورين')
 end
 if text == ("المحظورين") then
 local list = database:smembers(bot_id..'Ban:User'..msg.chat_id_)
-t = "\n ⦁ قائمة محظورين الجروب \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n ⦁ قائمة محظورين الجروب \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7645,7 +7630,7 @@ send(msg.chat_id_, msg.id_, '\n👨‍🎤 تم مسح المحظورين')
 end
 if text == ("المحظورين") then
 local list = database:smembers(bot_id..'Ban:User'..msg.chat_id_)
-t = "\n👨‍🎤 قائمة محظورين المجموعه \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n👨‍🎤 قائمة محظورين المجموعه \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7692,7 +7677,7 @@ return false
 end
 database:sadd(bot_id..'Ban:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم حظره'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -7779,7 +7764,7 @@ database:sadd(bot_id..'Ban:User'..msg.chat_id_, userid)
 chat_kick(msg.chat_id_, userid)  
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم حظره'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -7808,7 +7793,7 @@ return false
 end
 database:srem(bot_id..'Ban:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم الغاء حظره'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -7837,7 +7822,7 @@ return false
 end
 database:srem(bot_id..'Ban:User'..msg.chat_id_, result.id_)
 tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = msg.chat_id_, user_id_ = result.id_, status_ = { ID = "ChatMemberStatusLeft" },},function(arg,ban) end,nil)   
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم الغاء حظره'
 texts = usertext..status
 else
@@ -7868,7 +7853,7 @@ database:srem(bot_id..'Ban:User'..msg.chat_id_, userid)
 tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = msg.chat_id_, user_id_ = userid, status_ = { ID = "ChatMemberStatusLeft" },},function(arg,ban) end,nil)   
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم الغاء حظره'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -7885,7 +7870,7 @@ send(msg.chat_id_, msg.id_, '👨‍🎤 تم مسح المكتومين')
 end
 if text == ("المكتومين") and Mod(msg) then
 local list = database:smembers(bot_id..'Muted:User'..msg.chat_id_)
-t = "\n👨‍🎤 قائمة المكتومين \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n👨‍🎤 قائمة المكتومين \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7924,7 +7909,7 @@ return false
 end
 database:sadd(bot_id..'Muted:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم كتمه'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -7962,7 +7947,7 @@ send(msg.chat_id_,msg.id_,"👨‍🎤 عذرا عزيزي المستخدم ها
 return false 
 end      
 database:sadd(bot_id..'Muted:User'..msg.chat_id_, result.id_)
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم كتمه'
 texts = usertext..status
 send(msg.chat_id_, msg.id_, texts)
@@ -7996,7 +7981,7 @@ if Can_or_NotCan(result.sender_user_id_, msg.chat_id_) then
 send(msg.chat_id_, msg.id_, "\n👨‍🎤 عذرا لا تستطيع كتم ( "..Rutba(result.sender_user_id_,msg.chat_id_).." )")
 else
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم كتم لمدة ~ { '..TextEnd[2]..' '..TextEnd[3]..'}'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -8034,7 +8019,7 @@ TextEnd[3] = TextEnd[3]:gsub("يوم","ايام")
 if Can_or_NotCan(result.id_, msg.chat_id_) then
 send(msg.chat_id_, msg.id_, "\n👨‍🎤 عذرا لا تستطيع كتم ( "..Rutba(result.id_,msg.chat_id_).." )")
 else
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم كتم لمدة ~ { '..TextEnd[2]..' '..TextEnd[3]..'}'
 texts = usertext..status
 send(msg.chat_id_, msg.id_,texts)
@@ -8070,7 +8055,7 @@ end
 database:sadd(bot_id..'Muted:User'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم كتمه'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -8094,7 +8079,7 @@ end
 function start_function(extra, result, success)
 database:srem(bot_id..'Muted:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم الغاء كتمه'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -8116,7 +8101,7 @@ end
 function start_function(extra, result, success)
 if result.id_ then
 database:srem(bot_id..'Muted:User'..msg.chat_id_, result.id_)
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم الغاء كتمه'
 texts = usertext..status
 else
@@ -8142,7 +8127,7 @@ end
 database:srem(bot_id..'Muted:User'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم الغاء كتمه'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -8173,7 +8158,7 @@ send(msg.chat_id_, msg.id_, '\n👨‍🎤 عذرا لا تستطيع تقييد
 else
 https.request("https://api.telegram.org/bot"..token.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تقييده'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -8210,7 +8195,7 @@ return false
 end      
 https.request("https://api.telegram.org/bot"..token.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..result.id_)
  
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تقييده'
 texts = usertext..status
 else
@@ -8244,7 +8229,7 @@ if Can_or_NotCan(result.sender_user_id_, msg.chat_id_) then
 send(msg.chat_id_, msg.id_, "\n👨‍🎤 عذرا لا تستطيع تقييد ( "..Rutba(result.sender_user_id_,msg.chat_id_).." )")
 else
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تقييده لمدة ~ { '..TextEnd[2]..' '..TextEnd[3]..'}'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -8282,7 +8267,7 @@ TextEnd[3] = TextEnd[3]:gsub("يوم","ايام")
 if Can_or_NotCan(result.id_, msg.chat_id_) then
 send(msg.chat_id_, msg.id_, "\n👨‍🎤 عذرا لا تستطيع تقييد ( "..Rutba(result.id_,msg.chat_id_).." )")
 else
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تقييده لمدة ~ { '..TextEnd[2]..' '..TextEnd[3]..'}'
 texts = usertext..status
 send(msg.chat_id_, msg.id_,texts)
@@ -8315,7 +8300,7 @@ else
 https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم تقييده'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -8340,7 +8325,7 @@ end
 function start_function(extra, result, success)
 https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" .. result.sender_user_id_ .. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم الغاء تقييد'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -8363,7 +8348,7 @@ end
 function start_function(extra, result, success)
 if result.id_ then
 https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" .. result.id_ .. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم الغاء تقييد'
 texts = usertext..status
 else
@@ -8389,7 +8374,7 @@ end
 https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..userid.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم الغاء تقييد'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -8417,14 +8402,14 @@ database:srem(bot_id..'GBan:User',result.id_)
 database:srem(bot_id..'Ban:User'..msg.chat_id_,result.id_)
 database:srem(bot_id..'Muted:User'..msg.chat_id_,result.id_)
 database:srem(bot_id..'Gmute:User'..msg.chat_id_,result.id_)
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم الغاء جميع القيود'
 texts = usertext..status
 send(msg.chat_id_, msg.id_,texts)
 else
 database:srem(bot_id..'Ban:User'..msg.chat_id_,result.id_)
 database:srem(bot_id..'Muted:User'..msg.chat_id_,result.id_)
-usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم الغاء جميع القيود'
 texts = usertext..status
 send(msg.chat_id_, msg.id_,texts)
@@ -8452,7 +8437,7 @@ database:srem(bot_id..'GBan:User',result.sender_user_id_)
 database:srem(bot_id..'Ban:User'..msg.chat_id_,result.sender_user_id_)
 database:srem(bot_id..'Muted:User'..msg.chat_id_,result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم الغاء جميع القيود'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -8460,7 +8445,7 @@ else
 database:srem(bot_id..'Ban:User'..msg.chat_id_,result.sender_user_id_)
 database:srem(bot_id..'Muted:User'..msg.chat_id_,result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤 تم الغاء جميع القيود'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -8611,7 +8596,7 @@ end
 ---------------------- بداء كشف المجموعة
 
 ----------------------------------------- انتهاء كشف المجموعة
-if text == 'VIP الباور' and Mod(msg) then    
+if text == 'VIP الفرعون' and Mod(msg) then    
 if database:get(bot_id..'lockpin'..msg.chat_id_) then    
 lock_pin = '🔓'
 else 
@@ -8921,10 +8906,10 @@ local text =
 '\n⚙️┇𝙶𝚁𝙾𝚄𝙿 𝚂𝙴𝚃𝚃𝙸𝙽𝙶𝚂'..
 '\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ '..
 '\n𖤛︙ اعدادات الكروب كتالي √↓'..
-'\nءٴ≪ـــــــــــــــــــــ𓆩 𝗣𝗢𝗪𝗘𝗥𓏴   𓆪ـــــــــــــــــــــ≫ٴ'..
+'\nءٴ≪ـــــــــــــــــــــ𓆩 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡𓏴   𓆪ـــــــــــــــــــــ≫ٴ'..
 '\n𖤛︙  علامة ال {🔓} تعني مفعل'..
 '\n𖤛︙  علامة ال {🔐} تعني معطل'..
-'\nءٴ≪ـــــــــــــــــــــ𓆩 𝗣𝗢𝗪𝗘𝗥𓏴   𓆪ـــــــــــــــــــــ≫ٴ'..
+'\nءٴ≪ـــــــــــــــــــــ𓆩 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡𓏴   𓆪ـــــــــــــــــــــ≫ٴ'..
 '\n𖤛︙  الروابط » { '..lock_links..
 ' }\n'..'𖤛︙  المعرفات » { '..lock_user..
 ' }\n'..'𖤛︙  التاك » { '..lock_hash..
@@ -8935,7 +8920,7 @@ local text =
 ' }\n'..'𖤛︙  الماركدون » { '..lock_mark..
 ' }\n'..'𖤛︙  التعديل » { '..lock_edit..
 ' }\n'..'𖤛︙  تعديل الميديا » { '..lock_edit_med..
-' }\nءٴ≪ـــــــــــــــــــــ𓆩 𝗣𝗢𝗪𝗘𝗥𓏴   𓆪ـــــــــــــــــــــ≫ٴ'..
+' }\nءٴ≪ـــــــــــــــــــــ𓆩 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡𓏴   𓆪ـــــــــــــــــــــ≫ٴ'..
 '\n'..'𖤛︙  الكلايش » { '..lock_spam..
 ' }\n'..'𖤛︙  الكيبورد » { '..lock_inlin..
 ' }\n'..'𖤛︙  الاغاني » { '..lock_vico..
@@ -8944,7 +8929,7 @@ local text =
 ' }\n'..'𖤛︙  الدردشه » { '..lock_text..
 ' }\n'..'𖤛︙   الفيديو » { '..lock_ved..
 ' }\n'..'𖤛︙   الصور » { '..lock_photo..
-' }\nءٴ≪ـــــــــــــــــــــ𓆩 𝗣𝗢𝗪𝗘𝗥𓏴   𓆪ـــــــــــــــــــــ≫ٴ'..
+' }\nءٴ≪ـــــــــــــــــــــ𓆩 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡𓏴   𓆪ـــــــــــــــــــــ≫ٴ'..
 '\n'..'𖤛︙   الصوت » { '..lock_muse..
 ' }\n'..'𖤛︙  الملصقات » { '..lock_ste..
 ' }\n'..'𖤛︙  الجهات » { '..lock_phon..
@@ -8955,10 +8940,10 @@ local text =
 ' }\n'..'𖤛︙  التكرار » { '..flood..
 ' }\n'..'𖤛︙  الترحيب » { '..welcome..
 ' }\n'..'𖤛︙  عدد التكرار » { '..NUM_MSG_MAX..
-' }\nءٴ≪ـــــــــــــــــــــ𓆩 𝗣𝗢𝗪𝗘𝗥𓏴   𓆪ـــــــــــــــــــــ≫ٴ'..
+' }\nءٴ≪ـــــــــــــــــــــ𓆩 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡𓏴   𓆪ـــــــــــــــــــــ≫ٴ'..
 '\n𖤛︙  علامة ال {🔓} تعني مفعل'..
 '\n𖤛︙  علامة ال {🔐} تعني معطل'..
-'\nءٴ≪ـــــــــــــــــــــ𓆩 𝗣𝗢𝗪𝗘𝗥??   𓆪ـــــــــــــــــــــ≫ٴ'..
+'\nءٴ≪ـــــــــــــــــــــ𓆩 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡??   𓆪ـــــــــــــــــــــ≫ٴ'..
 '\n'..'𖤛︙  امر صيح » { '..kickme..
 ' }\n'..'𖤛︙  امر اطردني » { '..sehuser..
 ' }\n'..'𖤛︙  امر مين ضافني » { '..addme..
@@ -8967,7 +8952,7 @@ local text =
 ' }\n'..'𖤛︙  الايدي » { '..idgp..
 ' }\n'..'𖤛︙  الايدي بالصوره » { '..idph..
 ' }\n'..'𖤛︙  الرفع » { '..setadd..
-' }\n'..'𖤛︙  الحظر » { '..banm..' }\n\nٴ≪ـــــــــــــــــــــ𓆩 𝗣𝗢𝗪𝗘𝗥𓏴   𓆪ـــــــــــــــــــــ≫ٴ\n𖤛︙ قناة سورس الوون ↓\n [ ❍ ┇𓆩 𝗣𝗢𝗪𝗘𝗥𓏴   𓆪.](t.me/SOURCE_SYRIA) \n'
+' }\n'..'𖤛︙  الحظر » { '..banm..' }\n\nٴ≪ـــــــــــــــــــــ𓆩 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡𓏴   𓆪ـــــــــــــــــــــ≫ٴ\n𖤛︙ قناة سورس الوون ↓\n [ ❍ ┇𓆩 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡𓏴   𓆪.](t.me/SOURCE_SYRIA) \n'
 send(msg.chat_id_, msg.id_,text)     
 end
 
@@ -9108,7 +9093,7 @@ keyboard.inline_keyboard = {
 {text = ''..result.first_name_..'', url = "https://t.me/"..result.username_..""},
 },
 {
-{text = '𝗣𝗢𝗪𝗘𝗥 ⤶', url="https://t.me/MKALEXES"},
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ⤶', url="https://t.me/source_frawn"},
 { {text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}, },
 },
 }
@@ -9354,7 +9339,7 @@ end
 
 if text == "قائمه المنع" and Manager(msg) then   
 local list = database:smembers(bot_id.."DRAGON1:List:Filter"..msg.chat_id_)  
-t = "\n👨‍🎤 قائمة المنع \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n👨‍🎤 قائمة المنع \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do  
 local DRAGON_Msg = database:get(bot_id.."DRAGON1:Add:Filter:Rp2"..v..msg.chat_id_)   
 t = t..""..k.."- "..v.." » {"..DRAGON_Msg.."}\n"    
@@ -9500,7 +9485,7 @@ return false
 end
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID,filter_ = {ID = "ChannelMembersBots"},offset_ = 0,limit_ = 100 },function(extra,result,success)
 local admins = result.members_  
-text = "\n👨‍🎤 قائمة البوتات الموجوده \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+text = "\n👨‍🎤 قائمة البوتات الموجوده \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 local n = 0
 local t = 0
 for i=0 , #admins do 
@@ -9519,7 +9504,7 @@ send(msg.chat_id_, msg.id_, "👨‍🎤 لا توجد بوتات في المج�
 return false 
 end
 if #admins == i then 
-local a = '\n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n👨‍🎤 عدد البوتات التي هنا >> {'..n..'} بوت\n'
+local a = '\n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n👨‍🎤 عدد البوتات التي هنا >> {'..n..'} بوت\n'
 local f = '👨‍🎤 عدد البوتات التي هي ادمن >> {'..t..'}\n👨‍🎤 ملاحضه علامة ال (✯) تعني ان البوت ادمن \n'
 send(msg.chat_id_, msg.id_, text..a..f)
 end
@@ -9575,7 +9560,7 @@ for i,lock in pairs(list) do
 database:set(bot_id..lock..msg.chat_id_,'del')    
 end
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم قفـل التفليش ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل التفليش ')  
 end,nil)   
 end
 if text == 'فتح التفليش' and msg.reply_to_message_id_ == 0 and Mod(msg) then 
@@ -9585,7 +9570,7 @@ for i,lock in pairs(list) do
 database:del(bot_id..lock..msg.chat_id_)    
 end
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'MKALEXES')..') \n👨‍🎤 تـم فـتح التفليش ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم فـتح التفليش ')  
 end,nil)   
 end
 if text == 'طرد المحذوفين' or text == 'مسح المحذوفين' then  
@@ -9608,7 +9593,7 @@ if #list == 0 then
 send(msg.chat_id_, msg.id_,'👨‍🎤 لا توجد صلاحيات مضافه')
 return false
 end
-t = "\n👨‍🎤 قائمة الصلاحيات المضافه \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n👨‍🎤 قائمة الصلاحيات المضافه \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 var = database:get(bot_id.."Comd:New:rt:bot:"..v..msg.chat_id_)
 if var then
@@ -9697,19 +9682,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local blakrt = database:get(bot_id.."Comd:New:rt:bot:"..RTPA..msg.chat_id_)
 if blakrt == 'مميز' and Mod(msg) then
-send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'..'\n👨‍🎤 تم رفعه '..RTPA..'\n')   
+send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'..'\n👨‍🎤 تم رفعه '..RTPA..'\n')   
 database:set(bot_id.."Comd:New:rt:user:"..msg.chat_id_..result.sender_user_id_,RTPA) 
 database:sadd(bot_id..'Special:User'..msg.chat_id_,result.sender_user_id_)  
 elseif blakrt == 'ادمن' and Manager(msg) then 
-send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'..'\n👨‍🎤 تم رفعه '..RTPA..'\n')   
+send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'..'\n👨‍🎤 تم رفعه '..RTPA..'\n')   
 database:set(bot_id.."Comd:New:rt:user:"..msg.chat_id_..result.sender_user_id_,RTPA)
 database:sadd(bot_id..'Mod:User'..msg.chat_id_,result.sender_user_id_)  
 elseif blakrt == 'مدير' and Constructor(msg) then
-send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'..'\n👨‍🎤 تم رفعه '..RTPA..'\n')   
+send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'..'\n👨‍🎤 تم رفعه '..RTPA..'\n')   
 database:set(bot_id.."Comd:New:rt:user:"..msg.chat_id_..result.sender_user_id_,RTPA)  
 database:sadd(bot_id..'Manager'..msg.chat_id_,result.sender_user_id_)  
 elseif blakrt == 'عضو' and Mod(msg) then
-send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'..'\n👨‍🎤 تم رفعه '..RTPA..'\n')   
+send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'..'\n👨‍🎤 تم رفعه '..RTPA..'\n')   
 end
 end,nil)   
 end   
@@ -9732,19 +9717,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local blakrt = database:get(bot_id.."Comd:New:rt:bot:"..RTPA..msg.chat_id_)
 if blakrt == 'مميز' and Mod(msg) then
-send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'..'\n👨‍🎤 م تنزيله من '..RTPA..'\n')   
+send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'..'\n👨‍🎤 م تنزيله من '..RTPA..'\n')   
 database:srem(bot_id..'Special:User'..msg.chat_id_,result.sender_user_id_)  
 database:del(bot_id.."Comd:New:rt:user:"..msg.chat_id_..result.sender_user_id_)
 elseif blakrt == 'ادمن' and Manager(msg) then 
-send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'..'\n👨‍🎤 تم تنزيله من '..RTPA..'\n')   
+send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'..'\n👨‍🎤 تم تنزيله من '..RTPA..'\n')   
 database:srem(bot_id..'Mod:User'..msg.chat_id_,result.sender_user_id_) 
 database:del(bot_id.."Comd:New:rt:user:"..msg.chat_id_..result.sender_user_id_)
 elseif blakrt == 'مدير' and Constructor(msg) then
-send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'..'\n👨‍🎤  تم تنزيله من '..RTPA..'\n')   
+send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'..'\n👨‍🎤  تم تنزيله من '..RTPA..'\n')   
 database:srem(bot_id..'Manager'..msg.chat_id_,result.sender_user_id_)  
 database:del(bot_id.."Comd:New:rt:user:"..msg.chat_id_..result.sender_user_id_)
 elseif blakrt == 'عضو' and Mod(msg) then
-send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'..'\n👨‍🎤 تم تنزيله من '..RTPA..'\n')   
+send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'..'\n👨‍🎤 تم تنزيله من '..RTPA..'\n')   
 end
 end,nil)   
 end   
@@ -9767,19 +9752,19 @@ function py_username(extra, result, success)
 if result.id_ then
 local blakrt = database:get(bot_id.."Comd:New:rt:bot:"..text1[2]..msg.chat_id_)
 if blakrt == 'مميز' and Mod(msg) then
-send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(text1[3] or 'MKALEXES')..')'..'\n👨‍🎤 تم رفعه '..text1[2]..'')   
+send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(text1[3] or 'source_frawn')..')'..'\n👨‍🎤 تم رفعه '..text1[2]..'')   
 database:sadd(bot_id..'Special:User'..msg.chat_id_,result.id_)  
 database:set(bot_id.."Comd:New:rt:user:"..msg.chat_id_..result.id_,text1[2])
 elseif blakrt == 'ادمن' and Manager(msg) then 
-send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(text1[3] or 'MKALEXES')..')'..'\n👨‍🎤 تم رفعه '..text1[2]..'')   
+send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(text1[3] or 'source_frawn')..')'..'\n👨‍🎤 تم رفعه '..text1[2]..'')   
 database:sadd(bot_id..'Mod:User'..msg.chat_id_,result.id_)  
 database:set(bot_id.."Comd:New:rt:user:"..msg.chat_id_..result.id_,text1[2])
 elseif blakrt == 'مدير' and Constructor(msg) then
-send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(text1[3] or 'MKALEXES')..')'..'\n👨‍🎤 تم رفعه '..text1[2]..'')   
+send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(text1[3] or 'source_frawn')..')'..'\n👨‍🎤 تم رفعه '..text1[2]..'')   
 database:sadd(bot_id..'Manager'..msg.chat_id_,result.id_)  
 database:set(bot_id.."Comd:New:rt:user:"..msg.chat_id_..result.id_,text1[2])
 elseif blakrt == 'عضو' and Mod(msg) then
-send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(text1[3] or 'MKALEXES')..')'..'\n👨‍🎤 تم رفعه '..text1[2]..'')   
+send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(text1[3] or 'source_frawn')..')'..'\n👨‍🎤 تم رفعه '..text1[2]..'')   
 end
 else
 info = '👨‍🎤 المعرف غلط'
@@ -9805,19 +9790,19 @@ function py_username(extra, result, success)
 if result.id_ then
 local blakrt = database:get(bot_id.."Comd:New:rt:bot:"..text1[2]..msg.chat_id_)
 if blakrt == 'مميز' and Mod(msg) then
-send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(text1[3] or 'MKALEXES')..')'..'\n👨‍🎤 تم تنريله من '..text1[2]..'')   
+send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(text1[3] or 'source_frawn')..')'..'\n👨‍🎤 تم تنريله من '..text1[2]..'')   
 database:srem(bot_id..'Special:User'..msg.chat_id_,result.id_)  
 database:del(bot_id.."Comd:New:rt:user:"..msg.chat_id_..result.id_)
 elseif blakrt == 'ادمن' and Manager(msg) then 
-send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(text1[3] or 'MKALEXES')..')'..'\n👨‍🎤 تم تنريله من '..text1[2]..'')   
+send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(text1[3] or 'source_frawn')..')'..'\n👨‍🎤 تم تنريله من '..text1[2]..'')   
 database:srem(bot_id..'Mod:User'..msg.chat_id_,result.id_)  
 database:del(bot_id.."Comd:New:rt:user:"..msg.chat_id_..result.id_)
 elseif blakrt == 'مدير' and Constructor(msg) then
-send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(text1[3] or 'MKALEXES')..')'..'\n👨‍🎤 تم تنريله من '..text1[2]..'')   
+send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(text1[3] or 'source_frawn')..')'..'\n👨‍🎤 تم تنريله من '..text1[2]..'')   
 database:srem(bot_id..'Manager'..msg.chat_id_,result.id_)  
 database:del(bot_id.."Comd:New:rt:user:"..msg.chat_id_..result.id_)
 elseif blakrt == 'عضو' and Mod(msg) then
-send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(text1[3] or 'MKALEXES')..')'..'\n👨‍🎤 تم تنريله من '..text1[2]..'')   
+send(msg.chat_id_, msg.id_,'\n👨‍🎤 العضو » ['..result.title_..'](t.me/'..(text1[3] or 'source_frawn')..')'..'\n👨‍🎤 تم تنريله من '..text1[2]..'')   
 end
 else
 info = '👨‍🎤 المعرف غلط'
@@ -10136,7 +10121,7 @@ return false
 end
 tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 200
 },function(ta,DRAGON)
-local t = "\nツ قائمة الاعضاء \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+local t = "\nツ قائمة الاعضاء \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 x = 0
 local list = DRAGON.members_
 for k, v in pairs(list) do
@@ -10576,7 +10561,7 @@ send(msg.chat_id_, msg.id_,"👨‍🎤︙تم مسح ردود المدير")
 end
 if text == ("ردود المدير") and Manager(msg) then
 local list = database:smembers(bot_id.."List:Manager"..msg.chat_id_.."")
-text = "👨‍🎤︙قائمه ردود المدير \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+text = "👨‍🎤︙قائمه ردود المدير \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 if database:get(bot_id.."Add:Rd:Manager:Gif"..v..msg.chat_id_) then
 db = "متحركه 🎭"
@@ -10779,7 +10764,7 @@ if audios.Info == true then
 local Text ='👨‍🎤︙تم اختيار المقطع الصوتي لك'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝗣𝗢𝗪𝗘𝗥.',url="t.me/MKALEXES"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡.',url="t.me/source_frawn"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice='..URL.escape(audios.info)..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -10802,7 +10787,7 @@ send(msg.chat_id_, msg.id_,'👨‍🎤︙لا يمكنني تعديل  او و�
 return false  
 end
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤︙ العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..') '
+usertext = '\n👨‍🎤︙ العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..') '
 status  = '\n👨‍🎤︙ الايدي » '..result.sender_user_id_..'\n👨‍🎤︙تم ضافه {'..timsh..'} كلقب له'
 send(msg.chat_id_, msg.id_, usertext..status)
 https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=True&can_restrict_members=false&can_pin_messages=True&can_promote_members=false")
@@ -10820,7 +10805,7 @@ send(msg.chat_id_, msg.id_,'👨‍🎤 البوت ليس مشرف يرجى تر
 return false  
 end
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👨‍🎤  العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+usertext = '\n👨‍🎤  العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 status  = '\n👨‍🎤  الايدي » `'..result.sender_user_id_..'`\n👨‍🎤  تم حذف لقبه من المجموعه'
 send(msg.chat_id_, msg.id_, usertext..status)
 https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=false&can_restrict_members=false&can_pin_messages=false&can_promote_members=false")
@@ -10841,7 +10826,7 @@ if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
 send(msg.chat_id_,msg.id_,"👨‍🎤  عذرا عزيزي المستخدم هاذا معرف قناة يرجى استخدام الامر بصوره صحيحه !")   
 return false 
 end      
-usertext = '\n👨‍🎤  العضو » ['..result.title_..'](t.me/'..(username or 'MKALEXES')..')'
+usertext = '\n👨‍🎤  العضو » ['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
 status  = '\n👨‍🎤  تم حذف لقبه من المجموعه'
 texts = usertext..status
 send(msg.chat_id_, msg.id_, texts)
@@ -10897,18 +10882,18 @@ PRo = '❴ ✔️ ❵'
 else
 PRo = '❴ ✖ ❵'
 end 
-send(msg.chat_id_, msg.id_,'\n👨‍🎤صلاحيات البوت هي\n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n👨‍🎤︙  علامة ال {✔️} تعني مفعل\n👨‍🎤︙  علامة ال {✖} تعني غير مفعل\n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n👨‍🎤︙تغير معلومات المجموعة ↞ '..INf..'\n👨‍🎤︙حذف الرسائل ↞ '..DEL..'\n👨‍🎤︙حظر المستخدمين ↞ '..REs..'\n👨‍🎤︙دعوة المستخدمين ↞ '..INv..'\n👨‍🎤︙ثتبيت الرسالة ↞ '..Pin..'\n👨‍🎤︙اضافة مشرفين ↞ '..PRo)   
+send(msg.chat_id_, msg.id_,'\n👨‍🎤صلاحيات البوت هي\n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n👨‍🎤︙  علامة ال {✔️} تعني مفعل\n👨‍🎤︙  علامة ال {✖} تعني غير مفعل\n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n👨‍🎤︙تغير معلومات المجموعة ↞ '..INf..'\n👨‍🎤︙حذف الرسائل ↞ '..DEL..'\n👨‍🎤︙حظر المستخدمين ↞ '..REs..'\n👨‍🎤︙دعوة المستخدمين ↞ '..INv..'\n👨‍🎤︙ثتبيت الرسالة ↞ '..Pin..'\n👨‍🎤︙اضافة مشرفين ↞ '..PRo)   
 end
 end
 if text == "تعطيل الانستا" and Manager(msg) then
 send(msg.chat_id_, msg.id_, '👨‍🎤 تم تعطيل الانستا')
-database:set(bot_id.."MKALEXES:insta_bot"..msg.chat_id_,"close")
+database:set(bot_id.."source_frawn:insta_bot"..msg.chat_id_,"close")
 end
 if text == "تفعيل الانستا" and Manager(msg) then
 send(msg.chat_id_, msg.id_,'👨‍🎤 تم تفعيل الانستا')
-database:set(bot_id.."MKALEXES:insta_bot"..msg.chat_id_,"open")
+database:set(bot_id.."source_frawn:insta_bot"..msg.chat_id_,"open")
 end
-if text and text:match("^معلومات (.*)$") and database:get(bot_id.."MKALEXES:insta_bot"..msg.chat_id_) == "open" then
+if text and text:match("^معلومات (.*)$") and database:get(bot_id.."source_frawn:insta_bot"..msg.chat_id_) == "open" then
 local Textni = text:match("^معلومات (.*)$")
 data,res = https.request('https://forhassan.ml/Black/insta.php?username='..URL.escape(Textni)..'')
 if res == 200 then
@@ -10921,16 +10906,16 @@ end
 end
 end
 if text and text == "تفعيل تاك المشرفين" and Manager(msg) then 
-database:set(bot_id.."MKALEXES:Tag:Admins:"..msg.chat_id_,true)
+database:set(bot_id.."source_frawn:Tag:Admins:"..msg.chat_id_,true)
 send(msg.chat_id_, msg.id_,"👨‍🎤︙تم تفعيل تاك المشرفين")
 end
 if text and text == "تعطيل تاك المشرفين" and Manager(msg) then 
-database:del(bot_id.."MKALEXES:Tag:Admins:"..msg.chat_id_)
+database:del(bot_id.."source_frawn:Tag:Admins:"..msg.chat_id_)
 send(msg.chat_id_, msg.id_, "👨‍🎤︙تم تعطيل تاك المشرفين")
 end
 
 if text == 'صيح المشرفين' or text == "تاك للمشرفين" or text == "وين المشرفين" or text == "المشرفين" then
-if database:get(bot_id.."MKALEXES:Tag:Admins:"..msg.chat_id_) then 
+if database:get(bot_id.."source_frawn:Tag:Admins:"..msg.chat_id_) then 
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 100},function(arg,data)
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,b)  
 if b.username_ then 
@@ -10938,7 +10923,7 @@ User_id = "@"..b.username_
 else
 User_id = msg.sender_user_id_
 end --الكود حصري سورس سVIP يعني لو بكتهن راح اعرفك انت الاخذتهن
-local t = "\n👨‍🎤︙المستخدم ~ ["..User_id .."] يصيح المشرفين \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+local t = "\n👨‍🎤︙المستخدم ~ ["..User_id .."] يصيح المشرفين \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 k = 0
 for i,v in pairs(data.members_) do
 if bot_id ~= v.user_id_ then 
@@ -10980,7 +10965,7 @@ end
 return false
 end
 local list = database:smembers(bot_id.."botss:DRAGON:List:Rd:Sudo")
-text = "\nقائمة ردود المتعدده \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+text = "\nقائمة ردود المتعدده \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 for k,v in pairs(list) do
 db = "رساله "
 text = text..""..k.." => {"..v.."} => {"..db.."}\n"
@@ -11078,7 +11063,7 @@ end
 ------------------------------------------------------------------------
 -------------------------------
 if text == "بوت" then
-local Namebot = (database:get(bot_id..'Name:Bot') or 'باور')
+local Namebot = (database:get(bot_id..'Name:Bot') or 'فرعون')
 local DRAGON_Msg = {
 'اسمي '..Namebot..' يا قلبي 🙈💗',
 'اسمي'..Namebot..' يا روحي🙈❤️',
@@ -11098,7 +11083,7 @@ local msg_id = msg.id_/2097152/0.5
 keyboard = {} 
 keyboard.inline_keyboard = {
 	
-{{text = '𝗣𝗢𝗪𝗘𝗥', url="t.me/MKALEXES"}}, 
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡', url="t.me/source_frawn"}}, 
 { {text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}, },
 
 }
@@ -11113,8 +11098,8 @@ tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, l
 end
 
 
-if text == ""..(database:get(bot_id..'Name:Bot') or 'باور').."" then  
-Namebot = (database:get(bot_id..'Name:Bot') or 'باور')
+if text == ""..(database:get(bot_id..'Name:Bot') or 'فرعون').."" then  
+Namebot = (database:get(bot_id..'Name:Bot') or 'فرعون')
 local DRAGON_Msg = {
 'ننعم يروحي 😻♥️',
 'نعم يا قلب  '..Namebot..'',
@@ -11134,7 +11119,7 @@ local msg_id = msg.id_/2097152/0.5
 keyboard = {} 
 keyboard.inline_keyboard = {
 	
-{{text = '𝗣𝗢𝗪𝗘𝗥', url="t.me/MKALEXES"}}, 
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡', url="t.me/source_frawn"}}, 
 
 }
 local function getpro(extra, result, success) 
@@ -11387,7 +11372,7 @@ if text == 'الرتبه' and tonumber(msg.reply_to_message_id_) > 0 then
 function start_function(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(extra,data) 
 local rtp = Rutba(result.sender_user_id_,msg.chat_id_)
-local username = ' ['..data.first_name_..'](t.me/'..(data.username_ or 'MKALEXES')..')'
+local username = ' ['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
 local iduser = result.sender_user_id_
 send(msg.chat_id_, msg.id_,'*- العضو » (*'..username..'*)\n- الرتبه » ('..rtp..')*\n')
 end,nil)
@@ -11782,7 +11767,7 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n¦• 𝚄𝚂𝙴𝚁 ↬  ↝'..username..'↜  👨‍🎤\n¦• 𝙼𝚂𝙶𝚂↬  ↝'..Msguser..'↜  👨‍🎤\n¦• 𝚁𝙰𝙽𝙺↬ ↝'..Rutba(msg.sender_user_id_,msg.chat_id_)..'↜  👨‍🎤\n¦• 𝙸𝙳↬   ↝'..msg.sender_user_id_..'↜ 👨‍🎤\n¦• 𝙱𝙸𝙾 ↬ ↝'..getbioY..'↜ 👨‍🎤\n ¦• 𝒄𝒉↬  ↝@MKALEXES↜   👨‍🎤\n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n¦• 𝚄𝚂𝙴𝚁 ↬  ↝'..username..'↜  👨‍🎤\n¦• 𝙼𝚂𝙶𝚂↬  ↝'..Msguser..'↜  👨‍🎤\n¦• 𝚁𝙰𝙽𝙺↬ ↝'..Rutba(msg.sender_user_id_,msg.chat_id_)..'↜  👨‍🎤\n¦• 𝙸𝙳↬   ↝'..msg.sender_user_id_..'↜ 👨‍🎤\n¦• 𝙱𝙸𝙾 ↬ ↝'..getbioY..'↜ 👨‍🎤\n ¦• 𝒄𝒉↬  ↝@source_frawn↜   👨‍🎤\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي ↝'..Name..'↜ \n¦• 𝚄𝚂𝙴𝚁 ↬  ↝'..Name..'↜    ↝💘\n¦• 𝙼𝚂𝙶𝚂↬ ↝'..Msguser..'↜.   ↝💘\n ¦• 𝚁𝙰𝙽𝙺↬ ↝'..Rutba(msg.sender_user_id_,msg.chat_id_)..'↜    ↝💘\n¦• 𝙸𝙳↬  ↝'..msg.sender_user_id_..'↜    ↝💘\n¦• 𝒄𝒉↬   ↝@So0u_rce_Line↜ ↝🇧??\n')
@@ -12308,20 +12293,20 @@ send(msg.chat_id_, msg.id_,'👨‍🎤 ليس لديك رتبه لاستخدا�
 return false
 end
 if AddChannel(msg.sender_user_id_) == false then
-local MKALEXES  = database:get(bot_id..'text:ch:user')
-if MKALEXES  then
-send(msg.chat_id_, msg.id_,'['..MKALEXES ..']')
+local source_frawn  = database:get(bot_id..'text:ch:user')
+if source_frawn  then
+send(msg.chat_id_, msg.id_,'['..source_frawn ..']')
 else
 send(msg.chat_id_, msg.id_,'👨‍🎤لا تستطيع استخدام البوت \n 👨‍🎤يرجى الاشتراك بالقناه اولا \n 👨‍🎤اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
 local Text =[[
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 قم بأختيار اللغه.. ↑↓
 👨‍🎤 Choose language.. ↑↓ 
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
-👨‍🎤 𝘾𝙃 - [𝗣𝗢𝗪𝗘𝗥](t.me/MKALEXES )
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
+👨‍🎤 𝘾𝙃 - [𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡](t.me/source_frawn )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12329,7 +12314,7 @@ keyboard.inline_keyboard = {
 {text = 'english 𝅘𝅥𝅮', callback_data="/add"},{text = 'عربي 𝅘𝅥𝅮', callback_data="/help90"},
 },
 {
-{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ', url="t.me/MKALEXES "},
+{text = '𝗦𝙊𝙐𝙍𝗖𝙀 𝗙𝙍𝗔𝙒𝗡', url="t.me/source_frawn "},
 },
 {
 {text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
@@ -12356,14 +12341,14 @@ return false
 end
 local Text =[[
 *اهلا انتツفي اضافات البوت*
-*⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚*
+*⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚*
 * يمكنك معرفة حاله تفعيل الاضافات *
 * من خلال ارسال حاله الاضافات *
-*⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚*
+*⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚*
 *يمكنك تصفح الاضافات من خلال*
 *الكيبورد الموجود في الأسفل*
-*⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚*
-[𝗣𝗢𝗪𝗘𝗥☑](t.me/MKALEXES)
+*⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚*
+[𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡☑](t.me/source_frawn)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12374,7 +12359,7 @@ keyboard.inline_keyboard = {
 {text = 'تنبيه المعرف', callback_data="/change-id"},{text = 'تنبيه الصور', callback_data="/change-photo"},
 },
 {
-{text = '𝐒𝐎𝐔??𝐂𝐄 || 𝐇𝐀𝐂𝐊𝐄𝐑 ', url="t.me/MKALEXES"},
+{text = '𝗦𝙊𝙐𝙍𝗖𝙀 𝗙𝙍𝗔𝙒𝗡 ', url="t.me/source_frawn"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -12549,13 +12534,13 @@ if text and text:match("^زخرفه (.*)$") and database:get(bot_id.." sofi:zhrf
 local TextZhrfa = text:match("^زخرفه (.*)$")
 zh = https.request('https://apiabs.ml/zrf.php?abs='..URL.escape(TextZhrfa)..'')
 zx = JSON.decode(zh)
-t = "\n 👨‍🎤قائمه الزخرفه \n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n"
+t = "\n 👨‍🎤قائمه الزخرفه \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 i = 0
 for k,v in pairs(zx.ok) do
 i = i + 1
 t = t..i.."-  `"..v.."` \n"
 end
-send(msg.chat_id_, msg.id_, t..'⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\nاضغط علي الاسم ليتم نسخه\n⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚\n 👨‍🎤 ❲[𝙰𝙻𝙴 ☽‘](t.me/M_S_U)❳ 👨‍🎤 ')
+send(msg.chat_id_, msg.id_, t..'⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\nاضغط علي الاسم ليتم نسخه\n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n 👨‍🎤 ❲[𝗗𝙀𝗩 𝗙𝗥𝗔𝗪𝗡☽‘](t.me/DEV_FRAWN)❳ 👨‍🎤 ')
 end
 if text == "تعطيل الابراج" and Manager(msg) then
 send(msg.chat_id_, msg.id_, '👨‍🎤︙ تم تعطيل الابراج')
@@ -12736,8 +12721,8 @@ return false
 end
 local Teext =[[
 👨‍🎤 اكتب الامر الذي تريد تنفيذه..↑↓
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
-👨‍🎤 𝘾𝙃 - [𝗣𝗢𝗪𝗘𝗥](t.me/MKALEXES )
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
+👨‍🎤 𝘾𝙃 - [𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡](t.me/source_frawn )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12827,8 +12812,8 @@ return false
 end
 local Teext =[[
 👨‍🎤 اكتب الامر الذي تريد تنفيذه..↑↓
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
-👨‍🎤 𝘾𝙃 - [𝗣𝗢𝗪𝗘𝗥](t.me/MKALEXES )
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
+👨‍🎤 𝘾𝙃 - [𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡](t.me/source_frawn )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12894,7 +12879,7 @@ local Teext =[[
 👨‍🎤 المـلفات.
 👨‍🎤 الـصـور.
 👨‍🎤 الـتـاك.
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 المـلصقات.
 👨‍🎤 الاشعارات.
 👨‍🎤 الـدردشه.
@@ -12904,7 +12889,7 @@ local Teext =[[
 👨‍🎤 الاغاني.
 👨‍🎤 الصوت.
 👨‍🎤 الجهات.
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 المـاركداون.
 👨‍🎤 الكـلايش.
 👨‍🎤 الممنوعه.
@@ -12912,8 +12897,8 @@ local Teext =[[
 👨‍🎤 البوتات.
 👨‍🎤 التكرار.
 👨‍🎤 السب.
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
-👨‍🎤 𝘾𝙃 - [𝗣𝗢𝗪𝗘𝗥](t.me/MKALEXES )
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
+👨‍🎤 𝘾𝙃 - [𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡](t.me/source_frawn )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12931,8 +12916,8 @@ return false
 end
 local Teext =[[
 👨‍🎤 قائمة اوامر الادمنية..↑↓
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
-👨‍🎤 رفع او تنزيل مميز.
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
+👨‍?? رفع او تنزيل مميز.
 👨‍🎤 عدد الجروب.
 👨‍🎤 الغاء تقـييد.
 👨‍🎤 المحظورين.
@@ -12949,15 +12934,15 @@ local Teext =[[
 👨‍🎤 حـظر.
 👨‍🎤 طـرد.
 👨‍🎤 مـنع.
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 الغاء تثـبيت.
 👨‍🎤 تـثـبـيـت.
 👨‍🎤 الاعدادات.
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 الرابط.
 👨‍🎤 القوانين.
 👨‍🎤 الترحيب.
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 تفعيل او تعطيل الترحيب.↑↓
 👨‍🎤 اضف او مسح صلاحيه.↑↓
 👨‍🎤 وضع تكرار + العدد.↑↓
@@ -12966,22 +12951,22 @@ local Teext =[[
 👨‍🎤 جهـاتي.
 👨‍🎤 رسائـلي.
 👨‍🎤 سحكاتي.
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
         ╔═══════════════╗        
              👨‍🎤 وضع + الاوامر الادناه..↑↓
         ╚═══════════════╝        
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 اسـم.
 👨‍🎤 رابـط.
 👨‍🎤 صـوره.
 👨‍🎤 وصـف.
 👨‍🎤 قـوانين.
 👨‍🎤 ترحـيب.
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
         ╔═══════════════╗        
              👨‍🎤 مسح + الاوامر الادناه..↑↓
         ╚═══════════════╝        
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 قائمه المـنع.
 👨‍🎤 الصـلاحيات.
 👨‍🎤 المـحظورين.
@@ -12992,8 +12977,8 @@ local Teext =[[
 👨‍🎤 البـوتات.
 👨‍🎤 الصـوره.
 👨‍🎤 الرابـط.
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
-👨‍🎤 𝘾𝙃 - [𝗣𝗢𝗪𝗘𝗥](t.me/MKALEXES )
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
+👨‍🎤 𝘾𝙃 - [𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡](t.me/source_frawn )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -13011,11 +12996,11 @@ return false
 end
 local Teext =[[
 👨‍🎤 قائمة اوامر المدراء والمنشئ..↑↓
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 رفع او تنزيل ادمن
 👨‍🎤 رفع او كشف القيود
 👨‍🎤 تنزيل الكل
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 تفعيل او تعطيل الايدي بالصوره
 👨‍🎤 تفعيل او تعطيل الايدي
 👨‍🎤 تفعيل او تعطيل الردود العامه
@@ -13026,32 +13011,32 @@ local Teext =[[
 👨‍🎤 تفعيل او تعطيل الحظر
 👨‍🎤 تفعيل او تعطيل الرابط
 👨‍🎤 تفعيل او تعطيل اوامر التسليه
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
         ╔═══════════════╗        
              👨‍🎤 تعين او مسح الايدي..↑↓
         ╚═══════════════╝        
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 رفع الادمنيه
 👨‍🎤 اضف او مسح رد
 👨‍🎤 الادمنيه
 👨‍🎤 الردود
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 مسح + عدد
 👨‍🎤 مسح الادمنيه
 👨‍🎤 مسح الردود
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
         ╔═══════════════╗        
              👨‍🎤 اوامر المنشئين الاساسين..↑↓
         ╚═══════════════╝        
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 رفع او تنزيل منشئ
 👨‍🎤 مسح المنشئين
 👨‍🎤 المنشئين
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
         ╔═══════════════╗        
              👨‍🎤 اوامر المنشئين..↑↓
         ╚═══════════════╝        
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 مسح او مسح الاوامر المضافه
 👨‍🎤 اضف مجوهرات + العدد بالرد
 👨‍🎤 اضف رسائل + العدد بالرد
@@ -13061,8 +13046,8 @@ local Teext =[[
 👨‍🎤 الاوامر المضافه
 👨‍🎤 مسح المدراء
 👨‍🎤 الـمـدراء
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
-👨‍🎤 𝘾𝙃 - [𝗣𝗢𝗪𝗘𝗥](t.me/MKALEXES )
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
+👨‍🎤 𝘾𝙃 - [𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡](t.me/source_frawn )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -13080,11 +13065,11 @@ return false
 end
 local Teext =[[
 👨‍🎤 قائمة اوامر المطورين..↑↓
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
         ╔═══════════════╗        
              👨‍🎤 المـطور الـعـادي..↑↓
         ╚═══════════════╝        
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 اذاعه بالتوجيه للمجموعات
 👨‍🎤 اذاعه موجهه بالتـثبيت
 👨‍🎤 جلب نسخه احتياطيه
@@ -13097,11 +13082,11 @@ local Teext =[[
 👨‍🎤 مسح المالكين
 👨‍🎤 اذاعه خـاص
 👨‍🎤 الاحصائيات
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
         ╔═══════════════╗        
              👨‍🎤 المطور الاساسي..↑↓
         ╚═══════════════╝        
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 جلب او رفع نسخه احتياطيه
 👨‍🎤 اذاعه بالتوجيه للمجموعات
 👨‍🎤 رفع او تنزيل  مميز عام 
@@ -13121,8 +13106,8 @@ local Teext =[[
 👨‍🎤 الاحصائيات
 👨‍🎤 المطورين 
 👨‍🎤 الغاء العام
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
-👨‍🎤 𝘾𝙃 - [𝗣𝗢𝗪𝗘𝗥](t.me/MKALEXES )
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
+👨‍🎤 𝘾𝙃 - [𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡](t.me/source_frawn )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -13141,21 +13126,21 @@ return false
 end
 local Teext =[[
 👨‍🎤 قائمة اوامر التسليه..↑↓
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 رفع + تنزيل ← الامر
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 رفع + تنزيل ← متوحد 
 👨‍🎤 تاك للمتوحدين
 👨‍🎤 مسح المتوحدين
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 رفع + تنزيل ← رقاصه
 👨‍🎤 تاك للرقصات
 👨‍🎤 مسح الرقصات
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 رفع + تنزيل ← ابني
 👨‍🎤 تاك لولادي
 👨‍🎤 مسح ولادي
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 رفع + تنزيل ← بنتي
 👨‍🎤 تاك لبناتي
 👨‍🎤 مسح بناتي
@@ -13163,27 +13148,27 @@ local Teext =[[
 👨‍🎤 رفع + تنزيل ← زوجتي
 👨‍🎤 تاك لمرتاتي
 👨‍🎤 مسح مرتاتي
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 رفع + تنزيل ← شاذ
 👨‍🎤 تاك للشواذ
 👨‍🎤 مسح الشواذ
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 رفع + تنزيل ← خطيبتي
 👨‍🎤 تاك لخطيبتي
 👨‍🎤 مسح خطيبتي
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 رفع + تنزيل ← علق
 👨‍🎤 تاك للعلوق
 👨‍🎤 مسح العلوق
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 رفع + تنزيل ← مزه
 👨‍🎤 تاك للمزز
 👨‍🎤 مسح المزز
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 رفع + تنزيل ← وتكه
 👨‍🎤 تاك للوتكات
 👨‍🎤 مسح الوتكات
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 رفع + تنزيل ← كلب
 👨‍🎤 تاك للكلاب
 👨‍🎤 مسح الكلاب
@@ -13192,16 +13177,16 @@ local Teext =[[
 👨‍🎤 بقلبي او من قلبي
 👨‍🎤 تاك للي بقلبي
 👨‍🎤 مسح اللي بقلبي
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 رفع + تنزيل ← زوجتي
 👨‍🎤 تاك للزوجات
 👨‍🎤 مسح الزوجات
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 رفع + تنزيل ← ارمله
 👨‍🎤 تاك للارامل
 👨‍🎤 مسح المطلقات
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
-👨‍🎤 𝘾𝙃 - [𝗣𝗢𝗪𝗘𝗥](t.me/MKALEXES )
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
+👨‍🎤 𝘾𝙃 - [𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡](t.me/source_frawn )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -13220,8 +13205,8 @@ end
 local Teext =[[
 👨‍🎤 قم بأختيار اللغه.. ↑↓
 👨‍🎤 Choose language.. ↑↓ 
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
-👨‍🎤 𝘾𝙃 - [𝗣𝗢𝗪𝗘𝗥](t.me/MKALEXES )
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
+👨‍🎤 𝘾𝙃 - [𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡](t.me/source_frawn )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -13229,7 +13214,7 @@ keyboard.inline_keyboard = {
 {text = 'english 𝅘𝅥𝅮', callback_data="/add"},{text = 'عربي 𝅘𝅥𝅮', callback_data="/help90"},
 },
 {
-{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ', url="t.me/MKALEXES "},
+{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ', url="t.me/source_frawn "},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -13243,11 +13228,11 @@ return false
 end
 local Teext =[[
 👨‍🎤 اهلا بك في قسم الاوامر ..↑↓
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
-👨‍🎤 اليك الاوامر الخاص بسورس باور .
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
+👨‍🎤 اليك الاوامر الخاص بسورس فرعون .
 👨‍🎤 اختر الامر الذي تريده من الازرار بلاسفل .
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
-👨‍🎤 𝘾𝙃 - [𝗣𝗢𝗪𝗘𝗥](t.me/MKALEXES )
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
+👨‍🎤 𝘾𝙃 - [𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡](t.me/source_frawn )
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -13278,10 +13263,10 @@ return false
 end
 local Teext =[[
 👨‍🎤️ ❬ m 1 ❭ Orders Protect Group ⇊
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 Lock «Open + it
 👨‍🎤 Lock «» Open ❬ All ❭
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 Chat
 👨‍🎤 Knows
 👨‍🎤 Pictures
@@ -13306,15 +13291,15 @@ Mobile moving
 👨‍🎤 towers
 👨‍🎤 Meanings of names
 👨‍🎤 Welcome
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 Links
 👨‍🎤 Guidance
 👨‍🎤 popcorn
 👨‍🎤 Bots
 👨‍🎤 Prohibited
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
-👨‍🎤 𝘾𝙃 - [𝗣𝗢𝗪𝗘𝗥](t.me/MKALEXES) 
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
+👨‍🎤 𝘾𝙃 - [𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡](t.me/source_frawn) 
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -13333,36 +13318,36 @@ end
 local Teext =[[
 👨‍🎤 ❬ m 2 ❭ 2 👨‍🎤 entertainment orders ⇊
 👨‍🎤 Lifting «» Download + it
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 and Take
 👨‍🎤 Crown for Soutat
 👨‍🎤 Wipe Wattat
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤
 👨‍🎤 Crown for drapes
 👨‍🎤 Clear Docks
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 Jeep
 👨‍🎤 Crown for bodies
 👨‍🎤 Scanning
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 animal
 👨‍🎤 Crown for animals
 👨‍🎤 Animals
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 failed
 👨‍🎤 Crown for failure
 👨‍🎤 Scan of failure
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 Dermatology
 👨‍🎤 Crown for perforation
 👨‍🎤 Scanning
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 Catte
 👨‍🎤 Crown for cats
 👨‍🎤 Cats survey
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
-👨‍🎤 𝘾𝙃 - [𝗣𝗢𝗪𝗘𝗥](t.me/MKALEXES) 
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
+👨‍🎤 𝘾𝙃 - [𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡](t.me/source_frawn) 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -13380,42 +13365,42 @@ end
 local Teext =[[
 👨‍🎤 ❬ m 3 ❭ 3 👨‍🎤 Tall orders ⇊
 👨‍🎤 Lifting «← Download + it
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 my son
 👨‍🎤 Crown for children
 👨‍🎤 Survey sons
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 Crown for girls
 👨‍🎤 Clear the girls
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
         ╔═══════════════╗        
              👨‍🎤 Habayeb survey..↑↓
         ╚═══════════════╝        
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 my husband
 👨‍🎤 Crown for couples
 👨‍🎤 Survey of couples
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 My wife
 👨‍🎤 Crown for the wives
 👨‍🎤 Wipe waves
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 Khayen
 👨‍🎤 Crown for him
 👨‍🎤 Clear the moon
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 Crown for the two
 👨‍🎤 Khiennine survey
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 Abit
 👨‍🎤 Crown for the mixture
 👨‍🎤 Survey
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 Crown for Paradise
 👨‍🎤 Storage survey
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
-👨‍🎤 𝘾𝙃 - [𝗣𝗢𝗪𝗘𝗥](t.me/MKALEXES) 
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
+👨‍🎤 𝘾𝙃 - [𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡](t.me/source_frawn) 
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -13433,14 +13418,14 @@ return false
 end
 local Teext =[[
 👨‍🎤 ❬ m 4 ❭ Orders of members ⇊
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 Age account
 👨‍🎤 Picture «←
 👨‍🎤 Quran
 👨‍🎤 Settings
 👨‍🎤 Qatari
 👨‍🎤 Delete «← Sell ❬ Qatari
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 My messages «← Delete 
 👨‍🎤 Decorating «← Songs
 👨‍🎤 Movies «← Cartoon
@@ -13448,7 +13433,7 @@ local Teext =[[
 👨‍🎤 YouTube ← Games
 👨‍🎤 Weather + area
 👨‍🎤 Dark «link
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 My name is 
 👨‍🎤 My Juices «← Delete my juices
 👨‍🎤 Powers «← Ping
@@ -13457,7 +13442,7 @@ local Teext =[[
 👨‍🎤 I am Maine
 👨‍🎤 Say + word
 👨‍🎤 Qatah «← dog
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 Source «Developer
 👨‍🎤 link «hands
 👨‍🎤 Rank «← Revealed
@@ -13467,9 +13452,9 @@ local Teext =[[
 👨‍🎤 Boso «← her pussy
 👨‍🎤 Mido «← ←
 👨‍🎤 Delete link
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
-👨‍🎤 𝘾𝙃 - [𝗣𝗢𝗪𝗘𝗥](t.me/MKALEXES) 
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
+👨‍🎤 𝘾𝙃 - [𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡](t.me/source_frawn) 
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -13489,25 +13474,25 @@ end
 local Teext =[[
 👨‍🎤 ❬ m 5 ❭ Orders of developers ⇊
 👨‍🎤 Developer ←⇊
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 Lifting «download ❬ owner ❭
 👨‍🎤 Change the group link
 👨‍🎤 Destination of groups
 👨‍🎤 Destination by guidance for groups
 👨‍🎤 A radio face
 👨‍🎤 Special radio
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 A special guidance
 👨‍🎤 Fix the installation
 👨‍🎤 bring back copy
 👨‍🎤 raise its backup copy
 👨‍🎤 Statistics
 👨‍🎤 Delete owners
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
         ╔═══════════════╗        
              👨‍🎤 Basic Developer..
         ╚═══════════════╝        
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 Add "← Delete a general response
 👨‍🎤 Lifting «download ❬ special year ❭
 👨‍🎤 Featured Survey
@@ -13518,7 +13503,7 @@ local Teext =[[
 👨‍🎤 Fix the installation
 👨‍🎤 A radio face
 👨‍🎤 bring «← raising 
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 Statistics
 👨‍🎤 Lifting «download ❬ Developer ❭
 👨‍🎤 Developers «← Delete developers
@@ -13528,9 +13513,9 @@ local Teext =[[
 👨‍🎤 General makers
 👨‍🎤 Preventors General
 👨‍🎤 Canceling the general
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
-👨‍🎤 𝘾𝙃 - [𝗣𝗢𝗪𝗘𝗥](t.me/MKALEXES) 
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
+👨‍🎤 𝘾𝙃 - [𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡](t.me/source_frawn) 
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -13544,12 +13529,12 @@ end
 if Text == '/add' then
 local Teext =[[
 👨‍🎤 Welcome to the orders section.. ↑↓
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 👨‍🎤 You can use the buttons..↑↓
 👨‍🎤 By putting pressure on them..↑↓
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
-👨‍🎤 𝘾𝙃 - [𝗣𝗢𝗪𝗘𝗥](t.me/MKALEXES) 
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
+👨‍🎤 𝘾𝙃 - [𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡](t.me/source_frawn) 
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -13607,7 +13592,7 @@ if (text and text == "تفعيل اوامر التحشيش") then
 send(msg.chat_id_, msg.id_, ' 👨‍🎤 تم تفعيل اوامر التحشيش')
 database:del(bot_id.."Fun_Bots:"..msg.chat_id_)
 end
-local Name_Bot = (database:get(bot_id..'Name:Bot') or 'باور')
+local Name_Bot = (database:get(bot_id..'Name:Bot') or 'فرعون')
 if not database:get(bot_id.."Fun_Bots:"..msg.chat_id_) then
 if text ==  ""..Name_Bot..' شنو رئيك بهاذا' and tonumber(msg.reply_to_message_id_) > 0 then     
 function FunBot(extra, result, success) 
@@ -13675,12 +13660,12 @@ send(msg.chat_id_, msg.id_,xl)
 database:del(bot_id..":"..msg.sender_user_id_..":rjo_Bots"..msg.chat_id_)
 end
 if text == 'انا مين' and SudoBot(msg) then 
-send(msg.chat_id_,msg.id_, '[انت مطوري نور عنيا🥺🤍](t.me/MKALEXES)') 
+send(msg.chat_id_,msg.id_, '[انت مطوري نور عنيا🥺🤍](t.me/source_frawn)') 
 return false
 end
 
 if text == 'انا مين' and DevSoFi(msg) then 
-send(msg.chat_id_,msg.id_, '[انت مطوري الثاني حته مني 😍💚](t.me/MKALEXES)') 
+send(msg.chat_id_,msg.id_, '[انت مطوري الثاني حته مني 😍💚](t.me/source_frawn)') 
 return false
 end
 
@@ -14000,42 +13985,42 @@ end
 end
 
 if text == 'انا مين' and Sudo(msg) then 
-send(msg.chat_id_,msg.id_, '[انت المطور بس الصغنن 🌝💘](t.me/MKALEXES)') 
+send(msg.chat_id_,msg.id_, '[انت المطور بس الصغنن 🌝💘](t.me/source_frawn)') 
 return false
 end
 
 if text == 'انا مين' and CoSu(msg) then 
-send(msg.chat_id_,msg.id_, '[نت المالك هن يعني حاجه فوق فوف راسي 😂♥](t.me/MKALEXES)') 
+send(msg.chat_id_,msg.id_, '[نت المالك هن يعني حاجه فوق فوف راسي 😂♥](t.me/source_frawn)') 
 return false
 end
 
 if text == 'انا مين' and Constructor(msg) then 
-send(msg.chat_id_,msg.id_, '[انت منشئ يسطا عتلاء منشئ عاوز حاجه تانيه😹🤦‍♂️](t.me/MKALEXES)') 
+send(msg.chat_id_,msg.id_, '[انت منشئ يسطا عتلاء منشئ عاوز حاجه تانيه😹🤦‍♂️](t.me/source_frawn)') 
 return false
 end
 
 if text == 'انا مين' and BasicConstructor(msg) then 
-send(msg.chat_id_,msg.id_, '[ انت هنا منشئ اساسي يعني اعلى رتبه عاوزك تفتخر😂👨‍🎤](t.me/MKALEXES)') 
+send(msg.chat_id_,msg.id_, '[ انت هنا منشئ اساسي يعني اعلى رتبه عاوزك تفتخر😂👨‍🎤](t.me/source_frawn)') 
 return false
 end
 
 if text == 'انا مين' and Manager(msg) then 
-send(msg.chat_id_,msg.id_, '[ انت المدير يعني الروم تحت سيطرتك😹](t.me/MKALEXES)') 
+send(msg.chat_id_,msg.id_, '[ انت المدير يعني الروم تحت سيطرتك😹](t.me/source_frawn)') 
 return false
 end
 
 if text == 'انا مين' and Mod(msg) then 
-send(msg.chat_id_,msg.id_, '[انت مجرد ادمن اجتهد عشان ياخد رتبه😹 ](t.me/MKALEXES)') 
+send(msg.chat_id_,msg.id_, '[انت مجرد ادمن اجتهد عشان ياخد رتبه😹 ](t.me/source_frawn)') 
 return false
 end
 
 if text == 'انا مين' and Special(msg) then 
-send(msg.chat_id_,msg.id_, '[ انت مميز ابن ناس 😊 ](t.me/MKALEXES)') 
+send(msg.chat_id_,msg.id_, '[ انت مميز ابن ناس 😊 ](t.me/source_frawn)') 
 return false
 end
 
 if text == 'انا مين' then
-send(msg.chat_id_,msg.id_, '[انـت عضو قمـيل 🥺❤️](t.me/MKALEXES)') 
+send(msg.chat_id_,msg.id_, '[انـت عضو قمـيل 🥺❤️](t.me/source_frawn)') 
 return false
 end
 
@@ -14478,10 +14463,10 @@ keyboard.inline_keyboard = {
 {{text = 'بوت تيك توك 🏴‍☠️',url="t.me/K0XBOT"}},
 {{text = 'بوت انستقرام 🎌',url="t.me/J33Bot"}},
 {{text = 'بوت قران 🏳️',url="t.me/quran_lbot"}},
-{{text = '00:00', url="t.me/MKALEXES"}}, 
+{{text = '00:00', url="t.me/source_frawn"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/M_S_U/8&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/DEV_FRAWN/8&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 
@@ -14493,7 +14478,7 @@ ght = math.random(2,22);
 local Text ='تـم اخـتـيـآر  استـوري ممـيز لـك ❤️' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '00:00', url="t.me/MKALEXES"}}, 
+{{text = '00:00', url="t.me/source_frawn"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/koko12300/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -14506,7 +14491,7 @@ ght = math.random(1,33);
 local Text ='الستخدم ثيم اخر اكتب ثيم'  
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '00:00', url="t.me/MKALEXES"}}, 
+{{text = '00:00', url="t.me/source_frawn"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendDocument?chat_id=' .. msg.chat_id_ .. '&document=https://t.me/ahmedthem1/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -14516,10 +14501,10 @@ end
 
 if text == "صور انيمي" then 
 ght = math.random(1,60); 
-local Text ='اتفضل يباور 🌚❤️' 
+local Text ='اتفضل يفرعون 🌚❤️' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '00:00', url="t.me/MKALEXES"}}, 
+{{text = '00:00', url="t.me/source_frawn"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/s_rogen/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -14528,10 +14513,10 @@ end
 
 if text == "خلفيات" then 
 ght = math.random(1,28); 
-local Text ='اتفضل يباور 🌚❤️' 
+local Text ='اتفضل يفرعون 🌚❤️' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '00:00', url="t.me/MKALEXES"}}, 
+{{text = '00:00', url="t.me/source_frawn"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/KHALFEAT_RO/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -14539,10 +14524,10 @@ end
 
 if text == "صور" then 
 ght = math.random(1,28); 
-local Text ='اتفضل يباور 🌚❤️' 
+local Text ='اتفضل يفرعون 🌚❤️' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '00:00', url="t.me/MKALEXES"}}, 
+{{text = '00:00', url="t.me/source_frawn"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/KHALFEAT_RO/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -14552,10 +14537,10 @@ end
 
 if text == "تويت بالصوره" then 
 ght = math.random(1,14); 
-local Text ='اتفضل يباور 🌚❤️' 
+local Text ='اتفضل يفرعون 🌚❤️' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '00:00', url="t.me/MKALEXES"}}, 
+{{text = '00:00', url="t.me/source_frawn"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ka_rogan/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -14566,10 +14551,10 @@ end
 
 if text == "لو خيروك بالصوره" then 
 ght = math.random(1,16); 
-local Text ='اتفضل يباور 🌚❤️' 
+local Text ='اتفضل يفرعون 🌚❤️' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '00:00', url="t.me/MKALEXES"}}, 
+{{text = '00:00', url="t.me/source_frawn"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/lo_rogen/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -14594,16 +14579,16 @@ local Text = [[
 👨‍🎤 روايات ← لعرض الميزه
 👨‍🎤 ثيم ← لعرض الميزه
 👨‍🎤 م11← مـيزه خاصه  للبـوتات المدفوعـه تشـرح مميزات البـوت 
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
-👨‍🎤 𝘾𝙃 - [𓌹 ᯓ المبرمج باور ★ 𓌺](t.me/M_S_U) 
-⚚━━━━━⚚ 𝗣𝗢𝗪𝗘𝗥⚚━━━━━⚚
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
+👨‍🎤 𝘾𝙃 - [𓌹 ᯓ المبرمج فرعون ★ 𓌺](t.me/DEV_FRAWN) 
+⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {
-{text = 'المبرمج باور',url="t.me/M_S_U"}
+{text = 'المبرمج فرعون',url="t.me/DEV_FRAWN"}
 },  
-{{text = '00:00', url="t.me/MKALEXES"}}, 
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡', url="t.me/source_frawn"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ASZXDE12&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -14611,25 +14596,64 @@ end
 
 
 
-if text == 'اليكس' or text == 'باور' then  
+if text == 'مالك السورس' or text == 'بدير' then  
 local Text = [[
-🛑لتواصل مع المبرمج اليكس 🌚💞
+🛑لتواصل مع المبرمج بدير 🌚💞
 🛑اطغظ علي الازرار الي تحت 🌚💞
 
 ]]  
 keyboard = {}   
 keyboard.inline_keyboard = {  
 {
-{text = '𝙳𝙴𝚅 𝙰𝙻𝙴𝚇  🌚💞 ',url="t.me/M_S_U"}
+{text = '𝗗𝙀𝗩 𝗕𝙀𝗗𝗔𝙔𝙍',url="t.me/BEDAYR"}
 },  
 
-{{text = '00:00', url="t.me/MKALEXES"}}, 
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡', url="t.me/source_frawn"}}, 
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ASZXDE12/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'العاب باور ' or text == 'الالعاب المتطوره' or text == 'العاب متطوره' then  
+
+if text == 'المبرمج فرعون' or text == 'فرعون' then  
+local Text = [[
+🛑لتواصل مع المبرمج فرعون 🌚💞
+🛑اطغظ علي الازرار الي تحت 🌚💞
+
+]]  
+keyboard = {}   
+keyboard.inline_keyboard = {  
+{
+{text = '𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡',url="t.me/DEV_FRAWN"}
+},  
+
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡', url="t.me/source_frawn"}}, 
+}  
+local msg_id = msg.id_/2097152/0.5  
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ASZXDE12/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+
+if text == ' مالك السورس'  or text ==  'حكمدار'  then  
+local Text = [[
+🛑لتواصل مع المبرمج حمدار 🌚💞
+🛑اطغظ علي الازرار الي تحت 🌚💞
+
+]]  
+keyboard = {}   
+keyboard.inline_keyboard = {  
+{
+{text = ' 𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡' ,url="t.me/DEV_FRAWN"}
+},  
+
+{{text =  '𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡' , url="t.me/source_frawn"}}, 
+}  
+local msg_id = msg.id_/2097152/0.5  
+https.request("https://api.telegram.org/bot"..token.. /sendPhoto?chat_id=  .. msg.chat_id_ ..  &photo=https://t.me/ASZXDE12/2&caption=  .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+
+if text == 'العاب فرعون ' or text == 'الالعاب المتطوره' or text == 'العاب متطوره' then  
 local Text = [[  
  اهلا في قائمه الالعاب المتطوره 
 تفضل اختر لعبه من القائمه 
@@ -14661,10 +14685,10 @@ keyboard.inline_keyboard = {
 {{text = 'SpaceTraveler', url="https://t.me/gamee?game=SpaceTraveler"},{text = 'RedAndBlue', url="https://t.me/gamee?game=RedAndBlue"}},  
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
 {{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
-{{text = '👨‍🎤قنـآة السـورس 👨‍🎤', url="https://t.me/MKALEXES"},{text = '👨‍🎤مــبـرمج السورس 👨‍🎤', url="https://t.me/M_S_U"}}, 
+{{text = '👨‍🎤قنـآة السـورس 👨‍🎤', url="https://t.me/source_frawn"},{text = '👨‍🎤مــبـرمج السورس 👨‍🎤', url="https://t.me/DEV_FRAWN"}}, 
 }  
 local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MKALEXES&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/source_frawn&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == "نسبه الانوثه" or text == "نسبه انوثه" and msg.reply_to_message_id_ ~= 0 and Addictive(msg) then
 if not database:get(bot_id..'Cick:ano'..msg.chat_id_) then
@@ -14816,7 +14840,7 @@ end
 if #list == 0 then
 t = "👨‍🎤 لا يوجد ادمن"
 end
-send(msg.chat_id_,0,''..t..'\nٴ≪ـــــــــــــــــــــ𓆩 𝐒𝐎𝐔𝐑𝐂𝐄 || 𝐄𝐋𝐒??𝐋𝐓𝐀𝐍 𓆪ـــــــــــــــــــــ≫ٴ\n👨‍🎤 تم التعديل على الميديا\n👨‍🎤 الشخص الي قام بالتعديل\n👨‍🎤 ايدي الشخص ◂ '..result.sender_user_id_..'\n👨‍🎤 معرف الشخص»{ '..users..' }') 
+send(msg.chat_id_,0,''..t..'\nٴ≪ـــــــــــــــــــــ𓆩 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡𓆪ـــــــــــــــــــــ≫ٴ\n👨‍🎤 تم التعديل على الميديا\n👨‍🎤 الشخص الي قام بالتعديل\n👨‍🎤 ايدي الشخص ◂ '..result.sender_user_id_..'\n👨‍🎤 معرف الشخص»{ '..users..' }') 
 end,nil)
 DeleteMessage(msg.chat_id_,{[0] = msg.message_id_}) 
 end
@@ -14892,7 +14916,7 @@ tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,
 if data.username_ ~= false then
 send(msg.chat_id_,0,"👨‍🎤 العضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n👨‍🎤 ["..DRAGONAbot.."] \n") 
 else
-send(msg.chat_id_,0,"👨‍🎤 العضو : {["..data.first_name_.."](T.ME/MKALEXES)}\n👨‍🎤 ["..DRAGONAbot.."] \n") 
+send(msg.chat_id_,0,"👨‍🎤 العضو : {["..data.first_name_.."](T.ME/source_frawn)}\n👨‍🎤 ["..DRAGONAbot.."] \n") 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = data.message_id_}) 
