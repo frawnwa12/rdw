@@ -1425,7 +1425,7 @@ tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonu
 end
 if text == 'الاصدار' and DevSoFi(msg) then 
 database:del(bot_id..'Srt:Bot') 
-send(msg.chat_id_, msg.id_,' 👨‍🎤 اصدار سورس فرعون{ S:12✓}')
+send(msg.chat_id_, msg.id_,' 👨‍🎤 اصدار  فرعون{ S:12✓}')
 end
 
 
@@ -3079,7 +3079,7 @@ end
 
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == '"' then
 local Text =[[
-☑ [𝙗𝙤𝙩 𝙨𝙤𝙪𝙧𝙘𝙚   ](t.me/frawnwabot)
+☑ [𝙗𝙤𝙩 𝙨𝙤𝙪𝙧𝙘𝙚 ](t.me/frawnwabot)
 
 ☑ [⟦𝙨𝙤𝙪𝙧𝙘𝙚 𝙛𝙧𝙖𝙬𝙣 ⟧](t.me/source_frawn)
   
@@ -3095,10 +3095,10 @@ keyboard.inline_keyboard = {
 {{text = ' ◍ 𝘽𝙤𝙩 𝙨𝙤𝙪𝙧𝙘𝙚 𖣌 ', url = "https://t.me/frawnwabot"}},
 
 
-{ {text = 'اضف البوت لمجموعتك 🌚💞', url="http://t.me/"..sudos.UserName.."?startgroup=new"}, },
+{ {text = 'اضف البوت لمجموعتك 🌚💞', url="http://t.me/"..dofile("./Info.lua").botUserName.."?startgroup=new"}, },
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/source_frawn/167&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/source_frawn&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 ------by-alex---- by--- alex ------byalex-------power-----soucer----alex
@@ -9093,7 +9093,7 @@ keyboard.inline_keyboard = {
 },
 {
 {text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 ⤶', url="https://t.me/source_frawn"},
-{ {text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}, },
+{ {text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..dofile("./Info.lua").bot.UserName.."?startgroup=new"}, },
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -11083,7 +11083,7 @@ keyboard = {}
 keyboard.inline_keyboard = {
 	
 {{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡', url="t.me/source_frawn"}}, 
-{ {text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"}, },
+{ {text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..dofile("./Info.lua").bot.UserName.."?startgroup=new"}, },
 
 }
 local function getpro(extra, result, success) 
@@ -12316,7 +12316,7 @@ keyboard.inline_keyboard = {
 {text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ', url="t.me/source_frawn "},
 },
 {
-{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
+{text = 'اضف البوت لمجموعتك 𖠕', url="http://t.me/"..dofile("./Info.lua").bot.UserName.."?startgroup=new"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
