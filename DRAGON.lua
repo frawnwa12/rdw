@@ -307,15 +307,15 @@ return var
 end 
 function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(1970574026) then  
-var = 'المبرمج فرعون'
+var = 'المبرمج فرعون الكبير'
 elseif tonumber(user_id) == tonumber(5677887665443345666) then
 var = 'المبرمج بابلو'
 elseif tonumber(user_id) == tonumber(SUDO) then
-var ='الفرعون المتوسط'  
+var ='المطور الاساسي'  
 elseif database:sismember(bot_id.."Dev:SoFi:2", user_id) then 
-var = "الفرعون الصغير"  
+var = "المطور الاساسي²"  
 elseif tonumber(user_id) == tonumber(bot_id) then  
-var = 'بوت فرعون'
+var = 'بوت'
 elseif database:sismember(bot_id..'Sudo:User', user_id) then
 var = database:get(bot_id.."Sudo:Rd"..msg.chat_id_) or 'المطور'  
 elseif database:sismember(bot_id..'CoSu'..chat_id, user_id) then
@@ -14610,7 +14610,7 @@ keyboard.inline_keyboard = {
 {{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡', url="t.me/source_frawn"}}, 
 }  
 local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ASZXDE12/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/DEV_FRAWN&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'العاب فرعون ' or text == 'الالعاب المتطوره' or text == 'العاب متطوره' then  
