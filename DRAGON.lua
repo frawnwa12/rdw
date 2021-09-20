@@ -1491,7 +1491,7 @@ if text == 'قناه السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
  👨‍🎤 من أحسن السورسات على التليجرام سورس فرعون 👨‍🎤
-بجد سورس أمان جدا وفي مميزات جامده
+بجد 𖤍 𝗗𝙀𝗩 𝗔𝗦𝙏𝙊𝙍𝙊𝗞𝗦 𖤍 أمان جدا وفي مميزات جامده
 تع نصب بوتك عندنا لو محظور
 خش على تواصل هيدخلك لروم التواصل 
 ]] 
@@ -3075,26 +3075,21 @@ end
 end,nil)  
 end
 
-if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == '"' then
-local Text =[[
-☑ [𝘽𝙤𝙩 𝙨𝙤𝙪𝙧𝙘𝙚](t.me/frawnwabot)
-
-☑ [𝙨𝙤𝙪𝙧𝙘𝙚 𝙛𝙧𝙖𝙬𝙣](t.me/source_frawn)
-  
-☑ [𝙛𝙧𝙖𝙬𝙣 𝙬𝙖](t.me/DEV_FRAWN)
+if text == ' السورس'  or text ==  'سورس'  or text ==  'يا سورس ' or text ==  'سورس فرعون' then
+local Text = [[
+┍━━━━━☞[𝙁𝙍𝘼𝙒𝙉](https://t.me/source_frawn)☜━━━━━┑
+[𝑾𝑬𝑳𝑪𝑶𝑴𝑬 𝑻𝑶 𝑺𝑶𝑼𝑹𝑪𝑬 𝐅𝐑𝐀𝐖𝐍
+𝑻𝑯𝑬𝑺𝑻𝑹𝑶𝑵𝑮𝑬𝑺𝑻 𝑺𝑶𝑼𝑹𝑪𝑬 𝑰𝑵 𝑻𝑬𝑳𝑬𝑮𝑹𝑨𝑴](https://t.me/source_frawn)
+┕━━━━━☞[𝙁𝙍𝘼𝙒𝙉](https://t.me/source_frawn)☜━━━━━┙
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-	
-{{text = ' ◍ 𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡  𖣌 ', url = "https://t.me/DEV_FRAWN"}},
-
-{{text = ' ◍ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 𖣌 ', url = "https://t.me/source_frawn"}},
-
-{{text = ' ◍ 𝘽𝙤𝙩 𝙨𝙤𝙪𝙧𝙘𝙚 𖣌 ', url = "https://t.me/frawnwabot"}},
-{ {text = 'اضف البوت لمجموعتك 🌚💞', url="http://t.me/"..sudos.UserName.."?startgroup=new"}, },
+{{text =  '𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡',url="t.me/DEV_FRAWN"}},
+{{text =  '𝗖𝗛 𝗙𝙍𝗔𝙒𝗡', url="t.me/source_frawn"}},
+{{text =  'اضف البوت الي مجموعتك'  ,url="t.me/"..dofile("./DRAGON.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/frawnwafr/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token.. '/sendPhoto?chat_id='  .. msg.chat_id_ ..  '&photo=https://t.me/frawnwafr/2&caption='  .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 ------by-alex---- by--- alex ------byalex-------power-----soucer----alex
