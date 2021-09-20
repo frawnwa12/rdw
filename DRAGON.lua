@@ -3077,11 +3077,11 @@ end
 
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == '"' then
 local Text =[[
-☑ [𝘽𝙤𝙩 𝙨𝙤𝙪𝙧𝙘𝙚   ](t.me/frawnwabot)
+☑ [𝘽𝙤𝙩 𝙨𝙤𝙪𝙧𝙘𝙚](t.me/frawnwabot)
 
-☑ [⟦𝙨𝙤𝙪𝙧𝙘𝙚 𝙛𝙧𝙖𝙬𝙣 ⟧](t.me/source_frawn)
+☑ [𝙨𝙤𝙪𝙧𝙘𝙚 𝙛𝙧𝙖𝙬𝙣](t.me/source_frawn)
   
-☑ [𝙛𝙧𝙖𝙬𝙣 𝙬𝙖 ](t.me/DEV_FRAWN)
+☑ [𝙛𝙧𝙖𝙬𝙣 𝙬𝙖](t.me/DEV_FRAWN)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -3091,8 +3091,6 @@ keyboard.inline_keyboard = {
 {{text = ' ◍ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡 𖣌 ', url = "https://t.me/source_frawn"}},
 
 {{text = ' ◍ 𝘽𝙤𝙩 𝙨𝙤𝙪𝙧𝙘𝙚 𖣌 ', url = "https://t.me/frawnwabot"}},
-
-
 { {text = 'اضف البوت لمجموعتك 🌚💞', url="http://t.me/"..sudos.UserName.."?startgroup=new"}, },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -14597,12 +14595,11 @@ if text == 'فرعون' or text == 'فرعون' then
 local Text = [[
 🛑لتواصل مع المبرمج فرعون 🌚💞
 🛑اطغظ علي الازرار الي تحت 🌚💞
-
 ]]  
 keyboard = {}   
 keyboard.inline_keyboard = {  
 {
-{text = '𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡  🌚💞 ',url="t.me/DEV_FRAWN"}
+{text = '𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡',url="t.me/DEV_FRAWN"}
 },  
 
 {{text = '𖤍𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡𖤍', url="t.me/source_frawn"}}, 
