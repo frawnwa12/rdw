@@ -81,9 +81,9 @@ token="]]..database:get(id_server..":token")..[["
 while(true) do
 rm -fr ../.telegram-cli
 if [ ! -f ./tg ]; then
-echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝗙𝙍𝗔𝙒𝗡 ┉  ┉ ┉ ┉ ┉≫ٴ ┉ ┉ ┉ ┉ ┉ ┉┉ ┉ ┉ ┉ ┉ ┉ ┉"
+echo "╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸ ┉ ┉ ┉ ┉ ┉ ┉┉ ┉ ┉ ┉ ┉ ┉ ┉"
 echo "TG IS NOT FIND IN FILES BOT"
-echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝗙𝙍𝗔𝙒𝗡 ┉  ┉ ┉ ┉ ┉≫ٴ ٴ≪┉ ┉ ┉ ┉ ┉ 𝗙𝙍𝗔𝙒𝗡 ┉  ┉ ┉ ┉ ┉≫ٴ ┉"
+echo "╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸ ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸ ┉"
 exit 1
 fi
 if [ ! $token ]; then
@@ -1491,7 +1491,7 @@ if text == 'قناه السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
  👨‍🎤 من أحسن السورسات على التليجرام سورس فرعون 👨‍🎤
-بجد 𖤍 𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡 𖤍 أمان جدا وفي مميزات جامده
+بجد 𖤍𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡𖤍 أمان جدا وفي مميزات جامده
 تع نصب بوتك عندنا لو محظور
 خش على تواصل هيدخلك لروم التواصل 
 ]] 
@@ -3075,28 +3075,21 @@ end
 end,nil)  
 end
 
-if text ==  'السورس'  or text == ' سورس ' or text ==  'يا سورس ' or text =='  ياسورس '  then
-local Text =[[
-┍━━━━━☞[𝙁𝙍𝘼𝙒𝙉](t.me/source_frawn)☜━━━━━┑
-[𝑾𝑬𝑳𝑪𝑶𝑴𝑬 𝑻𝑶 𝑺𝑶𝑼𝑹𝑪𝑬 𝐅𝐑𝐀𝐖𝐍
-𝑻𝑯𝑬𝑺𝑻𝑹𝑶𝑵𝑮𝑬𝑺𝑻 𝑺𝑶𝑼𝑹𝑪𝑬 𝑰𝑵 𝑻𝑬𝑳𝑬𝑮𝑹𝑨𝑴](t.me/source_frawn)
-┕━━━━━☞[𝙁𝙍𝘼𝙒𝙉](t.me/source_frawn)☜━━━━━┙
+if text == ' السورس'  or text ==  'سورس'  or text ==  'يا سورس ' or text ==  'سورس فرعون' then
+local Text = [[
+[┍━━━━━☞𝙁𝙍𝘼𝙒𝙉☜━━━━━┑](t.me/source_frawn)
+[𝑾𝑬𝑳𝑪𝑶𝑴𝑬 𝑻𝑶 𝑺𝑶𝑼𝑹𝑪𝑬 𝐅𝐑𝐀𝐖𝐍]
+[𝑻𝑯𝑬𝑺𝑻𝑹𝑶𝑵𝑮𝑬𝑺𝑻 𝑺𝑶𝑼𝑹𝑪𝑬 𝑰𝑵 𝑻𝑬𝑳𝑬𝑮𝑹𝑨𝑴](t.me/source_frawn)
+[┕━━━━━☞𝙁𝙍𝘼𝙒𝙉☜━━━━━┙](t.me/source_frawn)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-
-{
-{text =  ' 𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡', url= "https://t.me/DEV_FRAWN"},
-},
-{
-{text ='  𝗖𝗛 𝗙𝙍𝗔𝙒𝗡', url = "https://t.me/source_frawn"},
-},
-{
-{text = ' اضف البوت لمجموعتك 𖠕', url = "http://t.me/"..dofile("./DRAGON.lua").botUserName.."?startgroup=start"},
-},
+{{text =  '𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡', url= "t.me/DEV_FRAWN"}},
+{{text =  '𝗖𝗛 𝗙𝙍𝗔𝙒𝗡', url= "t.me/source_frawn"}},
+{text = 'اضف البوت لمجموعتك 𖠕', url= "http://t.me/"..sudos.UserName.."?startgroup=new"},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token.." /sendvideo?chat_id=' .. msg.chat_id_ ..  '&video=t.me/frawnwafr/2?single&caption='  .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/frawnwafr/2?single&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 ------by-alex---- by--- alex ------byalex-------power-----soucer----alex
@@ -3821,7 +3814,7 @@ end,nil)
 elseif text == 'قفل التوجيه بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:forward"..msg.chat_id_,'ked')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n??‍🎤 تـم قفـل التوجيه بالتقييد ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل التوجيه بالتقييد ')  
 end,nil)
 elseif text == 'قفل التوجيه بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:forward"..msg.chat_id_,'ktm')  
@@ -4436,7 +4429,7 @@ return false
 end
 function start_function(extra, result, success)
 if result.id_ then
-usertext = '\n 👨‍🎤 العضو 👨‍?? ['..result.title_..'](t.me/'..(username or 'DV_POWER1')..')'
+usertext = '\n 👨‍🎤 العضو 👨‍🎤 ['..result.title_..'](t.me/'..(username or 'DV_POWER1')..')'
 status  = '\n 👨‍🎤 تم الغاء (الحظر-الكتم) عام من الجروبات'
 texts = usertext..status
 database:srem(bot_id..'GBan:User', result.id_)
@@ -6298,7 +6291,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,'👨‍🎤 لا تستطيع استخدام البوت \n ??‍🎤 يرجى الاشتراك بالقناه اولا \n 👨‍🎤 اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,'👨‍🎤 لا تستطيع استخدام البوت \n 👨‍🎤 يرجى الاشتراك بالقناه اولا \n 👨‍🎤 اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -12519,6 +12512,10 @@ local texting = {"قل لواحد ماتعرفه عطني كف خطأ العقا
 send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
 end
 end
+if text == 'زخرفه' or text == 'زخرفة' then
+send(msg.chat_id_,msg.id_, 'اكتب زخرفه + الاسم للي هتزخرفه مثال زخرفه فرعون') 
+return false
+end
 if text == "تعطيل الزخرفه" and Manager(msg) then
 send(msg.chat_id_, msg.id_, '👨‍🎤︙ تم تعطيل الزخرفه')
 database:set(bot_id.." sofi:zhrf_Bots"..msg.chat_id_,"close")
@@ -12529,7 +12526,7 @@ database:set(bot_id.." sofi:zhrf_Bots"..msg.chat_id_,"open")
 end
 if text and text:match("^زخرفه (.*)$") and database:get(bot_id.." sofi:zhrf_Bots"..msg.chat_id_) == "open" then
 local TextZhrfa = text:match("^زخرفه (.*)$")
-zh = https.request('https://apiabs.ml/zrf.php?abs='..URL.escape(TextZhrfa)..'')
+zh = https.request('https://rudi-dev.tk/Amir1/Boyka.php?en='..URL.escape(TextZhrfa)..'')
 zx = JSON.decode(zh)
 t = "\n 👨‍🎤قائمه الزخرفه \n⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━━━━━⚚\n"
 i = 0
