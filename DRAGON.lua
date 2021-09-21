@@ -161,7 +161,7 @@ io.popen("mkdir File_Bot")
 io.popen("cd File_Bot && rm -rf commands.lua.1") 
 io.popen("cd File_Bot && rm -rf commands.lua.2") 
 io.popen("cd File_Bot && rm -rf commands.lua.3") 
-io.popen("cd File_Bot && wget https://raw.githubusercontent.com/ahmedsiria/mero/main/File_Bot/commands.lua") 
+io.popen("cd File_Bot && wget https://raw.githubusercontent.com/frawnwa12/rdw/main/File_Bot/commands.lua") 
 t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
@@ -1272,7 +1272,7 @@ echo '⚚━━━━━⚚ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗙𝗥𝗔𝗪𝗡⚚━�
 end
 if text == 'تحديث السورس ' and DevSoFi(msg) then 
 os.execute('rm -rf DRAGON.lua')
-os.execute('wget https://raw.githubusercontent.com/exalex200/EX/main/DRAGON.lua')
+os.execute('wget https://raw.githubusercontent.com/frawnwa12/rdw/main/DRAGON.lua')
 send(msg.chat_id_, msg.id_,' 👨‍🎤 تم تحديث السورس')
 dofile('DRAGON.lua')  
 end
@@ -2793,7 +2793,7 @@ end
 return false
 end
 os.execute('rm -rf DRAGON.lua')
-os.execute('wget https://raw.githubusercontent.com/exalex200/EX/main/DRAGON.lua')
+os.execute('wget https://raw.githubusercontent.com/frawnwa12/rdw/main/DRAGON.lua')
 send(msg.chat_id_, msg.id_,'👨‍🎤 تم تحديث السورس \n👨‍🎤 لديك اخر اصدار لسورس فرعون\n👨‍🎤 الاصدار » { v 1.6 }')
 dofile('DRAGON.lua')  
 end
@@ -3089,7 +3089,7 @@ keyboard.inline_keyboard = {
 {text = 'اضف البوت لمجموعتك 𖠕', url= "http://t.me/"..sudos.UserName.."?startgroup=new"},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=t.me/frawnwafr/2?single&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/frawnwafr/2?single&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 ------by-alex---- by--- alex ------byalex-------power-----soucer----alex
@@ -4537,7 +4537,7 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
 if DevSoFi(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/ahmedsiria/mero/main/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/frawnwa12/rdw/main/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -4575,7 +4575,7 @@ t = "👨‍🎤 الملف » "..file.."\n👨‍🎤 تم تعطيل ملف \n
 else
 t = "👨‍🎤 بالتاكيد تم تعطيل ملف → "..file.."\n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/ahmedsiria/mero/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/frawnwa12/rdw/main/File_Bot/"..file)
 if res == 200 then
 os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
@@ -4595,7 +4595,7 @@ t = "👨‍🎤 بالتاكيد تم تفعيل ملف → "..file.." \n"
 else
 t = "👨‍🎤 الملف » "..file.."\n👨‍🎤 تم تفعيل ملف \n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/ahmedsiria/mero/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/frawnwa12/rdw/main/File_Bot/"..file)
 if res == 200 then
 local chek = io.open("File_Bot/"..file,'w+')
 chek:write(json_file)
