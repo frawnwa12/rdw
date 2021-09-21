@@ -3076,27 +3076,27 @@ end,nil)
 end
 
 if text ==  'السورس'  or text == ' سورس ' or text ==  'يا سورس ' or text =='  ياسورس '  then
-local Text =[
-┍━━━━━☞𝙁𝙍𝘼𝙒𝙉☜━━━━━┑
-𝑾𝑬𝑳𝑪𝑶𝑴𝑬 𝑻𝑶 𝑺𝑶𝑼𝑹𝑪𝑬 𝐅𝐑𝐀𝐖𝐍
-𝑻𝑯𝑬𝑺𝑻𝑹𝑶𝑵𝑮𝑬𝑺𝑻 𝑺𝑶𝑼𝑹𝑪𝑬 𝑰𝑵 𝑻𝑬𝑳𝑬𝑮𝑹𝑨𝑴
-┕━━━━━☞𝙁𝙍𝘼𝙒𝙉☜━━━━━┙
+local Text =[[
+┍━━━━━☞[𝙁𝙍𝘼𝙒𝙉](t.me/source_frawn)☜━━━━━┑
+[𝑾𝑬𝑳𝑪𝑶𝑴𝑬 𝑻𝑶 𝑺𝑶𝑼𝑹𝑪𝑬 𝐅𝐑𝐀𝐖𝐍
+𝑻𝑯𝑬𝑺𝑻𝑹𝑶𝑵𝑮𝑬𝑺𝑻 𝑺𝑶𝑼𝑹𝑪𝑬 𝑰𝑵 𝑻𝑬𝑳𝑬𝑮𝑹𝑨𝑴](t.me/source_frawn)
+┕━━━━━☞[𝙁𝙍𝘼𝙒𝙉](t.me/source_frawn)☜━━━━━┙
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 
 {
-{text =  ' 𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡'  , url= "https://t.me/DEV_FRAWN"},
+{text =  ' 𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡', url= "https://t.me/DEV_FRAWN"},
 },
 {
-{text ='  𝗖𝗛 𝗙𝙍𝗔𝙒𝗡' , url = "https://t.me/source_frawn"},
+{text ='  𝗖𝗛 𝗙𝙍𝗔𝙒𝗡', url = "https://t.me/source_frawn"},
 },
 {
-{text = ' اضف البوت لمجموعتك 𖠕' , url = "http://t.me/"..dofile("./DRAGON.lua").botUserName.."?startgroup=start"},
+{text = ' اضف البوت لمجموعتك 𖠕', url = "http://t.me/"..dofile("./DRAGON.lua").botUserName.."?startgroup=start"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token.." /sendvideo?chat_id=  .. msg.chat_id_ ..  &video=https://t.me/frawnwafr/2?single&caption=  .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token.." /sendvideo?chat_id=' .. msg.chat_id_ ..  '&video=t.me/frawnwafr/2?single&caption='  .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 ------by-alex---- by--- alex ------byalex-------power-----soucer----alex
@@ -3821,7 +3821,7 @@ end,nil)
 elseif text == 'قفل التوجيه بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:forward"..msg.chat_id_,'ked')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n👨‍🎤 تـم قفـل التوجيه بالتقييد ')  
+send(msg.chat_id_, msg.id_,'👨‍🎤 بواسطه » ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'source_frawn')..') \n??‍🎤 تـم قفـل التوجيه بالتقييد ')  
 end,nil)
 elseif text == 'قفل التوجيه بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:forward"..msg.chat_id_,'ktm')  
