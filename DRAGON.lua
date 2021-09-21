@@ -3089,7 +3089,7 @@ keyboard.inline_keyboard = {
 {text = 'اضف البوت لمجموعتك 𖠕', url= "http://t.me/"..sudos.UserName.."?startgroup=new"},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/frawnwafr/2?single&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=t.me/frawnwafr/2?single&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 ------by-alex---- by--- alex ------byalex-------power-----soucer----alex
