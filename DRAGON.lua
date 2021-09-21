@@ -3075,21 +3075,28 @@ end
 end,nil)  
 end
 
-if text == ' السورس'  or text ==  'سورس'  or text ==  'يا سورس ' or text ==  'سورس فرعون' then
-local Text = [[
-┍━━━━━☞[𝙁𝙍𝘼𝙒𝙉](https://t.me/source_frawn)☜━━━━━┑
-[𝑾𝑬𝑳𝑪𝑶𝑴𝑬 𝑻𝑶 𝑺𝑶𝑼𝑹𝑪𝑬 𝐅𝐑𝐀𝐖𝐍
-𝑻𝑯𝑬𝑺𝑻𝑹𝑶𝑵𝑮𝑬𝑺𝑻 𝑺𝑶𝑼𝑹𝑪𝑬 𝑰𝑵 𝑻𝑬𝑳𝑬𝑮𝑹𝑨𝑴](https://t.me/source_frawn)
-┕━━━━━☞[𝙁𝙍𝘼𝙒𝙉](https://t.me/source_frawn)☜━━━━━┙
+if text ==  'السورس'  or text == ' سورس ' or text ==  'يا سورس ' or text =='  ياسورس '  then
+local Text =[
+┍━━━━━☞𝙁𝙍𝘼𝙒𝙉☜━━━━━┑
+𝑾𝑬𝑳𝑪𝑶𝑴𝑬 𝑻𝑶 𝑺𝑶𝑼𝑹𝑪𝑬 𝐅𝐑𝐀𝐖𝐍
+𝑻𝑯𝑬𝑺𝑻𝑹𝑶𝑵𝑮𝑬𝑺𝑻 𝑺𝑶𝑼𝑹𝑪𝑬 𝑰𝑵 𝑻𝑬𝑳𝑬𝑮𝑹𝑨𝑴
+┕━━━━━☞𝙁𝙍𝘼𝙒𝙉☜━━━━━┙
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text =  '𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡',url="t.me/DEV_FRAWN"}},
-{{text =  '𝗖𝗛 𝗙𝙍𝗔𝙒𝗡', url="t.me/source_frawn"}},
-{{text =  'اضف البوت الي مجموعتك'  ,url="t.me/"..dofile("./DRAGON.lua").botUserName.."?startgroup=start"}}, 
+
+{
+{text =  ' 𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡'  , url= "https://t.me/DEV_FRAWN"},
+},
+{
+{text ='  𝗖𝗛 𝗙𝙍𝗔𝙒𝗡' , url = "https://t.me/source_frawn"},
+},
+{
+{text = ' اضف البوت لمجموعتك 𖠕' , url = "http://t.me/"..dofile("./DRAGON.lua").botUserName.."?startgroup=start"},
+},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token.. '/sendPhoto?chat_id='  .. msg.chat_id_ ..  '&photo=https://t.me/frawnwafr/2&caption='  .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token.." /sendvideo?chat_id=  .. msg.chat_id_ ..  &video=https://t.me/frawnwafr/2?single&caption=  .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 ------by-alex---- by--- alex ------byalex-------power-----soucer----alex
@@ -4429,7 +4436,7 @@ return false
 end
 function start_function(extra, result, success)
 if result.id_ then
-usertext = '\n 👨‍🎤 العضو 👨‍🎤 ['..result.title_..'](t.me/'..(username or 'DV_POWER1')..')'
+usertext = '\n 👨‍🎤 العضو 👨‍?? ['..result.title_..'](t.me/'..(username or 'DV_POWER1')..')'
 status  = '\n 👨‍🎤 تم الغاء (الحظر-الكتم) عام من الجروبات'
 texts = usertext..status
 database:srem(bot_id..'GBan:User', result.id_)
@@ -6291,7 +6298,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,'👨‍🎤 لا تستطيع استخدام البوت \n 👨‍🎤 يرجى الاشتراك بالقناه اولا \n 👨‍🎤 اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,'👨‍🎤 لا تستطيع استخدام البوت \n ??‍🎤 يرجى الاشتراك بالقناه اولا \n 👨‍🎤 اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
